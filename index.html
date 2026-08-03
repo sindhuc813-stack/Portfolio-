@@ -1,54 +1,199 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sindhu Portfolio</title>
+<title>Sindhu C | Portfolio</title>
+
 <style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Arial;
+}
+
 body{
-font-family:Arial,sans-serif;
-background:#f4f4f4;
-margin:0;
-padding:0;
+ background:#f5f8ff;
+ color:#333;
 }
-.container{
-max-width:800px;
-margin:40px auto;
-background:#fff;
-padding:30px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.2);
+
+header{
+ background:#0d47a1;
+ color:white;
+ padding:20px;
+ text-align:center;
 }
-h1{
-color:#0077cc;
+
+section{
+ padding:40px 10%;
+ text-align:center;
 }
-h2{
-color:#333;
+
+.hero{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ gap:40px;
+ flex-wrap:wrap;
 }
+
+.hero img{
+ width:200px;
+ height:200px;
+ border-radius:50%;
+ object-fit:cover;
+ border:5px solid #0d47a1;
+}
+
+h1 span,h2{
+ color:#0d47a1;
+}
+
+button,.btn{
+ background:#0d47a1;
+ color:white;
+ padding:12px 25px;
+ border-radius:25px;
+ text-decoration:none;
+ display:inline-block;
+ margin-top:15px;
+}
+
+.skills span{
+ display:inline-block;
+ background:#0d47a1;
+ color:white;
+ padding:10px 20px;
+ margin:10px;
+ border-radius:20px;
+}
+
+.card{
+ background:white;
+ max-width:500px;
+ margin:20px auto;
+ padding:25px;
+ border-radius:15px;
+ box-shadow:0 5px 15px #ddd;
+}
+
+#contact{
+ background:#0d47a1;
+ color:white;
+}
+
+#contact h2{
+ color:white;
+}
+
 </style>
+
 </head>
+
 <body>
 
-<div class="container">
-<h1>Hi, I'm Sindhu</h1>
-<p>BE Electronics and Communication Engineering (2021)</p>
+<header>
+<h1>Sindhu C</h1>
+<p>Java Full Stack Fresher</p>
+</header>
 
-<h2>Skills</h2>
-<ul>
-<li>Core Java</li>
-<li>Advanced Java</li>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-</ul>
 
-<h2>About Me</h2>
-<p>I am a fresher looking for opportunities as a Java Developer and Web Developer.</p>
+<section class="hero">
 
-<h2>Contact</h2>
-<p>Email: yourmail@example.com</p>
+<div>
+<h1>Hello, I'm <span>Sindhu</span></h1>
+
+<p>B.E Electronics & Communication Engineering (2021)</p>
+
+<p>
+Interested in Java Programming and Web Development.
+</p>
+
+<a class="btn" href="#contact">Contact Me</a>
 
 </div>
+
+
+<img src="profile.jpg" alt="Sindhu Profile">
+
+</section>
+
+
+<section>
+
+<h2>About Me</h2>
+
+<p>
+I am a fresher with skills in Java, HTML, CSS and JavaScript.
+Looking for an opportunity to start my career in software development.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<span>Java</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Projects</h2>
+
+<div class="card">
+
+<h3>Student Management System</h3>
+
+<p>Java based application project.</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Personal Portfolio</h3>
+
+<p>Responsive website using HTML and CSS.</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Certification</h2>
+
+<div class="card">
+
+<p>Java Course - CADD Centre</p>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: sindhuc813@gmail.com</p>
+
+<p>GitHub: github.com/sindhuc813</p>
+
+</section>
+
 
 </body>
 </html>
