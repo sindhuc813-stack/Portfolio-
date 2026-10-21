@@ -196,5 +196,69 @@ function updateCountdown(){
 updateCountdown();
 setInterval(updateCountdown,1000);
 </script>
+ <!-- PURPLE & GOLD WEDDING SURPRISE -->
+<section style="text-align:center;padding:35px 15px;
+background:linear-gradient(145deg,#210b35,#642b83);
+color:#fff3d0;border-radius:20px;">
+
+<h2 style="color:#f7d982;">💜 Our Special Day 💜</h2>
+<p>Something beautiful is waiting for you...</p>
+
+<div id="scratchCard"
+onclick="revealWedding()"
+style="padding:30px 12px;background:linear-gradient(135deg,#ffe9a3,#c69b37);
+color:#351346;border-radius:18px;cursor:pointer;
+font-size:21px;font-weight:bold;">
+🎁 TAP TO REVEAL 🎁
+</div>
+
+<div id="weddingReveal" style="display:none;">
+<h1 style="color:#f7d982;">22 • 11 • 2026</h1>
+<p>Sindhu ❤️ Hariharan</p>
+<p>Forever starts here! 💍</p>
+</div>
+
+<h2 style="color:#f7d982;margin-top:35px;">
+⏳ Wedding Countdown
+</h2>
+
+<div id="weddingTimer" style="font-size:20px;
+line-height:2;color:#ffe6a0;">
+Loading...
+</div>
+
+<p>📍 GPJ Mahal, Sholinganallur, Chennai</p>
+</section>
+
+<script>
+function revealWedding(){
+ document.getElementById("weddingReveal").style.display="block";
+ document.getElementById("scratchCard").innerHTML=
+ "✨ SURPRISE REVEALED ✨";
+}
+
+function weddingCountdown(){
+ const target=new Date("2026-11-22T00:00:00+05:30").getTime();
+ const now=Date.now();
+ const diff=target-now;
+ const box=document.getElementById("weddingTimer");
+
+ if(diff<=0){
+  box.innerHTML="Our Wedding Day is here! ❤️";
+  return;
+ }
+
+ const d=Math.floor(diff/86400000);
+ const h=Math.floor(diff%86400000/3600000);
+ const m=Math.floor(diff%3600000/60000);
+ const s=Math.floor(diff%60000/1000);
+
+ box.innerHTML=d+" Days<br>"+h+" Hours : "+m+
+ " Minutes : "+s+" Seconds";
+}
+
+weddingCountdown();
+setInterval(weddingCountdown,1000);
+</script>
 </body>
 </html>
