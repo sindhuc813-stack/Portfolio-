@@ -1,166 +1,209 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sindhu ❤️ Hariharan</title>
+<title>Sindhu ❤️ Hariharan | Wedding Invitation</title>
 
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: Georgia, serif;
-  background: #fff0f5;
-  color: #61264b;
-  text-align: center;
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Georgia,serif;
+ color:#fff5dc;
+ text-align:center;
+ background:linear-gradient(145deg,#170827,#40145f,#210d38);
 }
-
-section {
-  padding: 45px 20px;
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+section{padding:45px 18px}
+.hero{
+ min-height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ background:radial-gradient(circle,#63348b,#210d38 70%);
+ border:8px double #e4c16b;
+ margin:8px;
 }
-
-.cover {
-  min-height: 100vh;
-  background: linear-gradient(#581d4b99,#581d4b99),
-              linear-gradient(135deg,#f6bfd8,#8d426f);
-  color: white;
+h1{font-size:clamp(38px,9vw,65px);color:#f7d984;margin:12px}
+h2{color:#f7d984;font-size:29px}
+p{font-size:17px;line-height:1.8}
+.gold{color:#f7d984}
+.card{
+ max-width:650px;
+ margin:22px auto;
+ padding:25px;
+ border:1px solid #e4c16b;
+ border-radius:20px;
+ background:#ffffff0b;
+ box-shadow:0 0 20px #b58b5220;
 }
-
-h1 { font-size: 42px; }
-h2 { font-size: 30px; }
-p { line-height: 1.8; }
-
-.card {
-  background: #fffafc;
-  padding: 24px;
-  border-radius: 22px;
-  width: 100%;
-  max-width: 440px;
-  margin: 12px auto;
-  box-shadow: 0 5px 20px #9d547222;
+button{
+ background:linear-gradient(120deg,#f7df9b,#c99b40);
+ color:#301344;
+ border:0;
+ border-radius:25px;
+ padding:13px 24px;
+ font-size:16px;
+ cursor:pointer;
+ margin:8px;
 }
-
-button {
-  background: #a43c78;
-  color: white;
-  border: 0;
-  border-radius: 30px;
-  padding: 14px 25px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 8px;
+.photo{
+ width:100%;
+ max-width:420px;
+ border-radius:15px;
+ border:2px solid #e4c16b;
+ margin:12px auto;
+ display:block;
 }
-
-.heart { font-size: 38px; }
-.date { letter-spacing: 2px; }
-.chat {
-  background: #f2d0ef;
-  padding: 12px;
-  border-radius: 16px;
-  margin: 9px 0;
-  text-align: left;
+a{color:#f7d984}
+.heart{font-size:35px;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.2)}}
+#scratch{
+ background:#d8b85d;
+ color:#321444;
+ padding:28px;
+ border-radius:16px;
+ font-size:22px;
+ cursor:pointer;
 }
-.chat.right {
-  background: #d9c3f5;
-  text-align: right;
-}
-footer { padding: 25px; }
+footer{padding:30px;color:#f7d984}
 </style>
 </head>
 
 <body>
 
-<section class="cover">
-  <div class="heart">♥</div>
-  <p>A LITTLE STORY CALLED FOREVER</p>
-  <h1>Sindhu<br> &amp; <br>Hariharan</h1>
-  <p>Two hearts, one beautiful journey</p>
-  <button onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
-    Open Our Story ♥
-  </button>
-  <p>Scroll down for our memories ↓</p>
+<section class="hero">
+ <div class="heart">💜</div>
+ <p class="gold">TWO HEARTS · ONE BEAUTIFUL STORY</p>
+ <h1>Sindhu</h1>
+ <p class="gold">♡ Forever with ♡</p>
+ <h1>Hariharan</h1>
+ <p>From our first conversation to forever together...</p>
+ <button onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
+ Open Our Love Story 💌
+ </button>
+ <p class="gold">Wedding Invitation · 22.11.2026</p>
 </section>
 
 <section id="story">
-  <div class="heart">💌</div>
-  <h2>Chapter 1</h2>
-  <h1>Our First Chat</h1>
-  <p class="date">14 JANUARY 2024</p>
+ <h2>Our Little Love Story 💕</h2>
+ <div class="card">
+  <h2>💌 The First Conversation</h2>
+  <p>07 May 2024</p>
+  <p>One conversation became a beautiful memory.<br>
+  We didn't know then how special our story would become.</p>
+  <p class="gold">Every love story has a beginning. Ours began here. ✨</p>
+ </div>
 
-  <div class="card">
-    <div class="chat">Hariharan: Hii.. Sindhu✨</div>
-    <div class="chat right">Sindhu: Haiiii</div>
-    <div class="chat">Hariharan: U know mee..?</div>
-    <div class="chat right">Sindhu: Yub..</div>
-    <div class="chat right">Sindhu: Eppuddi iruka</div>
-    <div class="chat">Hariharan: Fine, neega</div>
-    <div class="chat right">Sindhu: Mm.. Gud.</div>
-    <div class="chat right">Sindhu: Ena pandringa</div>
-    <p><i>Just a small “Hi”…</i><br>
-    <b>The beginning of our forever ♥</b></p>
-  </div>
+ <div class="card">
+  <h2>🧃 Our First Meet-Up</h2>
+  <p>21 May 2024</p>
+  <p>Our first meeting, our first memories, and the beginning of something beautiful.</p>
+  <p class="gold">Frozen Feast 💜</p>
+  <p>Our special little meeting place.</p>
+  <!-- Add your real Frozen Feast photo below -->
+  <img class="photo" src="meetup.jpg"
+       alt="Our first meetup place"
+       onerror="this.style.display='none'">
+ </div>
+
+ <div class="card">
+  <h2>🏍️ A Ride Into Forever</h2>
+  <p>Two hearts, one journey, countless memories waiting to happen.</p>
+  <!-- Add your R15 bike couple photo as bike.jpg -->
+  <img class="photo" src="bike.jpg"
+       alt="Our R15 bike memory"
+       onerror="this.style.display='none'">
+ </div>
 </section>
 
 <section>
-  <div class="heart">🍹</div>
-  <h2>Chapter 2</h2>
-  <h1>Our First Meet</h1>
-  <div class="card">
-    <h2>Frozen Feast</h2>
-    <p>One little meeting.<br>
-    A thousand beautiful feelings.</p>
-    <p>📍 Frozen Feast Juice Shop</p>
-    <p><i>“Some meetings become memories for life.”</i></p>
-  </div>
-  <div class="card">
-    <div class="heart">🏍️</div>
-    <h2>Our Silver R15 Memory</h2>
-    <p>One special place, two hearts,<br>
-    and a story that was just beginning.</p>
-  </div>
+ <h2>Our Beautiful Memories 📸</h2>
+ <div class="card">
+  <p>Every picture has a story. Every memory has a place in our hearts.</p>
+  <!-- Replace these filenames with your actual photo filenames -->
+  <img class="photo" src="couple1.jpg" alt="Our memory 1"
+       onerror="this.style.display='none'">
+  <img class="photo" src="couple2.jpg" alt="Our memory 2"
+       onerror="this.style.display='none'">
+  <img class="photo" src="engagement.jpg" alt="Our engagement"
+       onerror="this.style.display='none'">
+ </div>
 </section>
 
 <section>
-  <div class="heart">💞</div>
-  <h2>Chapter 3</h2>
-  <h1>Our Love Story</h1>
-  <div class="card">
-    <p>From our first chat<br>
-    to our first meet…</p>
-    <p>From strangers to soulmates,<br>
-    we found our forever.</p>
-    <h2>Sindhu ❤️ Hariharan</h2>
+ <h2>🎁 A Little Surprise For You</h2>
+ <div class="card">
+  <p>Scratch the golden card to reveal our special day!</p>
+  <div id="scratch" onclick="revealDate()">
+   ✨ TAP TO REVEAL ✨
   </div>
+  <p id="revealed" class="gold"></p>
+ </div>
 </section>
 
-<section class="cover">
-  <div class="heart">💍</div>
-  <p>TOGETHER WITH OUR FAMILIES</p>
-  <h1>We're Getting Married!</h1>
-  <p class="date">22 · 11 · 2026</p>
-  <div class="card">
-    <h2>Wedding Celebration</h2>
-    <p>📍 GPJ Mahal<br>
-    Sholinganallur, Chennai</p>
-  </div>
+<section>
+ <h2>⏳ Countdown to Forever</h2>
+ <div class="card">
+  <h1 id="countdown">Loading...</h1>
+  <p class="gold">Until Sindhu & Hariharan's Wedding 💍</p>
+  <h2>22 November 2026</h2>
+  <p>Reception: 21 November 2026</p>
+ </div>
+</section>
+
+<section>
+ <h2>💍 The Big Day</h2>
+ <div class="card">
+  <p class="gold">WITH LOVE AND THE BLESSINGS OF OUR FAMILIES</p>
+  <h1>Sindhu ❤️ Hariharan</h1>
+  <p>Request the pleasure of your presence as we begin our forever.</p>
+  <h2>22 · 11 · 2026</h2>
+  <p>Wedding Ceremony</p>
+  <p>GPJ Mahal<br>Sholinganallur, Chennai</p>
+  <p>Reception · 21 November 2026</p>
   <button onclick="window.open('https://www.google.com/maps/search/?api=1&query=GPJ+Mahal+Sholinganallur+Chennai','_blank')">
-    View Venue Location 📍
+   📍 Find Our Venue
   </button>
-  <p>We can't wait to celebrate with you!</p>
-  <div class="heart">♥</div>
+ </div>
 </section>
 
 <footer>
-  Made with love, for our forever ❤️<br>
-  Sindhu &amp; Hariharan
+ <div class="heart">💜</div>
+ <h2>Sindhu & Hariharan</h2>
+ <p>Our story continues... Forever and always. ✨</p>
 </footer>
+
+<script>
+function revealDate(){
+ document.getElementById("scratch").innerHTML="💜 OUR FOREVER BEGINS 💜";
+ document.getElementById("revealed").innerHTML=
+ "22 November 2026 ✨<br>Sindhu ❤️ Hariharan";
+}
+
+function updateCountdown(){
+ const wedding = new Date("2026-11-22T00:00:00+05:30").getTime();
+ const now = Date.now();
+ const diff = wedding-now;
+ const el = document.getElementById("countdown");
+
+ if(diff<=0){
+  el.innerHTML="💍 The Big Day Is Here! 💜";
+  return;
+ }
+ const days=Math.floor(diff/(1000*60*60*24));
+ const hours=Math.floor((diff/(1000*60*60))%24);
+ const mins=Math.floor((diff/(1000*60))%60);
+ const secs=Math.floor((diff/1000)%60);
+ el.innerHTML=days+" Days<br>"+hours+" Hours<br>"+
+ mins+" Minutes<br>"+secs+" Seconds 💜";
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+</script>
 
 </body>
 </html>
+```
