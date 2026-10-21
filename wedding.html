@@ -4,606 +4,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sindhu ♥ Hariharan | Wedding Invitation</title>
+<title>Sindhu ❤️ Hariharan | Forever Love</title>
 <style>
-:root {
-  --purple: #250936;
-  --deep: #12051e;
-  --gold: #f4d58b;
-  --lightgold: #fff0c4;
+*{box-sizing:border-box}
+body{
+ margin:0;background:linear-gradient(145deg,#16051f,#481047,#24103d);
+ color:#fff0fa;font-family:Georgia,serif;text-align:center;overflow-x:hidden
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--deep);
-  color: #fff6e7;
-  font-family: Georgia, "Times New Roman", serif;
-  text-align: center;
-}
-button, a { -webkit-tap-highlight-color: transparent; }
-button { font: inherit; }
-.hero {
-  min-height: 100svh;
-  padding: 28px 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  background:
-    radial-gradient(ellipse at 50% 30%, #70388c 0%, #351044 36%, #12051e 78%);
-}
-.hero::before, .hero::after {
-  content: "✦";
-  position: absolute;
-  color: var(--gold);
-  font-size: 34px;
-  animation: twinkle 2s infinite alternate;
-}
-.hero::before { top: 16%; left: 12%; }
-.hero::after { right: 13%; bottom: 18%; animation-delay: 1s; }
-.crown { font-size: 52px; animation: float 3s infinite ease-in-out; }
-.eyebrow {
-  color: var(--gold);
-  letter-spacing: 4px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-h1 {
-  color: var(--lightgold);
-  font-size: clamp(40px, 10vw, 72px);
-  font-weight: normal;
-  margin: 16px 0;
-  text-shadow: 0 0 30px #e4b75c66;
-}
-.hero p { line-height: 1.8; }
-.gold { color: var(--gold); }
-.btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #fff0be, #d5a54d);
-  color: #291137;
-  border: 0;
-  border-radius: 30px;
-  padding: 14px 23px;
-  margin: 10px 4px;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 5px 22px #d8a64825;
-}
-.btn:active { transform: scale(.97); }
-.outline {
-  color: var(--lightgold);
-  background: transparent;
-  border: 1px solid var(--gold);
-}
-#invitation { display: none; }
-.topbar {
-  padding: 16px;
-  background: #1b0928;
-  border-bottom: 1px solid #dcb45d66;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  font-size: 13px;
-  color: var(--gold);
-}
-.intro { padding: 55px 20px 35px; }
-.intro h2, .section-title {
-  font-size: clamp(28px, 6vw, 42px);
-  font-weight: normal;
-  color: var(--lightgold);
-  margin: 12px 0;
-}
-.ornament { color: var(--gold); letter-spacing: 8px; }
-.container { max-width: 760px; margin: auto; padding: 0 17px 50px; }
-.memory {
-  margin: 22px 0;
-  border: 1px solid #d9b45b77;
-  border-radius: 18px;
-  overflow: hidden;
-  background: linear-gradient(145deg, #381748, #1b0b28);
-  box-shadow: 0 12px 32px #0003;
-  text-align: left;
-}
-.memory-toggle {
-  width: 100%;
-  border: 0;
-  padding: 22px 18px;
-  color: var(--lightgold);
-  background: transparent;
-  text-align: left;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.memory-toggle .emoji { font-size: 30px; }
-.memory-toggle .label { flex: 1; }
-.memory-toggle small {
-  display: block;
-  margin-top: 6px;
-  color: #e4d3e9;
-  font-size: 12px;
-}
-.arrow { color: var(--gold); font-size: 20px; }
-.memory-content {
-  display: none;
-  padding: 0 17px 22px;
-  animation: reveal .6s ease;
-  text-align: center;
-}
-.memory.open .memory-content { display: block; }
-.memory.open .arrow { transform: rotate(180deg); display: inline-block; }
-.photo {
-  min-height: 220px;
-  border: 1px dashed #e7c776;
-  border-radius: 13px;
-  background:
-    radial-gradient(ellipse at center, #694079, #291238);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  margin: 12px 0;
-  color: var(--lightgold);
-  overflow: hidden;
-  line-height: 1.8;
-}
-.photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
-.photo .symbol { font-size: 42px; }
-.note { color: #e4d6e9; font-size: 13px; line-height: 1.8; }
-.date { color: var(--gold); font-size: 14px; letter-spacing: 2px; }
-.divider {
-  width: 90px;
-  margin: 25px auto;
-  border: 0;
-  border-top: 1px solid var(--gold);
-}
-.scratch-wrap {
-  position: relative;
-  max-width: 390px;
-  margin: 18px auto;
-  height: 180px;
-  border-radius: 15px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #fff0bc, #c39135);
-  color: #351044;
-  touch-action: pan-y;
-}
-.scratch-under {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-}
-.scratch-under strong { font-size: 29px; }
-#scratch {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  touch-action: none;
-  cursor: crosshair;
-}
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-  margin: 22px 0;
-}
-.timebox {
-  padding: 15px 4px;
-  border: 1px solid #e4c47788;
-  border-radius: 12px;
-  background: #3b1b4c;
-}
-.timebox strong {
-  display: block;
-  font-size: clamp(23px, 6vw, 34px);
-  color: var(--lightgold);
-}
-.timebox span { font-size: 10px; letter-spacing: 1px; }
-.location-card {
-  border: 1px solid #d9b45b77;
-  border-radius: 16px;
-  padding: 25px 15px;
-  background: #291238;
-  line-height: 1.9;
-}
-footer {
-  padding: 38px 16px 55px;
-  color: var(--gold);
-  background: #0c0312;
-  line-height: 1.9;
-}
-.heart { color: #f4a6c1; }
-#surprise {
-  position: fixed;
-  inset: 0;
-  z-index: 20;
-  display: none;
-  place-items: center;
-  background: #10051beF;
-  padding: 20px;
-}
-.surprise-card {
-  width: 100%;
-  max-width: 430px;
-  padding: 35px 22px;
-  border: 1px solid var(--gold);
-  border-radius: 20px;
-  background: linear-gradient(145deg, #512667, #1a0826);
-  animation: reveal .5s ease;
-}
-@keyframes reveal {
-  from { opacity: 0; transform: translateY(18px) scale(.97); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
-@keyframes twinkle {
-  from { opacity: .35; transform: scale(.8); }
-  to { opacity: 1; transform: scale(1.25); }
-}
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .01ms !important; }
-}
+main{max-width:720px;margin:auto;padding:18px;position:relative}
+button{font-family:inherit;cursor:pointer}
+.hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.heart{position:absolute;bottom:-50px;color:#ffaddf;animation:float 10s linear infinite;opacity:.65}
+@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+.hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.crown{font-size:38px;color:#f8d995;animation:glow 2s infinite alternate}
+@keyframes glow{to{text-shadow:0 0 25px #ffb9e7,0 0 35px #f8d995}}
+h1{font-size:clamp(43px,10vw,68px);line-height:1.12;color:#ffe3f6;text-shadow:0 0 22px #d875cc}
+.gold{color:#f8d995;font-style:italic}
+.subtitle{line-height:1.9;color:#f2d3ee}
+.btn{border:1px solid #f8d995;border-radius:30px;padding:14px 23px;background:linear-gradient(120deg,#ffe5f5,#dca4e8,#f8d995);color:#40143e;font-size:15px}
+h2{color:#f8d995}
+.section-title{font-size:28px;color:#f8d995;margin-top:32px}
+.card{margin:17px 0;border:1px solid #a76eb6;border-radius:23px;background:linear-gradient(145deg,#4a1b50,#21102f);overflow:hidden;box-shadow:0 8px 28px #08020d66}
+.toggle{width:100%;border:0;background:transparent;color:white;padding:19px 15px;display:flex;align-items:center;gap:14px;text-align:left}
+.symbol{width:53px;height:53px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;background:linear-gradient(140deg,#ffe3f5,#dba3e8,#f8d995);font-size:26px}
+.label{flex:1;font-size:17px;color:#ffe4f5}
+.hint{display:block;font:12px Arial,sans-serif;color:#e8bce4;margin-top:6px}
+.arrow{font-size:23px;color:#f8d995}
+.content{display:none;padding:0 15px 22px;animation:reveal .6s ease}
+.card.open .content{display:block}
+.card.open{border-color:#f8d995;box-shadow:0 0 25px #d78bc833}
+@keyframes reveal{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}
+.placeholder{min-height:220px;padding:20px;border:1px dashed #d6a0d9;border-radius:17px;background:radial-gradient(ellipse,#753566,#24102e 75%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;line-height:1.8}
+.big{font-size:53px;animation:glow 2s infinite alternate}
+.note{font:13px Arial,sans-serif;color:#e9c8e9;line-height:1.9}
+.meetup{position:relative;overflow:hidden;border:1px solid #edc17b;border-radius:20px;padding:25px 12px;background:radial-gradient(ellipse at top,#a54d91,#572054 55%,#1c0b2b)}
+.meetup:before,.meetup:after{content:"♡";position:absolute;font-size:38px;color:#ffbce9;animation:float 8s linear infinite}
+.meetup:before{left:12%;bottom:-40px}.meetup:after{right:13%;bottom:-55px;animation-delay:2s}
+.meet-title{font-size:25px;color:#ffe4a8;margin:10px}
+.meet-icons{display:flex;align-items:center;justify-content:center;gap:23px;margin:24px 0}
+.meet-icons span{font-size:48px;animation:bob 2s ease-in-out infinite;filter:drop-shadow(0 0 12px #ffc2ec)}
+.meet-icons span:nth-child(2){animation-delay:.5s}
+@keyframes bob{50%{transform:translateY(-12px) rotate(5deg)}}
+.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:18px 0}
+.count-box{padding:12px 3px;border:1px solid #a76eb6;border-radius:12px;background:#35133e}
+.count-num{font-size:25px;color:#f8d995}
+.count-box small{display:block;font:10px Arial,sans-serif;color:#eac9e9;margin-top:6px}
+.scratch{padding:24px 10px;border:1px solid #f8d995;border-radius:18px;background:linear-gradient(135deg,#5c2059,#241034);cursor:pointer}
+.scratch-cover{display:inline-block;background:linear-gradient(120deg,#f8d995,#ffe0f4);color:#421541;border-radius:12px;padding:14px}
+.date-reveal{display:none;color:#f8d995;font-size:29px;margin-top:18px}
+.location{display:inline-block;margin:15px auto;color:#ffe3a6;border:1px solid #d7ae6a;border-radius:24px;padding:13px 20px;text-decoration:none}
+footer{padding:35px 5px 50px;color:#e8c6e8;line-height:2}
 </style>
 </head>
 <body>
-
-<!-- SURPRISE OPENING -->
-<section class="hero" id="cover">
-  <div class="crown">♛</div>
-  <div class="eyebrow">A Royal Celebration of Love</div>
-  <h1>Sindhu <span class="heart">♥</span><br>Hariharan</h1>
-  <div class="ornament">✦ ❖ ✦</div>
-  <p>A little secret, a beautiful journey,<br>and a forever beginning...</p>
-  <p class="gold">22 . 11 . 2026</p>
-  <button class="btn" onclick="openInvitation()">✧ Open Our Invitation ✧</button>
-  <p class="note">A special surprise awaits you</p>
+<div class="hearts" id="hearts"></div>
+<main>
+<section class="hero">
+ <div class="crown">♛ ♡ ♛</div>
+ <p style="letter-spacing:4px;color:#f8d995;font-size:12px">A LITTLE MAGIC · A FOREVER LOVE</p>
+ <h1>Sindhu<br><span class="gold">&</span><br>Hariharan</h1>
+ <p class="subtitle">Two hearts, one beautiful story.<br>One secret love, one forever promise. 💗</p>
+ <button class="btn" onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">Open Our Love Story ♡</button>
+ <p class="note">Every heart holds a memory… tap to discover it ✨</p>
 </section>
 
-<!-- MAIN WEBSITE -->
-<main id="invitation">
-  <div class="topbar">♛ SINDHU & HARIHARAN ♛</div>
+<section id="memories">
+ <div class="section-title">♡ Our Little Universe ♡</div>
+ <p class="note">Some moments become memories. Some memories become forever. 💜</p>
 
-  <section class="intro">
-    <div class="crown">♛</div>
-    <div class="eyebrow">Together with our families</div>
-    <h2>Our Forever Begins</h2>
-    <p>Two hearts, one beautiful journey,<br>one promise for a lifetime.</p>
-    <div class="ornament">✦ ❖ ✦</div>
-    <p class="gold">Reception · 21 November 2026</p>
-    <p class="gold">Wedding · 22 November 2026</p>
-    <button class="btn outline" onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
-      Open Our Memories ↓
-    </button>
-  </section>
+ <article class="card">
+  <button class="toggle" onclick="toggle(this)">
+   <span class="symbol">💌</span><span class="label">Our First Chat<span class="hint">07 May 2024 · The beginning of us</span></span><span class="arrow">⌄</span>
+  </button>
+  <div class="content">
+   <div class="placeholder"><span class="big">💌</span><b>Our Original Chat</b><span>Add your original chat screenshot here</span></div>
+   <p class="note">07 · 05 · 2024<br>One little conversation… a thousand feelings. ❤️</p>
+  </div>
+ </article>
 
-  <section class="container" id="memories">
-    <h2 class="section-title">Our Little World</h2>
-    <p class="note">Every memory holds a piece of our story.<br>Tap to open each secret.</p>
-    <hr class="divider">
+ <article class="card">
+  <button class="toggle" onclick="toggle(this)">
+   <span class="symbol">💞</span><span class="label">Our First Meetup<span class="hint">21 May 2024 · Frozen Feast</span></span><span class="arrow">⌄</span>
+  </button>
+  <div class="content">
+   <div class="meetup">
+    <div class="note">OUR FIRST MEETUP · 21.05.2024</div>
+    <div class="meet-title">Frozen Feast 🥤</div>
+    <div class="meet-icons"><span>🥤</span><span>💗</span><span>✨</span></div>
+    <p style="line-height:1.9">One place. One special day.<br>A memory that became part of our forever. 💕</p>
+    <p class="note">Not just a meetup… a beautiful page in our love story.</p>
+   </div>
+   <div class="placeholder" style="margin-top:15px"><span class="big">📸</span><b>Our Real Meetup Photo</b><span>Upload your meetup photo to show it here</span></div>
+  </div>
+ </article>
 
-    <!-- FIRST CHAT -->
-    <article class="memory">
-      <button class="memory-toggle" onclick="toggleMemory(this)">
-        <span class="emoji">💌</span>
-        <span class="label">
-          Our First Chat
-          <small>07 May 2024 · Where it all began</small>
-        </span>
-        <span class="arrow">⌄</span>
-      </button>
-      <div class="memory-content">
-        <div class="photo">
-          <span class="symbol">💬</span>
-          <strong>Our Original Chat</strong>
-          <span class="note">Replace this placeholder with your real chat screenshot.</span>
-        </div>
-        <p>One little conversation became a memory we will always treasure. <span class="heart">♥</span></p>
-        <p class="note">To show the original conversation, upload its screenshot to GitHub and add the image path below.</p>
-      </div>
-    </article>
+ <article class="card">
+  <button class="toggle" onclick="toggle(this)">
+   <span class="symbol">📷</span><span class="label">Our Two-Year Memories<span class="hint">Little moments, endless love</span></span><span class="arrow">⌄</span>
+  </button>
+  <div class="content">
+   <div class="placeholder"><span class="big">🫶</span><b>Our Favourite Moments</b><span>Add your couple photos here</span></div>
+   <p class="note">Every picture has a story. Every story has you. ❤️</p>
+  </div>
+ </article>
 
-    <!-- FIRST MEETUP + R15 TOGETHER -->
-    <article class="memory">
-      <button class="memory-toggle" onclick="toggleMemory(this)">
-        <span class="emoji">🥤</span>
-        <span class="label">
-          Our First Meetup
-          <small>21 May 2024 · Frozen Feast · And our R15 memory 🏍️</small>
-        </span>
-        <span class="arrow">⌄</span>
-      </button>
-      <div class="memory-content">
-        <p class="date">21 · 05 · 2024</p>
-        <h3 class="gold">Frozen Feast</h3>
-        <p>The day our chats became a real-life memory.</p>
+ <article class="card">
+  <button class="toggle" onclick="toggle(this)">
+   <span class="symbol">💍</span><span class="label">Our Engagement<span class="hint">A beautiful step towards forever</span></span><span class="arrow">⌄</span>
+  </button>
+  <div class="content">
+   <div class="placeholder"><span class="big">💍</span><b>Our Engagement Memories</b><span>Add your engagement photos here</span></div>
+   <p class="note">One promise, two hearts, a lifetime together. ✨</p>
+  </div>
+ </article>
 
-        <div class="photo">
-          <span class="symbol">🥤</span>
-          <strong>First Meetup Photo</strong>
-          <span class="note">Your real meetup picture goes here.</span>
-        </div>
+ <article class="card">
+  <button class="toggle" onclick="toggle(this)">
+   <span class="symbol">👨‍👩‍👧‍👦</span><span class="label">For Friends & Family<span class="hint">Our happiness is brighter with you</span></span><span class="arrow">⌄</span>
+  </button>
+  <div class="content">
+   <div class="placeholder"><span class="big">💌</span><b>With Love, We Invite You</b><span>Together with our families, we invite you to celebrate our special day and bless our journey of love.</span></div>
+  </div>
+ </article>
+</section>
 
-        <hr class="divider">
-        <h3 class="gold">🏍️ Our R15 Memory</h3>
-        <p>One more beautiful memory from our meetup journey.</p>
-        <div class="photo">
-          <span class="symbol">🏍️ 💜</span>
-          <strong>Our R15 Picture</strong>
-          <span class="note">Add your original R15 photo here.</span>
-        </div>
-        <p class="note">Both pictures belong to this same meetup section. R15 is not a separate memory card.</p>
-      </div>
-    </article>
+<section>
+ <div class="section-title">💍 The Forever Begins</div>
+ <p class="note">A new chapter. The same two hearts.<br>A lifetime of choosing each other. 💕</p>
+ <div class="card" style="padding:18px">
+  <h2>Wedding Countdown</h2>
+  <div class="count-grid" id="countdown">
+   <div class="count-box"><span class="count-num">--</span><small>DAYS</small></div>
+   <div class="count-box"><span class="count-num">--</span><small>HOURS</small></div>
+   <div class="count-box"><span class="count-num">--</span><small>MINUTES</small></div>
+   <div class="count-box"><span class="count-num">--</span><small>SECONDS</small></div>
+  </div>
+  <h2>A Little Surprise ✨</h2>
+  <p class="note">Tap below to reveal our wedding date.</p>
+  <div class="scratch" onclick="revealDate()">
+   <span class="scratch-cover" id="scratchCover">♡ Tap to Reveal ♡</span>
+   <div class="date-reveal" id="dateReveal">22 · 11 · 2026 💍</div>
+  </div>
+ </div>
 
-    <!-- OTHER MEMORIES -->
-    <article class="memory">
-      <button class="memory-toggle" onclick="toggleMemory(this)">
-        <span class="emoji">📸</span>
-        <span class="label">
-          Our Beautiful Memories
-          <small>Little moments, endless love</small>
-        </span>
-        <span class="arrow">⌄</span>
-      </button>
-      <div class="memory-content">
-        <div class="photo">
-          <span class="symbol">✨</span>
-          <strong>Our Memory Gallery</strong>
-          <span class="note">Replace this box with your favourite couple photos.</span>
-        </div>
-        <p>Every picture tells a story only we truly understand. <span class="heart">♥</span></p>
-      </div>
-    </article>
+ <div class="card" style="padding:20px">
+  <h2>🌹 Reception</h2><p style="font-size:23px">21 November 2026</p>
+  <p class="note">A night of celebration, smiles & love.</p>
+ </div>
+ <div class="card" style="padding:20px">
+  <h2>💒 Wedding Day</h2><p style="font-size:23px">22 November 2026</p>
+  <p class="note">The day our forever begins. ❤️</p>
+ </div>
+ <div class="section-title">GPJ Mahal</div>
+ <p class="note">Sholinganallur, Chennai</p>
+ <a class="location" href="https://www.google.com/maps/search/?api=1&query=GPJ+Mahal+Sholinganallur+Chennai" target="_blank" rel="noopener">📍 Open Venue in Google Maps ↗</a>
+</section>
 
-    <!-- ENGAGEMENT -->
-    <article class="memory">
-      <button class="memory-toggle" onclick="toggleMemory(this)">
-        <span class="emoji">💍</span>
-        <span class="label">
-          A Promise of Forever
-          <small>Our engagement memories</small>
-        </span>
-        <span class="arrow">⌄</span>
-      </button>
-      <div class="memory-content">
-        <div class="photo">
-          <span class="symbol">💐</span>
-          <strong>Engagement Photo</strong>
-          <span class="note">Add your engagement picture here.</span>
-        </div>
-        <p>From a little secret to a lifetime promise.</p>
-      </div>
-    </article>
-
-    <!-- INVITATION MESSAGE -->
-    <article class="memory">
-      <button class="memory-toggle" onclick="toggleMemory(this)">
-        <span class="emoji">💌</span>
-        <span class="label">
-          A Message for Our Loved Ones
-          <small>Friends & family, this is for you</small>
-        </span>
-        <span class="arrow">⌄</span>
-      </button>
-      <div class="memory-content">
-        <p>With love and the blessings of our families,</p>
-        <h3 class="gold">Sindhu & Hariharan</h3>
-        <p>invite you to celebrate the beginning of our forever.</p>
-        <p>Your presence and blessings will make our special day even more beautiful.</p>
-        <p class="heart">With love, always. ♥</p>
-      </div>
-    </article>
-  </section>
-
-  <!-- SCRATCH DATE REVEAL -->
-  <section class="container" id="wedding">
-    <hr class="divider">
-    <div class="eyebrow">A little surprise for you</div>
-    <h2 class="section-title">Reveal Our Wedding Date</h2>
-    <p>✨ Scratch the golden card with your finger ✨</p>
-
-    <div class="scratch-wrap" id="scratchWrap">
-      <div class="scratch-under">
-        <span>OUR BIG DAY</span>
-        <strong>22 · 11 · 2026</strong>
-        <span>♥ Sindhu & Hariharan ♥</span>
-      </div>
-      <canvas id="scratch"></canvas>
-    </div>
-    <p class="note">Rub across the gold surface to reveal the date.</p>
-
-    <hr class="divider">
-    <div class="eyebrow">The countdown to forever</div>
-    <h2 class="section-title">Our Wedding Day</h2>
-    <p class="gold">22 November 2026</p>
-    <div class="countdown">
-      <div class="timebox"><strong id="days">--</strong><span>DAYS</span></div>
-      <div class="timebox"><strong id="hours">--</strong><span>HOURS</span></div>
-      <div class="timebox"><strong id="minutes">--</strong><span>MINUTES</span></div>
-      <div class="timebox"><strong id="seconds">--</strong><span>SECONDS</span></div>
-    </div>
-  </section>
-
-  <!-- VENUE -->
-  <section class="container" id="venue">
-    <hr class="divider">
-    <div class="eyebrow">Save the dates</div>
-    <h2 class="section-title">Join Our Celebration</h2>
-
-    <div class="location-card">
-      <div class="crown">♛</div>
-      <h3 class="gold">Reception</h3>
-      <p>21 November 2026</p>
-      <hr class="divider">
-      <h3 class="gold">Wedding</h3>
-      <p>22 November 2026</p>
-      <hr class="divider">
-      <h3 class="gold">GPJ Mahal</h3>
-      <p>Sholinganallur, Chennai</p>
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://www.google.com/maps/search/?api=1&query=GPJ+Mahal+Sholinganallur+Chennai">
-        📍 Open Location in Maps
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="crown">♛</div>
-    <h2>Sindhu <span class="heart">♥</span> Hariharan</h2>
-    <p>One love. One lifetime. Forever together.</p>
-    <div class="ornament">✦ ❖ ✦</div>
-    <p>22 · 11 · 2026</p>
-    <button class="btn outline" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-      Back to the Beginning ↑
-    </button>
-  </footer>
+<footer>
+ <div style="font-size:38px;color:#ffb9e7">♥</div>
+ <h2>Sindhu & Hariharan</h2>
+ Our story started with a message…<br>and leads us to a lifetime of love. 💜<br>
+ <span style="color:#f8d995">22 · 11 · 2026</span><br>
+ <small>Made with love, for our forever. ✨</small>
+</footer>
 </main>
 
-<!-- FINAL SURPRISE POPUP -->
-<div id="surprise">
-  <div class="surprise-card">
-    <div class="crown">♛</div>
-    <div class="eyebrow">A forever kind of love</div>
-    <h2 class="gold">We're Getting Married!</h2>
-    <h1 style="font-size:38px">Sindhu ♥ Hariharan</h1>
-    <p>22 November 2026</p>
-    <button class="btn" onclick="closeSurprise()">Continue Our Story ✨</button>
-  </div>
-</div>
-
 <script>
-function openInvitation() {
-  document.getElementById("cover").style.display = "none";
-  document.getElementById("invitation").style.display = "block";
-  window.scrollTo(0, 0);
-  setTimeout(() => {
-    document.getElementById("surprise").style.display = "grid";
-  }, 700);
+function toggle(button){
+ button.closest('.card').classList.toggle('open');
 }
-
-function closeSurprise() {
-  document.getElementById("surprise").style.display = "none";
+function revealDate(){
+ document.getElementById('scratchCover').style.display='none';
+ document.getElementById('dateReveal').style.display='block';
 }
-
-function toggleMemory(button) {
-  const card = button.closest(".memory");
-  card.classList.toggle("open");
-}
-
-/* Scratch-card interaction */
-const canvas = document.getElementById("scratch");
-const ctx = canvas.getContext("2d");
-const wrap = document.getElementById("scratchWrap");
-let scratching = false;
-let scratched = false;
-
-function setupScratch() {
-  const rect = wrap.getBoundingClientRect();
-  const ratio = window.devicePixelRatio || 1;
-  canvas.width = rect.width * ratio;
-  canvas.height = rect.height * ratio;
-  canvas.style.width = rect.width + "px";
-  canvas.style.height = rect.height + "px";
-  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-
-  const gradient = ctx.createLinearGradient(0, 0, rect.width, rect.height);
-  gradient.addColorStop(0, "#d6b45e");
-  gradient.addColorStop(.5, "#f9e8b3");
-  gradient.addColorStop(1, "#ad8030");
-  ctx.globalCompositeOperation = "source-over";
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, rect.width, rect.height);
-
-  ctx.fillStyle = "#392048";
-  ctx.textAlign = "center";
-  ctx.font = "bold 17px Georgia";
-  ctx.fillText("✦ SCRATCH TO REVEAL ✦", rect.width / 2, rect.height / 2 - 4);
-  ctx.font = "13px Georgia";
-  ctx.fillText("A special date awaits you", rect.width / 2, rect.height / 2 + 24);
-  ctx.globalCompositeOperation = "destination-out";
-}
-
-function scratchAt(event) {
-  if (!scratching || scratched) return;
-  const rect = canvas.getBoundingClientRect();
-  const point = event.touches ? event.touches[0] : event;
-  const x = point.clientX - rect.left;
-  const y = point.clientY - rect.top;
-  ctx.beginPath();
-  ctx.arc(x, y, 20, 0, Math.PI * 2);
-  ctx.fill();
-
-  if (Math.random() > .82) checkScratch();
-}
-
-function checkScratch() {
-  const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-  let clear = 0;
-  const total = pixels.length / 4;
-  for (let i = 3; i < pixels.length; i += 4) {
-    if (pixels[i] < 80) clear++;
-  }
-  if (clear / total > .38) {
-    scratched = true;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }
-}
-
-canvas.addEventListener("pointerdown", e => {
-  scratching = true;
-  canvas.setPointerCapture(e.pointerId);
-  scratchAt(e);
-});
-canvas.addEventListener("pointermove", scratchAt);
-canvas.addEventListener("pointerup", () => scratching = false);
-canvas.addEventListener("pointercancel", () => scratching = false);
-
-setupScratch();
-window.addEventListener("resize", () => {
-  if (!scratched) setupScratch();
-});
-
-/* Countdown to wedding day */
-function updateCountdown() {
-  // India Standard Time is UTC+05:30.
-  const target = new Date("2026-11-22T00:00:00+05:30").getTime();
-  const remaining = target - Date.now();
-  if (remaining <= 0) {
-    ["days", "hours", "minutes", "seconds"].forEach(id => {
-      document.getElementById(id).textContent = "0";
-    });
-    return;
-  }
-  document.getElementById("days").textContent =
-    Math.floor(remaining / 86400000);
-  document.getElementById("hours").textContent =
-    Math.floor((remaining % 86400000) / 3600000);
-  document.getElementById("minutes").textContent =
-    Math.floor((remaining % 3600000) / 60000);
-  document.getElementById("seconds").textContent =
-    Math.floor((remaining % 60000) / 1000);
+function updateCountdown(){
+ const target=new Date('2026-11-22T00:00:00+05:30').getTime();
+ const diff=target-Date.now();
+ const nums=document.querySelectorAll('#countdown .count-num');
+ if(diff<=0){
+  nums.forEach(n=>n.textContent='0');
+  return;
+ }
+ const vals=[
+  Math.floor(diff/86400000),
+  Math.floor(diff%86400000/3600000),
+  Math.floor(diff%3600000/60000),
+  Math.floor(diff%60000/1000)
+ ];
+ nums.forEach((n,i)=>n.textContent=vals[i]);
 }
 updateCountdown();
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown,1000);
+const bg=document.getElementById('hearts');
+for(let i=0;i<22;i++){
+ const h=document.createElement('span');
+ h.className='heart';
+ h.textContent=['♡','♥','❤'][i%3];
+ h.style.left=(i*4.6)+'%';
+ h.style.animationDuration=(8+i%8)+'s';
+ h.style.animationDelay=(-(i%10))+'s';
+ h.style.fontSize=(15+i%19)+'px';
+ bg.appendChild(h);
+}
 </script>
 </body>
 </html>
