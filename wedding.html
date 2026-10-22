@@ -3,127 +3,180 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hariharan ❤️ Sindhu | Wedding Invitation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hariharan ❤️ Sindhu | Our Forever</title>
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;color:#fff4df;
- font-family:Georgia,serif;
- background:linear-gradient(145deg,#170d2c,#42184e,#170d2c);
- text-align:center;
+ margin:0;background:#190c29;color:#fff1e9;
+ font-family:Georgia,serif;text-align:center;
 }
-main{max-width:700px;margin:auto;padding:24px 18px 50px}
-.card{
- border:1px solid #d6b66c;border-radius:24px;
- padding:30px 18px;margin:20px 0;
- background:rgba(255,255,255,.045);
- box-shadow:0 0 30px #10071d;
+section{padding:35px 18px;max-width:680px;margin:auto}
+.hero{
+ min-height:100vh;display:flex;flex-direction:column;
+ justify-content:center;align-items:center;
+ background:radial-gradient(ellipse at top,#70345f,#251034 65%,#12091e);
+ padding:28px 20px;
 }
-.gold{color:#f2d38a}
-h1{font-size:clamp(30px,8vw,52px);line-height:1.3}
-h2{color:#f2d38a;font-weight:normal}
+h1{font-size:clamp(40px,10vw,64px);color:#f8dca0;line-height:1.2}
+h2{color:#f8dca0;font-weight:normal}
+p{line-height:1.7}
 button{
- background:#f2d38a;color:#32143b;border:0;
- border-radius:30px;padding:13px 22px;
- font-size:16px;margin:8px;cursor:pointer;
+ background:#f5d89c;color:#351438;border:1px solid #fff0c9;
+ border-radius:28px;padding:13px 21px;margin:7px;
+ font-size:15px;cursor:pointer;
 }
-.panel{display:none;margin:18px auto;max-width:550px}
-.panel img{width:100%;border-radius:16px;margin-top:12px}
-.heart{font-size:28px;animation:pulse 1.5s infinite}
-@keyframes pulse{50%{transform:scale(1.2)}}
-#countdown{font-size:22px;color:#f2d38a}
+.card{
+ border:1px solid #a87b99;border-radius:20px;
+ background:#2a1639;padding:24px 17px;margin:22px auto;
+ box-shadow:0 0 25px #10071d;
+}
+.heart{font-size:35px;animation:beat 1.1s infinite}
+@keyframes beat{50%{transform:scale(1.2)}}
+.hidden{display:none}
+.panel{
+ display:none;margin:20px auto;padding:18px;
+ border:1px solid #d5ad75;border-radius:18px;
+ background:#351c43;max-width:520px;
+}
+.gold{color:#f8dca0}
+input[type=range]{width:85%;accent-color:#f5d89c}
+img{max-width:100%;border-radius:12px;margin-top:12px}
+a{color:#f8dca0}
 </style>
 </head>
 <body>
-<main>
-<section class="card">
-<div class="gold">✧ A Royal Wedding Invitation ✧</div>
-<p class="heart">♥</p>
-<h1>Hariharan<br><span class="gold">❤️</span><br>Sindhu</h1>
-<p>Two hearts. One beautiful forever.</p>
-<p>With love, we invite you to celebrate our wedding.</p>
-<h2>22 November 2026</h2>
+
+<section class="hero" id="welcome">
+<p class="gold">✧ A LITTLE LOVE SURPRISE ✧</p>
+<div style="font-size:60px">💌</div>
+<h2>Some stories are written in the stars…</h2>
+<p>And some begin with just one little hello. ✨</p>
+<button onclick="openLove()">💌 Open My Invitation</button>
+<p class="gold">A tiny surprise, made with love ♥</p>
+</section>
+
+<section id="story" class="hidden">
+<div class="card">
+<p class="gold">OUR FOREVER STORY</p>
+<div class="heart">💗</div>
+<h1 id="names" style="opacity:0">Hariharan<br>❤️<br>Sindhu</h1>
+<p id="tagline" class="hidden">Two hearts. One beautiful forever.</p>
+<button id="continue" class="hidden" onclick="revealNext()">Tap to continue ♥</button>
+</div>
+
+<div id="dateSection" class="card hidden">
+<h2>💍 Our Wedding Day</h2>
+<p>Move the slider to reveal our special date!</p>
+<div id="scratchCover" style="padding:22px;border-radius:15px;background:#f5d89c;color:#351438">
+<h2 style="color:#351438">Our forever date is a secret… 🤫</h2>
+<input aria-label="Reveal wedding date" type="range" min="0" max="100" value="0" oninput="scratch(this.value)">
+<p id="scratchHint">Slide to reveal ✨</p>
+</div>
+<div id="weddingDate" class="hidden">
+<h1>22 · 11 · 2026</h1>
 <p>GPJ Mahal<br>Sholinganallur, Chennai</p>
-</section>
+</div>
+</div>
 
-<section class="card">
-<h2>Our Wedding Countdown</h2>
-<div id="countdown"></div>
-</section>
-
-<section class="card">
-<h2>Our Love Story</h2>
-<p>Every little moment brought us closer to forever.</p>
-
+<div class="card">
+<h2>💌 Our Little Memories</h2>
+<p>Every love story has a beginning… here's ours.</p>
 <button onclick="show('chat')">💌 First Chat</button>
-<button onclick="show('meet')">✨ First Meetup</button>
+<button onclick="show('meet')">☕ First Meetup</button>
 <button onclick="show('photos')">📸 Our Photos</button>
-<button onclick="show('invite')">💖 Invite Friends & Family</button>
+<button onclick="show('invite')">💝 Invite Friends & Family</button>
 
 <div class="panel" id="chat">
 <h2>Our First Chat</h2>
-<p>07 May 2024</p>
-<p>Our story began with a little conversation…</p>
-<p>Add your original chat screenshot here.</p>
-<img src="chat.jpg" alt="First chat" onerror="this.style.display='none'">
+<p class="gold">14 · 01 · 2024</p>
+<p>One little conversation, a beautiful beginning. 💕</p>
+<p>Add your original chat screenshot as <b>chat.jpg</b>.</p>
+<img src="chat.jpg" alt="Our first chat" onerror="this.style.display='none'">
 </div>
 
 <div class="panel" id="meet">
 <h2>Our First Meetup</h2>
-<p>21 May 2024 · Frozen Feast</p>
-<p>One beautiful meeting, a lifetime of memories.</p>
-<img src="meetup.jpg" alt="First meetup" onerror="this.style.display='none'">
+<p class="gold">11 · 05 · 2024</p>
+<p>📍 Frozen Feast</p>
+<p>One special day, a memory to keep forever. 🥹❤️</p>
+<p>Add your original meetup photo as <b>meetup.jpg</b>.</p>
+<img src="meetup.jpg" alt="Our first meetup" onerror="this.style.display='none'">
 </div>
 
 <div class="panel" id="photos">
-<h2>Our Beautiful Memories</h2>
-<p>Our favourite moments together.</p>
-<img src="couple1.jpg" alt="Couple photo 1" onerror="this.style.display='none'">
-<img src="couple2.jpg" alt="Couple photo 2" onerror="this.style.display='none'">
+<h2>Our Beautiful Moments</h2>
+<p>Little moments, endless love. 📷</p>
+<p>Add photos named <b>couple1.jpg</b> and <b>couple2.jpg</b>.</p>
+<img src="couple1.jpg" alt="Couple memory one" onerror="this.style.display='none'">
+<img src="couple2.jpg" alt="Couple memory two" onerror="this.style.display='none'">
 </div>
 
 <div class="panel" id="invite">
-<h2>Celebrate With Us</h2>
-<p>Your presence will make our day extra special.</p>
+<h2>You're Special to Us 💗</h2>
+<p>Your presence will make our day more beautiful.</p>
+<p>Join us to celebrate our wedding!</p>
 <p>Hariharan ❤️ Sindhu</p>
 <p>22 November 2026 · GPJ Mahal</p>
-<button onclick="shareInvite()">Share Invitation</button>
+<button onclick="shareInvite()">💌 Share on WhatsApp</button>
+</div>
+</div>
+
+<div class="card">
+<h2>⏳ Countdown to Forever</h2>
+<h1 id="countdown">Loading…</h1>
+<p class="gold">Until our special day 💍</p>
+</div>
+
+<div class="card">
+<p>Same sky, same dreams…</p>
+<h2>Forever Us ❤️</h2>
+<p>With love,<br>Hariharan ♥ Sindhu</p>
 </div>
 </section>
 
-<footer class="gold">Made with love, for our forever ♥</footer>
-</main>
-
 <script>
+function openLove(){
+ document.getElementById('story').classList.remove('hidden');
+ document.getElementById('welcome').style.display='none';
+ document.getElementById('names').style.opacity=1;
+ document.getElementById('tagline').classList.remove('hidden');
+ document.getElementById('continue').classList.remove('hidden');
+ document.getElementById('dateSection').classList.remove('hidden');
+}
+function revealNext(){
+ document.getElementById('dateSection').scrollIntoView({behavior:'smooth'});
+}
+function scratch(v){
+ if(Number(v)>=85){
+  document.getElementById('weddingDate').classList.remove('hidden');
+  document.getElementById('scratchHint').textContent='Surprise! Our forever begins ❤️';
+ }
+}
 function show(id){
  document.querySelectorAll('.panel').forEach(p=>p.style.display='none');
- const panel=document.getElementById(id);
- panel.style.display='block';
- panel.scrollIntoView({behavior:'smooth',block:'center'});
+ const el=document.getElementById(id);
+ el.style.display='block';
+ el.scrollIntoView({behavior:'smooth',block:'center'});
 }
 function updateCountdown(){
- const wedding=new Date('2026-11-22T00:00:00+05:30');
- const diff=wedding-new Date();
- if(diff<=0){document.getElementById('countdown').textContent="Our forever begins! ❤️";return;}
- const days=Math.floor(diff/86400000);
- const hours=Math.floor(diff/3600000)%24;
- const mins=Math.floor(diff/60000)%60;
- const secs=Math.floor(diff/1000)%60;
- document.getElementById('countdown').textContent=
- days+' days · '+hours+' hrs · '+mins+' mins · '+secs+' secs';
+ const target=new Date('2026-11-22T00:00:00+05:30');
+ const diff=target-new Date();
+ const el=document.getElementById('countdown');
+ if(diff<=0){el.textContent='Forever begins! ❤️';return;}
+ const d=Math.floor(diff/86400000);
+ const h=Math.floor(diff/3600000)%24;
+ const m=Math.floor(diff/60000)%60;
+ const s=Math.floor(diff/1000)%60;
+ el.textContent=d+' days '+h+' hrs '+m+' mins '+s+' secs';
+}
+function shareInvite(){
+ const url=location.href;
+ const msg='You are invited to Hariharan ❤️ Sindhu’s wedding! 22 November 2026, GPJ Mahal, Sholinganallur, Chennai. '+url;
+ window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
 }
 updateCountdown();
 setInterval(updateCountdown,1000);
-function shareInvite(){
- const url=location.href;
- const message='You are invited to Hariharan ❤️ Sindhu’s wedding on 22 November 2026! '+url;
- if(navigator.share){
-  navigator.share({title:'Wedding Invitation',text:message,url:url});
- }else{
-  window.open('https://wa.me/?text='+encodeURIComponent(message),'_blank');
- }
-}
 </script>
 </body>
 </html>
