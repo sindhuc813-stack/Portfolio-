@@ -4,724 +4,360 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hariharan ♥ Sindhu | Our Wedding</title>
+<title>Hariharan ❤️ Sindhu | Our Love Story</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,'Times New Roman',serif;
+  background:#fff8f7;color:#633d4b;
+  overflow-x:hidden
 }
-
-:root {
-  --pink: #f8dce7;
-  --dark-pink: #a84970;
-  --gold: #bd9652;
-  --cream: #fffaf5;
-  --text: #684451;
+button{font-family:inherit;cursor:pointer}
+#cover{
+  position:fixed;inset:0;z-index:10;
+  background:linear-gradient(145deg,#fff0f2,#fce0e8,#fff9ed);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;padding:24px;
+  transition:opacity .8s,transform .8s
 }
-
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: linear-gradient(145deg, #fff8f5, #fbe5ed, #fff4e8);
-  color: var(--text);
-  min-height: 100vh;
-  overflow-x: hidden;
+#cover.hide{opacity:0;transform:scale(1.1);pointer-events:none}
+.small{letter-spacing:4px;font-size:11px;text-transform:uppercase}
+.cover-heart{font-size:45px;animation:pulse 1.5s infinite}
+h1{font-size:clamp(36px,9vw,62px);font-weight:normal;margin:20px 0;color:#a44c6c}
+.amp{color:#d49a58}
+.cover-text{font-size:15px;line-height:1.9;margin-bottom:26px}
+.btn{
+  border:0;border-radius:30px;padding:14px 24px;
+  background:#a94f70;color:white;font-size:14px;
+  box-shadow:0 7px 20px #a94f7030
 }
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+.btn:active{transform:scale(.96)}
+header{
+  position:sticky;top:0;z-index:5;
+  background:#fff8f7ed;backdrop-filter:blur(10px);
+  padding:13px 12px;border-bottom:1px solid #f2d9df;
+  text-align:center
 }
-
-#hearts {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 5;
+header a{color:#94516a;text-decoration:none;font-size:12px;
+  margin:5px 8px;display:inline-block}
+.hero{
+  min-height:70vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:60px 20px;
+  background:radial-gradient(ellipse at top,#f8dce5,transparent 65%)
 }
-
-.heart {
-  position: absolute;
-  bottom: -40px;
-  color: #dc729a;
-  animation: floatUp linear forwards;
-  opacity: .7;
+.hero h2{font-size:clamp(34px,8vw,53px);font-weight:normal;margin:18px 0}
+.hero p{line-height:1.9;font-size:14px}
+.section{padding:65px 20px;text-align:center;scroll-margin-top:75px}
+.section:nth-of-type(even){background:#fff0f2}
+.kicker{font-size:11px;letter-spacing:4px;color:#b27a87;text-transform:uppercase}
+.section h2{font-size:clamp(27px,6vw,38px);font-weight:normal;margin:13px 0 15px}
+.description{font-size:14px;line-height:1.9;max-width:480px;margin:0 auto 25px}
+.cards{
+  max-width:800px;margin:auto;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px
 }
-
-@keyframes floatUp {
-  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-  15% { opacity: .8; }
-  100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+.card{
+  border:1px solid #f0d4dc;border-radius:18px;
+  padding:22px 12px;background:#fffdfb;
+  color:#704455;text-align:center;
+  transition:transform .3s,box-shadow .3s
 }
-
-.screen {
-  display: none;
-  min-height: 100vh;
-  padding: 25px 16px 45px;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn .65s ease;
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 24px #9d53651b}
+.card .emoji{font-size:32px;display:block;margin-bottom:12px}
+.card strong{font-size:17px;font-weight:normal}
+.card small{display:block;font-size:11px;line-height:1.7;margin-top:8px}
+.detail{
+  display:none;margin:20px auto 0;max-width:500px;
+  padding:22px;border:1px solid #edcbd5;border-radius:18px;
+  background:white;line-height:1.9;font-size:14px;
+  animation:rise .45s ease
 }
-
-.screen.active {
-  display: flex;
+.detail.show{display:block}
+.photo{
+  width:100%;height:170px;object-fit:cover;
+  border-radius:12px;margin:12px 0;
+  background:#f7e1e7;color:#8d5365
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+.countbox{
+  display:flex;justify-content:center;gap:10px;
+  margin:25px auto;flex-wrap:wrap
 }
-
-.card {
-  width: 100%;
-  max-width: 560px;
-  background: rgba(255, 252, 248, .93);
-  border: 1px solid #dfc18a;
-  outline: 1px solid #ead8b7;
-  outline-offset: 6px;
-  border-radius: 24px;
-  padding: 30px 22px;
-  text-align: center;
-  box-shadow: 0 15px 45px #a849701a;
-  position: relative;
-  z-index: 1;
+.time{
+  background:#fff;border:1px solid #efd2dc;
+  padding:16px 12px;border-radius:14px;min-width:67px
 }
-
-.eyebrow {
-  color: var(--gold);
-  font-size: 12px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
+.time strong{display:block;font-size:25px;font-weight:normal;color:#a44c6c}
+.time span{font-size:10px;letter-spacing:1px}
+.invite{
+  max-width:480px;margin:auto;padding:30px 20px;
+  background:#fffdf8;border:1px solid #d7b77e;
+  outline:1px solid #ead7b2;outline-offset:-7px;
+  line-height:2
 }
-
-h1 {
-  font-size: clamp(34px, 9vw, 53px);
-  font-weight: normal;
-  color: var(--dark-pink);
-  line-height: 1.15;
+.invite h3{font-size:30px;font-weight:normal;color:#a44c6c;margin:14px 0}
+footer{text-align:center;padding:45px 20px;background:#f9e5e9;line-height:2}
+#topBtn{
+  position:fixed;bottom:18px;right:16px;z-index:4;
+  border:0;border-radius:50%;width:44px;height:44px;
+  background:#a94f70;color:white;font-size:20px
 }
-
-h2 {
-  font-size: clamp(27px, 7vw, 38px);
-  color: var(--dark-pink);
-  font-weight: normal;
-  margin-bottom: 16px;
+.heart{
+  position:fixed;bottom:-30px;pointer-events:none;
+  z-index:8;animation:floatUp 5s linear forwards
 }
-
-h3 {
-  font-size: 21px;
-  font-weight: normal;
-  color: var(--dark-pink);
-  margin: 12px 0;
-}
-
-p {
-  line-height: 1.8;
-  font-size: 15px;
-}
-
-.amp {
-  color: var(--gold);
-  font-size: 29px;
-  display: block;
-  margin: 7px 0;
-}
-
-.flower {
-  font-size: 27px;
-  margin: 12px 0;
-}
-
-.main-button {
-  border: 1px solid var(--gold);
-  background: linear-gradient(135deg, #fff7f4, #f8dce7);
-  color: #88405e;
-  padding: 13px 20px;
-  border-radius: 30px;
-  font-size: 15px;
-  transition: .25s;
-  margin-top: 17px;
-  box-shadow: 0 4px 12px #a8497010;
-}
-
-.main-button:hover {
-  transform: translateY(-2px);
-  background: #f6d4e1;
-}
-
-.back-button {
-  display: block;
-  margin: 22px auto 0;
-  border: none;
-  background: transparent;
-  color: #965c70;
-  font-size: 15px;
-  padding: 10px;
-}
-
-.small-note {
-  font-size: 12px;
-  opacity: .8;
-  margin-top: 17px;
-}
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 24px;
-}
-
-.menu-item {
-  min-height: 105px;
-  border: 1px solid #e5c7d2;
-  border-radius: 16px;
-  background: #fff8f7;
-  padding: 17px 9px;
-  color: var(--text);
-  transition: .25s;
-}
-
-.menu-item:hover {
-  transform: translateY(-3px);
-  background: #fbe8ef;
-  border-color: var(--gold);
-}
-
-.menu-item .emoji {
-  display: block;
-  font-size: 25px;
-  margin-bottom: 9px;
-}
-
-.menu-item span:last-child {
-  font-size: 14px;
-}
-
-.story-date {
-  color: var(--gold);
-  letter-spacing: 2px;
-  font-size: 13px;
-  margin: 8px 0 18px;
-}
-
-.divider {
-  color: var(--gold);
-  margin: 18px 0;
-  letter-spacing: 5px;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.photo-tile {
-  border: 1px solid #dfc18a;
-  background: #fff4f5;
-  border-radius: 16px;
-  padding: 8px;
-  color: var(--text);
-  overflow: hidden;
-}
-
-.photo-tile img {
-  width: 100%;
-  height: 155px;
-  object-fit: cover;
-  border-radius: 11px;
-  display: block;
-  background: #f5dce5;
-}
-
-.photo-tile .caption {
-  padding: 9px 2px 4px;
-  font-size: 13px;
-}
-
-.photo-placeholder {
-  height: 155px;
-  border-radius: 11px;
-  background: linear-gradient(135deg, #f7dce7, #fff0e1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  color: #97566e;
-  font-size: 13px;
-}
-
-.photo-placeholder b {
-  font-size: 29px;
-  font-weight: normal;
-}
-
-.secret-card {
-  min-height: 190px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: 1px dashed var(--gold);
-  border-radius: 20px;
-  background: linear-gradient(135deg, #fff1f5, #fff9eb);
-  padding: 25px 15px;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.secret-card:hover {
-  transform: scale(1.015);
-}
-
-.secret-date {
-  font-size: 30px;
-  color: var(--dark-pink);
-  margin-top: 13px;
-}
-
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 7px;
-  margin: 24px 0 12px;
-}
-
-.time-box {
-  padding: 13px 3px;
-  border: 1px solid #e7c6d1;
-  border-radius: 13px;
-  background: #fff4f5;
-}
-
-.time-box strong {
-  display: block;
-  color: var(--dark-pink);
-  font-size: clamp(22px, 6vw, 31px);
-  font-weight: normal;
-}
-
-.time-box span {
-  display: block;
-  font-size: 10px;
-  letter-spacing: 1px;
-  margin-top: 6px;
-}
-
-.invite-date {
-  font-size: 25px;
-  color: var(--dark-pink);
-  margin: 16px 0;
-}
-
-.location {
-  color: #8b5b45;
-  line-height: 1.9;
-  margin-top: 8px;
-}
-
-.photo-viewer {
-  position: fixed;
-  inset: 0;
-  z-index: 20;
-  background: #301723eF;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-}
-
-.photo-viewer.open {
-  display: flex;
-}
-
-.photo-viewer img {
-  max-width: 100%;
-  max-height: 78vh;
-  border-radius: 15px;
-  border: 2px solid #dfc18a;
-}
-
-.viewer-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #fff8f5;
-  border: none;
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  font-size: 23px;
-  color: var(--dark-pink);
-}
-
-footer {
-  font-size: 11px;
-  opacity: .65;
-  margin-top: 22px;
-}
-
-@media (max-width: 360px) {
-  .card { padding: 25px 15px; }
-  .menu-grid { gap: 8px; }
-  .menu-item { min-height: 95px; }
-  .photo-tile img, .photo-placeholder { height: 125px; }
-  .countdown { gap: 4px; }
-  .time-box span { letter-spacing: 0; }
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes pulse{50%{transform:scale(1.18)}}
+@keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-width:380px){
+  .cards{gap:9px}.card{padding:18px 8px}
+  header a{margin:4px;font-size:11px}
 }
 </style>
 </head>
 
 <body>
-<div id="hearts"></div>
 
-<!-- COVER -->
-<section class="screen active" id="cover">
-  <div class="card">
-    <div class="flower">❀ 💗 ❀</div>
-    <div class="eyebrow">A little story, a forever love</div>
-    <h1>Hariharan</h1>
-    <span class="amp">♥</span>
-    <h1>Sindhu</h1>
-    <div class="divider">✦ ❀ ✦</div>
-    <p>Two hearts, one beautiful journey.</p>
-    <p>Our forever begins with a little love story...</p>
-    <button class="main-button" onclick="showScreen('home')">
-      Open Our Love Story 💌
-    </button>
-    <footer>MADE WITH LOVE · H & S</footer>
-  </div>
-</section>
-
-<!-- HOME MENU -->
-<section class="screen" id="home">
-  <div class="card">
-    <div class="eyebrow">Our little world</div>
-    <h2>Hariharan <span style="color:#bd9652">♥</span> Sindhu</h2>
-    <p>Every little memory brought us here. Choose a little chapter of our love. ♡</p>
-
-    <div class="menu-grid">
-      <button class="menu-item" onclick="showScreen('chat')">
-        <span class="emoji">💌</span>
-        <span>Our First Chat</span>
-      </button>
-
-      <button class="menu-item" onclick="showScreen('meet')">
-        <span class="emoji">🥤</span>
-        <span>Our First Meet</span>
-      </button>
-
-      <button class="menu-item" onclick="showScreen('photos')">
-        <span class="emoji">📸</span>
-        <span>Our Memories</span>
-      </button>
-
-      <button class="menu-item" onclick="showScreen('secret')">
-        <span class="emoji">🎁</span>
-        <span>Secret Card</span>
-      </button>
-
-      <button class="menu-item" onclick="showScreen('countdown')">
-        <span class="emoji">⏳</span>
-        <span>Wedding Countdown</span>
-      </button>
-
-      <button class="menu-item" onclick="showScreen('invite')">
-        <span class="emoji">💍</span>
-        <span>Wedding Invitation</span>
-      </button>
-    </div>
-
-    <div class="flower">♡ ♡ ♡</div>
-    <button class="back-button" onclick="showScreen('cover')">← Back to cover</button>
-  </div>
-</section>
-
-<!-- FIRST CHAT -->
-<section class="screen" id="chat">
-  <div class="card">
-    <div class="flower">💌</div>
-    <div class="eyebrow">Chapter One</div>
-    <h2>Our First Chat</h2>
-    <div class="story-date">07 · 05 · 2024</div>
-    <div class="divider">✧ ♡ ✧</div>
-    <p>It started with a simple conversation...</p>
-    <p>Neither of us knew that a little chat would become such a beautiful part of our story.</p>
-    <p>One message became many. And slowly, you became my favourite notification. 💗</p>
-    <div class="divider">♡</div>
-    <p><i>Some conversations become memories. Ours became forever.</i></p>
-    <button class="main-button" onclick="showScreen('photos')">See Our Memories 📸</button>
-    <button class="back-button" onclick="showScreen('home')">← Back to our story</button>
-  </div>
-</section>
-
-<!-- FIRST MEET -->
-<section class="screen" id="meet">
-  <div class="card">
-    <div class="flower">🥤 💕</div>
-    <div class="eyebrow">Chapter Two</div>
-    <h2>Our First Meet</h2>
-    <div class="story-date">21 · 05 · 2024</div>
-    <div class="divider">✧ ♡ ✧</div>
-    <h3>Frozen Feast</h3>
-    <p>Our first meet, our first little memories...</p>
-    <p>A simple place, a special day, and a feeling that made everything different.</p>
-    <p>Maybe it looked like an ordinary day to everyone else. But for us, it became a day worth remembering forever. 💞</p>
-    <div class="divider">♡ ♡ ♡</div>
-    <p><i>One meeting. A thousand feelings. One beautiful us.</i></p>
-    <button class="main-button" onclick="showScreen('photos')">Open Our Photos 📸</button>
-    <button class="back-button" onclick="showScreen('home')">← Back to our story</button>
-  </div>
-</section>
-
-<!-- PHOTO GALLERY -->
-<section class="screen" id="photos">
-  <div class="card">
-    <div class="eyebrow">Little moments, forever memories</div>
-    <h2>Our Memory Gallery</h2>
-    <p>Tap a photo to view it bigger. ♡</p>
-
-    <div class="photo-grid">
-
-      <button class="photo-tile" onclick="openPhoto('chat.jpg','Our First Chat 💌')">
-        <img src="chat.jpg" alt="Our first chat"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-placeholder" style="display:none">
-          <b>💌</b><span>Add chat.jpg</span>
-        </div>
-        <div class="caption">Our First Chat 💌</div>
-      </button>
-
-      <button class="photo-tile" onclick="openPhoto('meet.jpg','Our First Meet 🥤')">
-        <img src="meet.jpg" alt="Our first meet"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-placeholder" style="display:none">
-          <b>🥤</b><span>Add meet.jpg</span>
-        </div>
-        <div class="caption">Our First Meet 🥤</div>
-      </button>
-
-      <button class="photo-tile" onclick="openPhoto('couple.jpg','Our Together Forever 💗')">
-        <img src="couple.jpg" alt="Our couple photo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-placeholder" style="display:none">
-          <b>💗</b><span>Add couple.jpg</span>
-        </div>
-        <div class="caption">Our Together Forever 💗</div>
-      </button>
-
-      <button class="photo-tile" onclick="showScreen('invite')">
-        <div class="photo-placeholder">
-          <b>💍</b><span>Our Wedding Day</span>
-        </div>
-        <div class="caption">Our Forever Begins 💍</div>
-      </button>
-
-    </div>
-
-    <p class="small-note">Photo names: chat.jpg · meet.jpg · couple.jpg</p>
-    <button class="back-button" onclick="showScreen('home')">← Back to our story</button>
-  </div>
-</section>
-
-<!-- FULL PHOTO VIEW -->
-<div class="photo-viewer" id="photoViewer" onclick="closePhoto()">
-  <button class="viewer-close" onclick="closePhoto()">×</button>
-  <img id="largePhoto" src="" alt="Memory photo">
+<div id="cover">
+  <div class="small">A little story, a lifetime of love</div>
+  <div class="cover-heart">♡</div>
+  <h1>Hariharan <span class="amp">♥</span><br>Sindhu</h1>
+  <p class="cover-text">Two hearts. One beautiful story.<br>And a forever waiting to begin...</p>
+  <button class="btn" onclick="openStory()">Open Our Love Story ♡</button>
+  <p style="margin-top:28px;font-size:12px">Scroll, explore & fall in love with our story</p>
 </div>
 
-<!-- SECRET CARD -->
-<section class="screen" id="secret">
-  <div class="card">
-    <div class="eyebrow">A little secret, just for you</div>
-    <h2>Your Secret Card 🎁</h2>
-    <p>Something beautiful is waiting inside...</p>
+<header>
+  <a href="#home">HOME</a>
+  <a href="#story">OUR STORY</a>
+  <a href="#memories">MEMORIES</a>
+  <a href="#countdown">COUNTDOWN</a>
+  <a href="#wedding">WEDDING</a>
+</header>
 
-    <div class="secret-card" id="secretCard" onclick="revealSecret()">
-      <div id="secretFront">
-        <div style="font-size:42px">💌</div>
-        <h3>Tap to Reveal</h3>
-        <p>Our special forever date is hidden here.</p>
-        <p class="small-note">♡ A little surprise for you ♡</p>
-      </div>
-      <div id="secretBack" style="display:none">
-        <div style="font-size:36px">💍</div>
-        <p>THE DAY OUR FOREVER BEGINS</p>
-        <div class="secret-date">22 · 11 · 2026</div>
-        <p>Hariharan ♥ Sindhu</p>
-      </div>
-    </div>
+<main>
+<section class="hero" id="home">
+  <div class="cover-heart">💗</div>
+  <p class="kicker">Our forever begins</p>
+  <h2>Hariharan <span class="amp">♥</span> Sindhu</h2>
+  <p>A chance meeting, a secret love,<br>and a beautiful forever.</p>
+  <p style="margin-top:25px">↓ Scroll to discover our story ↓</p>
+</section>
 
-    <button class="main-button" onclick="showScreen('countdown')">See the Countdown ⏳</button>
-    <button class="back-button" onclick="showScreen('home')">← Back to our story</button>
+<section class="section" id="story">
+  <p class="kicker reveal">Chapter one</p>
+  <h2 class="reveal">Every Love Has a Beginning ♡</h2>
+  <p class="description reveal">Oru chinna conversation-la start aana namma story... ippo lifetime journey-ah maarudhu. 💕</p>
+
+  <div class="cards">
+    <button class="card reveal" onclick="toggleDetail('chat')">
+      <span class="emoji">💌</span>
+      <strong>Our First Chat</strong>
+      <small>07 May 2024<br>Tap to open ♡</small>
+    </button>
+    <button class="card reveal" onclick="toggleDetail('meet')">
+      <span class="emoji">🧋</span>
+      <strong>Our First Meet</strong>
+      <small>Frozen Feast<br>21 May 2024</small>
+    </button>
+  </div>
+
+  <div class="detail" id="chat">
+    <div style="font-size:38px">💌</div>
+    <h3>Where It All Began</h3>
+    <p><strong>07 · 05 · 2024</strong></p>
+    <p>Oru simple chat... aana adhu namma life-la oru beautiful chapter open pannuchu. Andha first conversation eppovume special. ❤️</p>
+  </div>
+
+  <div class="detail" id="meet">
+    <div style="font-size:38px">🥤</div>
+    <h3>Our First Meet</h3>
+    <p><strong>Frozen Feast · 21 May 2024</strong></p>
+    <p>First time face-to-face meet pannina andha naal... chinna moments, cute memories, marakka mudiyadha feeling. Adhu namma story-la special day. 💗</p>
+    <img class="photo" src="meet.jpg" alt="Our first meet photo">
+    <small>Photo theriyala na GitHub-la meet.jpg upload pannunga.</small>
   </div>
 </section>
 
-<!-- COUNTDOWN -->
-<section class="screen" id="countdown">
-  <div class="card">
-    <div class="flower">⏳ 💗 💍</div>
-    <div class="eyebrow">Counting every heartbeat</div>
-    <h2>Until Our Forever</h2>
-    <p>Hariharan <span style="color:#bd9652">♥</span> Sindhu</p>
-    <div class="invite-date">22 November 2026</div>
+<section class="section" id="memories">
+  <p class="kicker reveal">Chapter two</p>
+  <h2 class="reveal">Little Moments, Big Love 💞</h2>
+  <p class="description reveal">Namma memories ellame precious. Ovvoru card-ah click panni paaru!</p>
 
-    <div class="countdown">
-      <div class="time-box">
-        <strong id="days">--</strong>
-        <span>DAYS</span>
-      </div>
-      <div class="time-box">
-        <strong id="hours">--</strong>
-        <span>HOURS</span>
-      </div>
-      <div class="time-box">
-        <strong id="minutes">--</strong>
-        <span>MINUTES</span>
-      </div>
-      <div class="time-box">
-        <strong id="seconds">--</strong>
-        <span>SECONDS</span>
-      </div>
-    </div>
+  <div class="cards">
+    <button class="card reveal" onclick="toggleDetail('memory1')">
+      <span class="emoji">📷</span>
+      <strong>Our Picture</strong>
+      <small>A moment to keep forever</small>
+    </button>
+    <button class="card reveal" onclick="toggleDetail('memory2')">
+      <span class="emoji">🏍️</span>
+      <strong>Our Special Memories</strong>
+      <small>Little adventures together</small>
+    </button>
+    <button class="card reveal" onclick="toggleDetail('secret')">
+      <span class="emoji">🔐</span>
+      <strong>Secret Love Note</strong>
+      <small>Only for you ❤️</small>
+    </button>
+    <button class="card reveal" onclick="toggleDetail('forever')">
+      <span class="emoji">💍</span>
+      <strong>Our Forever</strong>
+      <small>The next beautiful chapter</small>
+    </button>
+  </div>
 
-    <p id="countdownMessage">Every second takes us closer to forever. 💕</p>
-    <div class="divider">✧ ♡ ✧</div>
-    <button class="main-button" onclick="showScreen('invite')">Open Wedding Invitation 💌</button>
-    <button class="back-button" onclick="showScreen('home')">← Back to our story</button>
+  <div class="detail" id="memory1">
+    <h3>Us, Always ♡</h3>
+    <img class="photo" src="couple.jpg" alt="Our couple photo">
+    <p>One photo, a thousand feelings. Innum neraya memories create panna porom! 💕</p>
+  </div>
+
+  <div class="detail" id="memory2">
+    <h3>Our Little Adventures 🏍️</h3>
+    <img class="photo" src="meet.jpg" alt="Our special memory">
+    <p>Places may change, days may pass... but the person beside you makes every memory special.</p>
+  </div>
+
+  <div class="detail" id="secret">
+    <h3>My Secret to You 💌</h3>
+    <p>“Un kooda pesura ovvoru moment-um special. Unna choose pannadhu oru moment illa... en future full-ah un kooda irukkanum-ngra aasai. Ippo nee en love mattum illa, en forever.” ❤️</p>
+    <p style="margin-top:12px">Forever yours ♡</p>
+  </div>
+
+  <div class="detail" id="forever">
+    <h3>And Now... Forever 💍</h3>
+    <p>Our next chapter begins on 22 November 2026.</p>
+    <p>Two names, one promise, one lifetime. ❤️</p>
   </div>
 </section>
 
-<!-- WEDDING INVITATION -->
-<section class="screen" id="invite">
-  <div class="card">
-    <div class="flower">❀ 💍 ❀</div>
-    <div class="eyebrow">With love and blessings</div>
-    <p>Two hearts are becoming one family.</p>
-    <p style="margin-top:18px">Together with our families,</p>
-    <p>we invite you to celebrate the wedding of</p>
-
-    <h1 style="margin-top:22px">Hariharan</h1>
-    <span class="amp">♥</span>
-    <h1>Sindhu</h1>
-
-    <div class="divider">✧ ❀ ✧</div>
-    <p>On our most special day</p>
-    <div class="invite-date">Sunday<br>22 November 2026</div>
-
-    <div class="location">
-      <h3>Wedding Venue</h3>
-      <p><strong>GPJ Mahal</strong></p>
-      <p>Sholinganallur, Chennai</p>
-    </div>
-
-    <div class="divider">♡ ♡ ♡</div>
-    <p>Join us as we begin our forever.</p>
-    <p><i>Your presence and blessings mean the world to us.</i></p>
-
-    <button class="main-button" onclick="showScreen('countdown')">Our Countdown ⏳</button>
-    <button class="back-button" onclick="showScreen('home')">← Back to our story</button>
-    <footer>WITH LOVE, HARIHARAN ♥ SINDHU</footer>
+<section class="section" id="countdown">
+  <p class="kicker reveal">The big day</p>
+  <h2 class="reveal">Counting Down to Forever 💍</h2>
+  <p class="description reveal">Our wedding day is getting closer!</p>
+  <div class="countbox reveal">
+    <div class="time"><strong id="days">--</strong><span>DAYS</span></div>
+    <div class="time"><strong id="hours">--</strong><span>HOURS</span></div>
+    <div class="time"><strong id="mins">--</strong><span>MINUTES</span></div>
+    <div class="time"><strong id="secs">--</strong><span>SECONDS</span></div>
   </div>
+  <p>22 · 11 · 2026 ♡</p>
 </section>
+
+<section class="section" id="wedding">
+  <p class="kicker reveal">With love & blessings</p>
+  <h2 class="reveal">You're Invited! 💌</h2>
+  <div class="invite reveal">
+    <p style="letter-spacing:3px;font-size:11px">TO CELEBRATE OUR LOVE</p>
+    <div style="font-size:35px;margin:15px">♡</div>
+    <h3>Hariharan<br><span class="amp">♥</span><br>Sindhu</h3>
+    <p>Joyfully beginning our forever</p>
+    <p style="font-size:24px;color:#a44c6c">22 November 2026</p>
+    <p><strong>Venue</strong></p>
+    <p>GPJ Mahal<br>Sholinganallur, Chennai</p>
+    <p style="margin-top:16px">Your presence will make our day more beautiful. ❤️</p>
+  </div>
+  <button class="btn" style="margin-top:25px" onclick="shareInvite()">Share Our Invitation ♡</button>
+</section>
+</main>
+
+<footer>
+  <div style="font-size:32px">❤️</div>
+  <p>Hariharan & Sindhu</p>
+  <p>Our story. Our love. Our forever.</p>
+  <p style="font-size:12px">Made with love, for our forever ♡</p>
+</footer>
+
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script>
-function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(function(screen) {
-    screen.classList.remove('active');
-  });
+function openStory(){
+  document.getElementById('cover').classList.add('hide');
+  setTimeout(()=>document.getElementById('cover').style.display='none',850);
+  document.getElementById('home').scrollIntoView({behavior:'smooth'});
+  hearts();
+}
 
-  var target = document.getElementById(id);
-  if (target) {
-    target.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+function toggleDetail(id){
+  const target=document.getElementById(id);
+  const wasOpen=target.classList.contains('show');
+  document.querySelectorAll('.detail').forEach(d=>d.classList.remove('show'));
+  if(!wasOpen){
+    target.classList.add('show');
+    setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'center'}),100);
+    hearts();
   }
-
-  closePhoto();
 }
 
-function revealSecret() {
-  document.getElementById('secretFront').style.display = 'none';
-  document.getElementById('secretBack').style.display = 'block';
-}
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
 
-function openPhoto(src, title) {
-  var viewer = document.getElementById('photoViewer');
-  var image = document.getElementById('largePhoto');
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-  image.onerror = function() {
-    closePhoto();
-    alert('Photo not uploaded yet. Upload ' + src + ' to the same GitHub repository as wedding.html.');
-  };
-
-  image.src = src;
-  image.alt = title;
-  viewer.classList.add('open');
-}
-
-function closePhoto() {
-  var viewer = document.getElementById('photoViewer');
-  if (viewer) viewer.classList.remove('open');
-}
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') closePhoto();
-});
-
-/* Wedding countdown: India Standard Time */
-function updateCountdown() {
-  var weddingDate = new Date('2026-11-22T00:00:00+05:30').getTime();
-  var now = Date.now();
-  var distance = weddingDate - now;
-
-  if (distance <= 0) {
-    document.getElementById('days').textContent = '0';
-    document.getElementById('hours').textContent = '0';
-    document.getElementById('minutes').textContent = '0';
-    document.getElementById('seconds').textContent = '0';
-    document.getElementById('countdownMessage').textContent =
-      'Our special day is here! Happy Wedding Day! 💍💗';
+function updateCountdown(){
+  const wedding=new Date('2026-11-22T00:00:00+05:30').getTime();
+  const diff=wedding-Date.now();
+  if(diff<=0){
+    document.getElementById('days').textContent='0';
+    document.getElementById('hours').textContent='0';
+    document.getElementById('mins').textContent='0';
+    document.getElementById('secs').textContent='0';
     return;
   }
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  var minutes = Math.floor((distance / (1000 * 60)) % 60);
-  var seconds = Math.floor((distance / 1000) % 60);
-
-  document.getElementById('days').textContent = days;
-  document.getElementById('hours').textContent = hours;
-  document.getElementById('minutes').textContent = minutes;
-  document.getElementById('seconds').textContent = seconds;
+  document.getElementById('days').textContent=Math.floor(diff/86400000);
+  document.getElementById('hours').textContent=Math.floor(diff%86400000/3600000);
+  document.getElementById('mins').textContent=Math.floor(diff%3600000/60000);
+  document.getElementById('secs').textContent=Math.floor(diff%60000/1000);
 }
-
 updateCountdown();
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown,1000);
 
-/* Floating hearts */
-function createHeart() {
-  var container = document.getElementById('hearts');
-  var heart = document.createElement('span');
-  heart.className = 'heart';
-  heart.textContent = ['♡', '♥', '💕', 'ღ'][Math.floor(Math.random() * 4)];
-  heart.style.left = Math.random() * 100 + 'vw';
-  heart.style.fontSize = (12 + Math.random() * 20) + 'px';
-  heart.style.animationDuration = (6 + Math.random() * 6) + 's';
-  container.appendChild(heart);
-
-  setTimeout(function() {
-    heart.remove();
-  }, 12500);
+function hearts(){
+  const symbols=['♥','♡','💗','💕'];
+  for(let i=0;i<7;i++){
+    const h=document.createElement('span');
+    h.className='heart';
+    h.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    h.style.left=Math.random()*95+'vw';
+    h.style.fontSize=(14+Math.random()*18)+'px';
+    h.style.color=['#d96c91','#c78b9e','#e7b96f'][Math.floor(Math.random()*3)];
+    h.style.animationDuration=(3+Math.random()*3)+'s';
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),6500);
+  }
 }
 
-setInterval(createHeart, 650);
+setInterval(()=>{if(Math.random()>.45)hearts()},6500);
+
+async function shareInvite(){
+  const data={
+    title:'Hariharan ❤️ Sindhu Wedding',
+    text:'You are invited to celebrate Hariharan & Sindhu on 22 November 2026 at GPJ Mahal, Sholinganallur, Chennai. ❤️',
+    url:location.href
+  };
+  if(navigator.share){
+    try{await navigator.share(data)}catch(e){}
+  }else{
+    try{
+      await navigator.clipboard.writeText(data.text+' '+data.url);
+      alert('Invitation details copied! You can paste and share them.');
+    }catch(e){
+      alert(data.text+' '+data.url);
+    }
+  }
+}
 </script>
 </body>
 </html>
