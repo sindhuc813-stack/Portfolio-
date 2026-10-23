@@ -7,83 +7,8 @@
 <title>Hariharan ♥ Sindhu | Our Love Story</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-
-:root{
-  --pink:#ff5caa;
-  --purple:#8454d9;
-  --gold:#ffd36e;
-  --cream:#fff8fb;
-}
-
-body{
-  font-family:Georgia,"Times New Roman",serif;
-  color:#702957;
-  background:linear-gradient(135deg,#fff0f8,#f4eaff,#fff8d9,#e5fff5);
-  min-height:100vh;
-  overflow-x:hidden;
-}
-
-button{font-family:inherit;cursor:pointer}
-
-#magic{
-  position:fixed;inset:0;pointer-events:none;
-  overflow:hidden;z-index:20;
-}
-
-.float{
-  position:absolute;bottom:-50px;
-  animation:floatUp linear forwards;
-  opacity:.9;
-}
-
-@keyframes floatUp{
-  to{transform:translateY(-115vh) rotate(360deg);opacity:0}
-}
-
-header{
-  text-align:center;padding:23px 12px 12px;
-}
-
-.topline{
-  color:#c34c9a;letter-spacing:3px;
-  font-size:12px;margin-bottom:12px;
-}
-
-h1{
-  font-size:clamp(29px,7vw,48px);
-  line-height:1.25;
-  background:linear-gradient(90deg,#fa4f9e,#9861e8,#f6a33d,#ec4c87);
-  background-clip:text;-webkit-background-clip:text;
-  color:transparent;
-}
-
-.subtitle{margin:12px 0;color:#985b92;font-style:italic}
-
-.ornament{font-size:25px;letter-spacing:7px;margin:10px}
-
-.navbar{
-  display:flex;justify-content:space-between;
-  align-items:flex-start;gap:10px;
-  padding:10px 12px;max-width:850px;margin:auto;
-}
-
-.dropdown{position:relative;flex:1;max-width:210px}
-
-.dropbtn{
-  width:100%;padding:12px 9px;border:1px solid #f4a5d1;
-  background:#ffffffd9;color:#8a387d;border-radius:22px;
-  box-shadow:0 4px 15px #d66ba526;font-size:13px;
-}
-
-.dropcontent{
-  display:none;position:absolute;top:calc(100% + 7px);
-  left:0;width:100%;z-index:30;
-  background:#fffafd;border:1px solid #f4b6dc;
-  border-radius:16px;padding:7px;
-  box-shadow:0 8px 22px #8c47882b;
-}
-
+*
+  
 .dropcontent.right{left:auto;right:0}
 
 .dropcontent button{
@@ -193,55 +118,88 @@ main{max-width:850px;margin:auto;padding:8px 13px 35px}
 .viewerbox{text-align:center;color:white}
 .viewerbox p{margin-top:10px}
 
-.scratch{
-  max-width:340px;margin:15px auto 5px;
-  border:2px dashed #d78ac2;border-radius:20px;
-  padding:10px;background:#fff7fb;
+  
+<style>
+:root {
+  --pink: #f7b8d0;
+  --purple: #d88eae;
+  --gold: #c9a04a;
+  --cream: #fff8f8;
 }
 
-.scratch button{
-  width:100%;min-height:125px;border:0;
-  border-radius:13px;color:white;
-  background:linear-gradient(135deg,#fb70b7,#a97aea,#6dc9c0);
-  font-size:20px;line-height:1.6;
-  padding:18px;
+body {
+  background: linear-gradient(145deg, #fff7fa, #fce5ee, #fffaf0);
+  color: #805064;
 }
 
-.scratch button.revealed{
-  background:linear-gradient(135deg,#fff0bc,#ffe1f2);
-  color:#9e4388;border:1px solid #f1c4d9;
+h1 {
+  background: linear-gradient(90deg, #d98baa, #c9a04a, #e5a5be);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.countdown{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:7px;margin:17px 0;
+.panel {
+  background: #fffafc;
+  border: 1px solid #e9c58a;
+  box-shadow: 0 8px 25px #c9a04a20;
 }
 
-.timebox{
-  border-radius:14px;padding:12px 2px;
-  background:linear-gradient(145deg,#ffe1f0,#e9dcff);
+.hero {
+  background: linear-gradient(145deg, #fff9fb, #fbe2ec, #fff5df);
 }
 
-.timebox strong{display:block;font-size:23px;color:#a33b8c}
-.timebox span{font-size:11px}
-
-.storydate{
-  color:#b04a92;font-weight:bold;margin:12px;
+.dropbtn {
+  background: #fffafc;
+  color: #966078;
+  border-color: #dfb76c;
 }
 
-footer{text-align:center;padding:24px 10px 38px;line-height:2;font-size:14px}
-
-.backtop{margin-top:15px}
-
-@media(min-width:600px){
-  .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .photo-card img{height:200px}
+.dropcontent {
+  background: #fffafc;
+  border-color: #dfb76c;
 }
 
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important}
+.btn {
+  background: linear-gradient(100deg, #e9a6c0, #c9a04a);
+  color: white;
+}
+
+.btn.gold {
+  background: linear-gradient(100deg, #d5b16a, #e9a6c0);
+}
+
+.btn.soft {
+  background: #fff1f6;
+  color: #966078;
+  border: 1px solid #dfb76c;
+}
+
+.photo-card {
+  background: #fff7fa;
+  border-color: #e9c58a;
+}
+
+.photo-placeholder {
+  background: linear-gradient(145deg, #fbe2ec, #fff5df);
+  color: #966078;
+}
+
+.timebox {
+  background: linear-gradient(145deg, #fbe2ec, #fff0d1);
+}
+
+.timebox strong,
+.section-title,
+.storydate {
+  color: #b17a35;
+}
+
+.scratch button {
+  background: linear-gradient(135deg, #e9a6c0, #c9a04a);
 }
 </style>
+
 </head>
 
 <body>
