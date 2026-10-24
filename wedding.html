@@ -7,227 +7,117 @@
 <title>Hariharan ♥ Sindhu | Our Love Story</title>
 <style>
 *{box-sizing:border-box}
-:root{--pink:#ffe5ef;--rose:#c94f7c;--gold:#c39a48;--deep:#713b50}
-body{margin:0;font-family:Georgia,serif;color:var(--deep);
-background:linear-gradient(135deg,#fff8fb,#ffe4ee,#fff5df);
-text-align:center;overflow-x:hidden}
-header{padding:55px 18px 38px;background:linear-gradient(140deg,#fbd3e2,#fff4e6,#f8d7e5);
-border-bottom:2px solid #e7c27c}
-.eyebrow{letter-spacing:4px;font-size:12px;color:#946b36}
-h1{font-size:clamp(36px,9vw,62px);margin:18px 0;color:#b54870}
-h2{color:#ad4d70;font-size:27px}
-p{line-height:1.8}
-section{padding:36px 17px;max-width:760px;margin:auto}
-.card{background:#ffffffd9;border:1px solid #e9c6d3;border-radius:25px;
-padding:25px 18px;margin:18px auto;box-shadow:0 8px 25px #a64c7012}
-.heart{color:#d94f83}
-button{font-family:inherit;border:0;border-radius:30px;padding:13px 22px;
-background:linear-gradient(120deg,#d86d96,#b94d75);color:white;
-font-size:15px;cursor:pointer;margin:8px}
-button:active{transform:scale(.97)}
-.gold{background:linear-gradient(120deg,#e6c67e,#b58a37)}
-.memory{margin:20px 0;padding:18px;background:#fff9fc;border-radius:20px;
-border:1px dashed #d9a1b5}
-.memory img{width:100%;max-height:360px;object-fit:cover;border-radius:15px;
-display:none;margin-top:14px}
-.memory input{max-width:100%;font-size:13px}
-.caption{font-size:13px;color:#9b6a7d}
-#scratch{width:min(100%,330px);height:145px;display:block;margin:18px auto;
-border-radius:18px;touch-action:none;border:2px solid #d4ad63}
-#reveal{font-size:21px;color:#b44970;font-weight:bold;min-height:35px}
-#timer{font-size:22px;line-height:1.8;color:#a6446b}
-.flower{position:fixed;top:-35px;z-index:10;pointer-events:none;
-animation:fall linear forwards}
-@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:.15}}
-footer{padding:35px 15px;background:#f9dce7;margin-top:20px}
-.small{font-size:12px;color:#946d7d}
+body{margin:0;font-family:Georgia,serif;background:#fff0f5;color:#813b53;text-align:center}
+header{padding:55px 15px;background:linear-gradient(135deg,#ffe1eb,#fff8ef);border-bottom:3px solid #d8b16b}
+h1{font-size:clamp(35px,8vw,60px);color:#c54f78;margin:12px}
+h2{color:#b34e70}
+p{line-height:1.7}
+section{max-width:850px;margin:25px auto;padding:24px 16px}
+.card{margin:20px 0;padding:18px;background:#fffaf7;border:2px solid #e8c58c;border-radius:24px;box-shadow:0 5px 20px #e7a6ba50}
+img{width:100%;max-width:430px;border-radius:18px;border:3px solid #e6c080;object-fit:cover}
+button{border:0;border-radius:25px;background:#d85c83;color:white;padding:13px 23px;font-size:16px;cursor:pointer;margin:8px}
+.hidden{display:none}
+#scratch{background:linear-gradient(135deg,#d8b16b,#fff0bd);color:#813b53;padding:30px;border-radius:18px;cursor:pointer;font-size:21px}
+#timer{font-size:22px;color:#c54f78;font-weight:bold}
+.heart{position:fixed;bottom:-30px;animation:float 8s linear infinite;pointer-events:none}
+@keyframes float{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="eyebrow">A LITTLE FAIRYTALE ✨</div>
-  <h1>Hariharan <span class="heart">♥</span> Sindhu</h1>
-  <p>Two hearts, one beautiful forever.</p>
-  <p>Our little love story becomes a lifetime together.</p>
-  <div style="font-size:35px">🌸 🦋 💗 🦋 🌸</div>
-  <button class="gold" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
-    Open Our Love Story ↓
-  </button>
+<div>🌸 💗 🦋 💗 🌸</div>
+<p>OUR LITTLE LOVE STORY</p>
+<h1>Hariharan ♥ Sindhu</h1>
+<h2>Two hearts, one forever 💍</h2>
+<p>From our first chat to our forever together...</p>
 </header>
 
-<section id="story">
-  <h2>Our Story Begins 💌</h2>
-  <p>Every love story has a beginning. Here's ours, one little memory at a time.</p>
-
-  <div class="card">
-    <h2>💬 Our First Chat</h2>
-    <p>The first conversation that became a thousand memories.</p>
-    <div class="memory">
-      <label>Our First Chat photo</label><br><br>
-      <input type="file" accept="image/*" onchange="preview(this,'chatPhoto')">
-      <img id="chatPhoto" alt="First chat memory">
-      <p class="caption">Add our special memory ♡</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>🌷 Our First Meet</h2>
-    <p>One meeting, a thousand butterflies in our hearts.</p>
-    <div class="memory">
-      <label>Our First Meet photo</label><br><br>
-      <input type="file" accept="image/*" onchange="preview(this,'meetPhoto')">
-      <img id="meetPhoto" alt="First meet memory">
-      <p class="caption">Our beginning, our forever ♡</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>🥤 The Juice Shop Memory</h2>
-    <p>A simple little moment that became part of our story.</p>
-    <div class="memory">
-      <label>Our Juice Shop photo</label><br><br>
-      <input type="file" accept="image/*" onchange="preview(this,'juicePhoto')">
-      <img id="juicePhoto" alt="Juice shop memory">
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>💍 Our Engagement</h2>
-    <p>One promise, two hearts, endless tomorrows.</p>
-    <div class="memory">
-      <label>Our Engagement photo</label><br><br>
-      <input type="file" accept="image/*" onchange="preview(this,'engagePhoto')">
-      <img id="engagePhoto" alt="Engagement memory">
-    </div>
-  </div>
-</section>
-
 <section>
-  <div class="card">
-    <div style="font-size:35px">🎁 💗 🎁</div>
-    <h2>Our Secret Scratch Card</h2>
-    <p>We kept our love secret… now scratch to reveal our special day!</p>
-    <div id="reveal">💗 Our date is a secret 💗</div>
-    <canvas id="scratch" width="660" height="290"></canvas>
-    <p class="small">Use your finger to scratch the pink layer.</p>
-    <button class="gold" onclick="revealDate()">Reveal Our Date 💌</button>
-  </div>
-</section>
+<div class="card">
+<h2>💌 Our First Chat</h2>
+<img src="IMG-20261020-WA0034~3(1).jpg" alt="Our first chat">
+<p>One little hello started a beautiful story. 💕</p>
+<button onclick="toggle('chat')">Read our memory 💗</button>
+<p id="chat" class="hidden">Hiii... Sindhu! A small conversation, a special beginning. 💌</p>
+</div>
 
-<section id="countdown">
-  <div class="card">
-    <h2>⏳ Countdown to Forever</h2>
-    <p>Our forever begins on 22 November 2026.</p>
-    <button onclick="showCountdown()">Open Our Countdown 💖</button>
-    <div id="timer">Tap to reveal our countdown ♡</div>
-  </div>
-</section>
+<div class="card">
+<h2>🦋 Our First Meet</h2>
+<img src="IMG-20261021-WA0021.jpg" alt="Our first meet memory">
+<p>Some meetings become memories forever. 🌷</p>
+<button onclick="toggle('meet')">Open memory 💖</button>
+<p id="meet" class="hidden">Frozen Feast, smiles and the beginning of us. ❤️</p>
+</div>
 
-<section>
-  <div class="card">
-    <div style="font-size:38px">👰🏻‍♀️ ♥ 🤵🏻</div>
-    <h2>With Love, We Invite You</h2>
-    <p><b>Hariharan & Sindhu</b></p>
-    <p>Reception<br><b>21 November 2026</b></p>
-    <p>Wedding Day<br><b>Sunday, 22 November 2026</b></p>
-    <p>📍 GP Janarajan Mahal<br>Sholinganallur, Chennai</p>
-    <div style="font-size:28px">🌸 💕 🦋 💕 🌸</div>
-  </div>
-</section>
+<div class="card">
+<h2>🥤 Our Juice Shop Memory</h2>
+<p>A little place, a lovely memory, a story that became ours. 💞</p>
+<img src="IMG-20261021-WA0021.jpg" alt="Frozen Feast memory">
+</div>
 
-<footer>
-  <h2>Our Forever Starts Here 💗</h2>
-  <p>One love. One promise. One lifetime.</p>
-  <p>Hariharan ♥ Sindhu</p>
-</footer>
+<div class="card">
+<h2>💍 Our Engagement</h2>
+<p>A promise today, a lifetime of love tomorrow. 🌸</p>
+<p>Our journey continues forever. ❤️</p>
+</div>
+
+<div class="card">
+<h2>🎁 Secret Scratch Card</h2>
+<p>Touch the card to reveal our special day!</p>
+<div id="scratch" onclick="reveal()">✨ Tap to reveal ✨</div>
+<p id="date" class="hidden"><strong>22 November 2026 💒</strong><br>Our forever begins!</p>
+</div>
+
+<div class="card">
+<h2>⏳ Wedding Countdown</h2>
+<button onclick="toggle('countdown')">Open countdown 💗</button>
+<div id="countdown" class="hidden">
+<p id="timer"></p>
+</div>
+</div>
+
+<div class="card">
+<h2>🌷 Reception</h2>
+<p>21 November 2026</p>
+<h2>💒 Wedding Day</h2>
+<p>22 November 2026</p>
+<p>📍 GP Janarajan Mahal<br>Sholinganallur, Chennai</p>
+<p>With love, Hariharan ♥ Sindhu</p>
+<p>🌸 Thank you for being part of our story 🌸</p>
+</div>
+</section>
 
 <script>
-function preview(input,id){
-  const file=input.files && input.files[0];
-  if(!file)return;
-  const reader=new FileReader();
-  reader.onload=()=>{
-    const img=document.getElementById(id);
-    img.src=reader.result;
-    img.style.display='block';
-  };
-  reader.readAsDataURL(file);
+function toggle(id){
+ const el=document.getElementById(id);
+ el.classList.toggle('hidden');
 }
-
-function revealDate(){
-  document.getElementById('reveal').innerHTML=
-  '💍 22 NOVEMBER 2026 💗<br><span style="font-size:14px">Hariharan ♥ Sindhu — Forever!</span>';
-  initScratch();
+function reveal(){
+ document.getElementById('scratch').textContent='💗 Our Wedding Date 💗';
+ document.getElementById('date').classList.remove('hidden');
 }
-
-const canvas=document.getElementById('scratch');
-const ctx=canvas.getContext('2d');
-let drawing=false,cleared=false;
-
-function initScratch(){
-  ctx.globalCompositeOperation='source-over';
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  const grad=ctx.createLinearGradient(0,0,660,290);
-  grad.addColorStop(0,'#f5c1d6');
-  grad.addColorStop(1,'#df8eb0');
-  ctx.fillStyle=grad;
-  ctx.fillRect(0,0,660,290);
-  ctx.fillStyle='#783a56';
-  ctx.textAlign='center';
-  ctx.font='bold 38px Georgia';
-  ctx.fillText('SCRATCH HERE ♥',330,145);
-  ctx.font='30px Georgia';
-  ctx.fillText('✨ 💗 ✨',330,195);
-  ctx.globalCompositeOperation='destination-out';
-  cleared=false;
+function updateTimer(){
+ const wedding=new Date('2026-11-22T00:00:00+05:30').getTime();
+ const diff=wedding-Date.now();
+ if(diff<=0){
+  document.getElementById('timer').textContent='Our special day is here! 💍';
+  return;
+ }
+ const d=Math.floor(diff/86400000);
+ const h=Math.floor(diff%86400000/3600000);
+ const m=Math.floor(diff%3600000/60000);
+ const s=Math.floor(diff%60000/1000);
+ document.getElementById('timer').textContent=
+ d+' Days '+h+' Hours '+m+' Minutes '+s+' Seconds 💕';
 }
-function point(e){
-  const r=canvas.getBoundingClientRect();
-  return {x:(e.clientX-r.left)*canvas.width/r.width,
-          y:(e.clientY-r.top)*canvas.height/r.height};
-}
-canvas.addEventListener('pointerdown',e=>{
-  drawing=true;canvas.setPointerCapture(e.pointerId);
-  const p=point(e);ctx.beginPath();ctx.arc(p.x,p.y,32,0,Math.PI*2);ctx.fill();
-});
-canvas.addEventListener('pointermove',e=>{
-  if(!drawing)return;
-  const p=point(e);ctx.lineWidth=65;ctx.lineCap='round';
-  ctx.strokeStyle='rgba(0,0,0,1)';
-  ctx.lineTo(p.x,p.y);ctx.stroke();ctx.beginPath();ctx.moveTo(p.x,p.y);
-});
-canvas.addEventListener('pointerup',()=>{drawing=false;ctx.beginPath()});
-initScratch();
-
-function showCountdown(){
-  const timer=document.getElementById('timer');
-  const target=new Date(2026,10,22,0,0,0).getTime();
-  function update(){
-    const diff=target-Date.now();
-    if(diff<=0){
-      timer.innerHTML='💖 Today is our wedding day! 💖';
-      return;
-    }
-    const d=Math.floor(diff/86400000);
-    const h=Math.floor(diff%86400000/3600000);
-    const m=Math.floor(diff%3600000/60000);
-    const s=Math.floor(diff%60000/1000);
-    timer.innerHTML=`💗 ${d} Days<br>${h} Hours ${m} Minutes ${s} Seconds`;
-  }
-  update();
-  if(window.countdownInterval)clearInterval(window.countdownInterval);
-  window.countdownInterval=setInterval(update,1000);
-}
+setInterval(updateTimer,1000);updateTimer();
 setInterval(()=>{
-  const f=document.createElement('div');
-  f.className='flower';
-  f.textContent=['🌸','💗','🦋','✨','🌷'][Math.floor(Math.random()*5)];
-  f.style.left=Math.random()*100+'vw';
-  f.style.animationDuration=(5+Math.random()*5)+'s';
-  f.style.fontSize=(16+Math.random()*18)+'px';
-  document.body.appendChild(f);
-  setTimeout(()=>f.remove(),10500);
+ const h=document.createElement('span');
+ h.className='heart';h.textContent=['💗','🌸','💕','🦋'][Math.floor(Math.random()*4)];
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=(15+Math.random()*18)+'px';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),8000);
 },650);
 </script>
 </body>
