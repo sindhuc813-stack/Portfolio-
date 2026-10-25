@@ -1,323 +1,148 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hariharan ♥ Sindhu | Forever</title>
+<title>Hariharan ♥ Sindhu | Wedding Invitation</title>
 <style>
-:root{
- --pink:#f7d5e1;
- --rose:#b85878;
- --deep:#873750;
- --gold:#c59a45;
- --cream:#fff9ef;
-}
+:root{--pink:#ffe8f0;--rose:#d86f91;--deep:#8c3455;--gold:#c99a3a;--cream:#fffaf3}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
- margin:0;overflow-x:hidden;text-align:center;
- font-family:Georgia,'Times New Roman',serif;
- color:var(--deep);
- background:
- radial-gradient(ellipse at top,#fffaf2 0%,transparent 55%),
- linear-gradient(140deg,#f9dce7,#fff4f4,#f6d4df);
-}
-body:before{
- content:"";position:fixed;inset:7px;
- border:2px solid #d5ad61;
- border-radius:18px;pointer-events:none;z-index:10;
-}
-button{font-family:inherit}
-.petal{
- position:fixed;top:-35px;z-index:3;
- pointer-events:none;animation:fall linear forwards;
-}
-@keyframes fall{
- to{transform:translateY(110vh) rotate(440deg);opacity:.1}
-}
-.sparkle{
- position:fixed;pointer-events:none;z-index:2;
- color:#c69b43;animation:twinkle 2s infinite alternate;
-}
-@keyframes twinkle{to{opacity:.2;transform:scale(.6)}}
-.hero{padding:65px 18px 38px;position:relative}
-.eyebrow{
- letter-spacing:4px;font-size:11px;color:#a77b36;
- text-transform:uppercase
-}
-h1{font-size:clamp(35px,9vw,55px);margin:16px 0;color:#ad6a7d}
-.names{
- font-size:clamp(36px,9vw,51px);
- line-height:1.5;color:#8b4059;
- text-shadow:1px 2px 0 #fff,0 0 20px #e8bdcc
-}
-.heart{color:#c77b91}
-.subtitle{font-style:italic;line-height:1.8}
-.ornament{color:#bf984d;letter-spacing:5px;font-size:22px}
-.rose{font-size:27px;animation:sway 3s infinite alternate}
-@keyframes sway{to{transform:rotate(10deg)}}
-.goldline{
- width:150px;height:1px;margin:20px auto;
- background:linear-gradient(90deg,transparent,#bc954c,transparent)
-}
-.btn{
- display:inline-block;border:1px solid #c6a05a;
- border-radius:30px;padding:13px 22px;margin:8px;
- color:#843e57;background:linear-gradient(135deg,#fffaf1,#f4d4df);
- box-shadow:0 4px 14px #ac667222;font-size:15px;
- cursor:pointer
-}
-.btn:active{transform:scale(.97)}
-.frame{
- width:91%;max-width:510px;margin:22px auto;
- padding:29px 18px;position:relative;
- border:1px solid #caa455;border-radius:7px;
- background:linear-gradient(145deg,#fffdf8,#fff0f5 60%,#fffaf0);
- box-shadow:0 8px 30px #9c516d24;
- outline:1px solid #dfc38b;outline-offset:4px
-}
-.frame:before,.frame:after{
- content:"❧";position:absolute;color:#b98d42;font-size:29px
-}
-.frame:before{top:5px;left:9px}
-.frame:after{bottom:5px;right:9px;transform:rotate(180deg)}
-h2{color:#a95471;font-size:25px}
-p{line-height:1.8}
-.love{
- font-size:17px;line-height:2;
- font-style:italic;color:#85465c
-}
-.gallery{display:grid;gap:18px;margin-top:20px}
-.photo{
- border:1px solid #d2b06d;border-radius:12px;
- padding:8px;background:#fff;
- box-shadow:0 6px 18px #b46d8222
-}
-.photo img{
- display:block;width:100%;height:auto;max-height:520px;
- object-fit:contain;border-radius:7px;background:#fcecf2
-}
-.photo figcaption{padding:10px 3px;color:#a05d75;font-style:italic}
-#scratch{
- margin:20px auto;max-width:330px;padding:28px 12px;
- border:2px dashed #c39a48;border-radius:14px;
- background:linear-gradient(135deg,#f3d2df,#fff0cc);
- box-shadow:inset 0 0 20px #fff;
- cursor:pointer;user-select:none
-}
-#scratchTitle{font-size:19px}
-#reveal{display:none;animation:appear 1s ease}
-@keyframes appear{
- from{opacity:0;transform:scale(.8)}
- to{opacity:1;transform:scale(1)}
-}
-#timer{display:none}
-#countdown{
- font-size:clamp(19px,5vw,25px);line-height:1.9;
- color:#a34e70;font-weight:bold
-}
-.countbox{
- display:inline-block;margin:5px;padding:10px 7px;
- min-width:65px;background:#fff4f7;
- border:1px solid #e1c38a;border-radius:12px
-}
-.countbox span{display:block;font-size:11px;font-weight:normal}
-.date{font-size:25px;color:#a55c72}
-footer{padding:32px 18px 55px}
-a{color:inherit}
-@media(max-width:360px){
- .frame{padding:24px 12px}
- .countbox{min-width:57px}
-}
+body{margin:0;color:#6b3148;background:radial-gradient(circle at top,#fff8fb,#ffe6ef 48%,#fff4df);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.2;background-image:radial-gradient(#d4a24b 1px,transparent 1px);background-size:22px 22px;z-index:-1}
+.petal{position:fixed;top:-30px;z-index:5;pointer-events:none;animation:fall linear infinite;font-size:20px}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+.wrap{max-width:760px;margin:auto;padding:18px}
+.frame{position:relative;margin:14px auto;padding:28px 18px;border:2px solid #d7b05d;border-radius:28px;background:rgba(255,250,247,.92);box-shadow:0 12px 35px #9b496b20;overflow:hidden}
+.frame:before{content:"✿  ❀  ✿";position:absolute;top:8px;left:0;right:0;text-align:center;color:#c99a3a;letter-spacing:15px}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:11px;color:#b17b28;margin-top:22px}
+h1{font-size:clamp(34px,9vw,62px);line-height:1.08;margin:18px 0 8px;color:#9c3e61;font-weight:normal}
+h1 span{color:#c99a3a}
+.subtitle{font-style:italic;font-size:17px;line-height:1.6}
+.ornament{color:#c99a3a;font-size:24px;margin:15px}
+.pill{display:inline-block;border:1px solid #d9b768;border-radius:30px;padding:10px 16px;margin:7px;background:#fff7e9;color:#8b5d24;font-size:13px}
+.section-title{font-size:25px;color:#a24465;font-weight:normal;margin:5px 0 10px}
+.btn{border:0;border-radius:30px;padding:13px 19px;background:linear-gradient(135deg,#d87b99,#b84e76);color:white;font-size:15px;box-shadow:0 6px 16px #b84e7630;cursor:pointer;margin:6px}
+.btn.gold{background:linear-gradient(135deg,#d8b35f,#a87825)}
+.panel{display:none;margin:16px auto 0;padding:16px;border:1px solid #e2c77f;border-radius:18px;background:#fffdf9;animation:appear .5s ease}
+.panel.show{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.dates{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.date{padding:18px 10px;background:linear-gradient(145deg,#fff0f5,#fffaf0);border:1px solid #e2c77f;border-radius:18px}
+.date b{display:block;font-size:24px;color:#9c3e61;margin:7px}
+.place{line-height:1.8}
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}
+.photo-grid img{width:100%;height:220px;object-fit:cover;border:3px solid #e0c16e;border-radius:16px;background:#fff0f5;box-shadow:0 5px 15px #8c34551a}
+.photo-grid img:active{transform:scale(.98)}
+.note{font-size:13px;color:#95667a;line-height:1.6}
+.scratch-wrap{position:relative;max-width:420px;margin:15px auto;height:145px;border-radius:18px;overflow:hidden;border:2px solid #d4ad55;background:#fff4d8}
+.scratch-under{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;font-size:22px;color:#9c3e61;background:radial-gradient(circle,#fff,#ffe6ef)}
+#scratchCanvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.count{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:15px 0}
+.count div{min-width:65px;padding:12px 8px;background:#fff0f5;border:1px solid #e2c77f;border-radius:14px}
+.count strong{display:block;font-size:25px;color:#a24465}
+.count small{font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.message{font-size:18px;line-height:1.8;font-style:italic}
+footer{padding:20px 10px;text-align:center;color:#a66c7e;font-size:13px}
+a.map{color:#9c3e61}
+@media(max-width:420px){.frame{padding:25px 13px}.photo-grid img{height:175px}.dates{gap:8px}.date b{font-size:21px}}
 </style>
 </head>
 <body>
+<div class="wrap">
+  <main class="frame" style="text-align:center">
+    <div class="eyebrow">A royal invitation to our forever</div>
+    <div class="ornament">❦ ❀ ❦</div>
+    <p class="subtitle">With hearts full of love, we invite you to celebrate the beginning of our forever</p>
+    <h1>Hariharan <span>♥</span><br>Sindhu</h1>
+    <p class="subtitle">Two hearts · One promise · A lifetime together</p>
+    <div class="ornament">✧ 💗 ✧</div>
+    <button class="btn gold" onclick="document.getElementById('surprise').classList.toggle('show')">Open Our Little Surprise ✨</button>
+    <div id="surprise" class="panel">
+      <p class="message">“In all the ordinary days, you became my favourite part. Today, tomorrow, and always — it will be us.”</p>
+      <p>Forever begins with a beautiful yes. 💞</p>
+    </div>
+  </main>
 
-<header class="hero">
- <div class="ornament">❀ ❧ ✧ ❧ ❀</div>
- <div class="rose">🌹 🦋 🌹</div>
- <p class="eyebrow">A celebration of love</p>
- <h1>Wedding Invitation</h1>
- <div class="goldline"></div>
- <p class="subtitle">Two hearts, one beautiful destiny</p>
- <div class="names">
-  Hariharan<br>
-  <span class="heart">♥</span><br>
-  Sindhu
- </div>
- <div class="ornament">✧ ❀ ✧ ❀ ✧</div>
- <p class="subtitle">Together is a beautiful place to be. ♡</p>
- <button class="btn" onclick="document.getElementById('love').scrollIntoView({behavior:'smooth'})">
-  ♡ A message from our hearts
- </button>
-</header>
+  <section class="frame" style="text-align:center">
+    <h2 class="section-title">Our Special Days</h2>
+    <div class="dates">
+      <div class="date">🌷 Reception<b>21 November</b>2026</div>
+      <div class="date">💍 Wedding<b>22 November</b>2026</div>
+    </div>
+    <p class="place">📍 <strong>GP Janarajan Mahal</strong><br>Sholinganallur, Chennai</p>
+  </section>
 
-<section class="frame" id="love">
- <div class="ornament">❧ ❀ ❧</div>
- <h2>Our Forever Begins</h2>
- <div class="goldline"></div>
- <div class="love">
-  In a world full of passing moments,<br>
-  we found a love we want to keep forever.<br><br>
-  You are my today, my tomorrow,<br>
-  and every beautiful dream in between.<br><br>
-  As we take our hands and promise a lifetime,<br>
-  your love and blessings would mean everything to us.
- </div>
- <div class="goldline"></div>
- <p>With all our love,</p>
- <div style="font-size:24px;color:#a95471">Hariharan ♥ Sindhu</div>
- <div class="ornament">🌸 💗 🌸</div>
-</section>
+  <section class="frame" style="text-align:center">
+    <h2 class="section-title">A Little Piece of Our Happiness 💗</h2>
+    <p class="subtitle">Tap below to open our engagement memories</p>
+    <button class="btn" onclick="togglePanel('engagement')">🌸 Reveal Engagement Photos</button>
+    <div id="engagement" class="panel">
+      <p class="note">Our favourite moments, kept close to our hearts.</p>
+      <div class="photo-grid">
+        <img src="IMG-20260914-WA0025.jpg" alt="Engagement memory 1" loading="lazy">
+        <img src="IMG-20260914-WA0030.jpg" alt="Engagement memory 2" loading="lazy">
+        <img src="IMG-20260914-WA0031.jpg" alt="Engagement memory 3" loading="lazy">
+        <img src="IMG-20260914-WA0053.jpg" alt="Engagement memory 4" loading="lazy">
+        <img src="IMG-20260914-WA0059.jpg" alt="Engagement memory 5" loading="lazy">
+        <img src="IMG-20260915-WA0017.jpg" alt="Engagement memory 6" loading="lazy">
+      </div>
+      <p class="note">If a photo does not appear, check that its filename in GitHub matches exactly, including capital letters and .jpg.</p>
+    </div>
+  </section>
 
-<section class="frame" id="engagement">
- <div class="ornament">❀ ✧ ❀</div>
- <h2>Our Engagement</h2>
- <p class="subtitle">A little promise, a lifetime of love. 💍</p>
- <div class="goldline"></div>
- <div class="gallery">
-  <figure class="photo">
-   <img src="IMG-20260916-WA0025.jpg" alt="Engagement memory" loading="lazy">
-   <figcaption>A beautiful beginning ♥</figcaption>
-  </figure>
-  <figure class="photo">
-   <img src="IMG-20260916-WA0027.jpg" alt="Engagement memory" loading="lazy">
-   <figcaption>My favourite person 💗</figcaption>
-  </figure>
-  <figure class="photo">
-   <img src="IMG-20260916-WA0030.jpg" alt="Engagement memory" loading="lazy">
-   <figcaption>One promise, forever ✨</figcaption>
-  </figure>
-  <figure class="photo">
-   <img src="IMG-20260916-WA0031.jpg" alt="Engagement memory" loading="lazy">
-   <figcaption>Our little fairytale 🌹</figcaption>
-  </figure>
-  <figure class="photo">
-   <img src="IMG-20260916-WA0053.jpg" alt="Engagement memory" loading="lazy">
-   <figcaption>Love looks beautiful on us 💍</figcaption>
-  </figure>
-  <figure class="photo">
-   <img src="IMG-20260916-WA0059.jpg" alt="Engagement memory" loading="lazy">
-   <figcaption>Forever, hand in hand ♡</figcaption>
-  </figure>
- </div>
-</section>
+  <section class="frame" style="text-align:center">
+    <h2 class="section-title">A Secret Just for You 🎁</h2>
+    <p class="subtitle">Gently rub the golden card with your finger to reveal the secret.</p>
+    <div class="scratch-wrap">
+      <div class="scratch-under">💗 Our wedding day<br><strong>22 · 11 · 2026</strong> 💗</div>
+      <canvas id="scratchCanvas" aria-label="Scratch to reveal wedding date"></canvas>
+    </div>
+    <button class="btn gold" onclick="revealScratch()">Reveal the Secret</button>
+  </section>
 
-<section class="frame">
- <div class="ornament">✧ 🎁 ✧</div>
- <h2>A Secret Surprise</h2>
- <p>There is a little secret waiting just for you...</p>
- <div id="scratch" role="button" tabindex="0"
-      onclick="revealDate()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();revealDate()}">
-  <div id="scratchTitle">✨ TOUCH TO REVEAL ✨</div>
-  <p style="margin-bottom:0">A golden surprise awaits 💗</p>
- </div>
- <div id="reveal">
-  <div class="ornament">🌸 💍 🌸</div>
-  <p>THE DAY WE BEGIN FOREVER</p>
-  <div class="date">22 November 2026</div>
-  <p>Our hearts have chosen forever. ♥</p>
-  <button class="btn" onclick="showCountdown()">♡ Reveal Our Countdown</button>
- </div>
-</section>
+  <section class="frame" style="text-align:center">
+    <h2 class="section-title">Countdown to Forever ⏳</h2>
+    <p class="subtitle">Every second brings us closer to our forever.</p>
+    <div class="count">
+      <div><strong id="days">--</strong><small>Days</small></div>
+      <div><strong id="hours">--</strong><small>Hours</small></div>
+      <div><strong id="minutes">--</strong><small>Minutes</small></div>
+      <div><strong id="seconds">--</strong><small>Seconds</small></div>
+    </div>
+    <p id="countText" class="note">Counting down to 22 November 2026 💕</p>
+  </section>
 
-<section class="frame" id="timer">
- <div class="ornament">✧ ⏳ ✧</div>
- <h2>Until Our Forever</h2>
- <p>Every heartbeat brings us closer to our special day.</p>
- <div id="countdown"></div>
- <div class="goldline"></div>
- <p class="subtitle">The wait is precious. The forever is ours. 💕</p>
-</section>
+  <section class="frame" style="text-align:center">
+    <h2 class="section-title">A Loving Message 💌</h2>
+    <button class="btn" onclick="togglePanel('love')">Open My Heart</button>
+    <div id="love" class="panel">
+      <p class="message">“You are my today, my tomorrow, and every little dream in between. No matter how many seasons change, I will keep choosing you. Here’s to holding hands through every chapter of life.”</p>
+      <p>With all my love, always. 💗</p>
+      <div class="ornament">❀ ♥ ❀</div>
+    </div>
+  </section>
 
-<section class="frame" id="wedding">
- <div class="ornament">🌹 ❀ 🌹</div>
- <h2>Save Our Special Dates</h2>
- <p>With hearts full of joy,</p>
- <p>we invite you to celebrate our new beginning.</p>
- <div class="goldline"></div>
- <p>♡ RECEPTION ♡</p>
- <div class="date">21 November 2026</div>
- <div class="goldline"></div>
- <p>♡ WEDDING CEREMONY ♡</p>
- <div class="date">22 November 2026</div>
- <div class="ornament">💍</div>
- <p>GP Janarajan Mahal</p>
- <p>Sholinganallur, Chennai</p>
- <a href="https://www.google.com/maps/search/?api=1&query=GP+Janarajan+Mahal+Sholinganallur+Chennai"
-    target="_blank" rel="noopener">
-  <button class="btn">📍 Find Our Venue</button>
- </a>
- <div class="goldline"></div>
- <p class="love">Your presence and blessings will make our day even more beautiful. ♡</p>
-</section>
-
-<footer>
- <div class="ornament">❀ ❧ ✧ ❧ ❀</div>
- <div style="font-size:30px">💗 🦋 🌹 🦋 💗</div>
- <p class="subtitle">One love. One promise. One lifetime.</p>
- <div class="names" style="font-size:30px">Hariharan ♥ Sindhu</div>
- <p class="eyebrow">Forever starts here · 2026</p>
- <div class="ornament">❀ ✧ ❀</div>
-</footer>
-
+  <section class="frame" style="text-align:center">
+    <h2 class="section-title">Come Celebrate With Us 📍</h2>
+    <p class="place">GP Janarajan Mahal<br>Sholinganallur, Chennai</p>
+    <a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=GP+Janarajan+Mahal+Sholinganallur+Chennai">Open venue in Google Maps ↗</a>
+  </section>
+  <footer>Made with love for Hariharan ♥ Sindhu<br>❀ Baby Pink & Gold · Forever starts here ❀</footer>
+</div>
 <script>
-function revealDate(){
- document.getElementById('scratchTitle').textContent='💖 22 NOVEMBER 2026 💖';
- document.getElementById('scratch').style.background=
- 'linear-gradient(135deg,#f3c3d6,#ffe6a9)';
- document.getElementById('reveal').style.display='block';
-}
-function showCountdown(){
- const timer=document.getElementById('timer');
- timer.style.display='block';
- timer.scrollIntoView({behavior:'smooth',block:'center'});
-}
-function updateCountdown(){
- const target=new Date('2026-11-22T06:30:00+05:30').getTime();
- const diff=target-Date.now();
- const el=document.getElementById('countdown');
- if(diff<=0){
-  el.innerHTML='💍 Our forever begins today! 💗';
-  return;
- }
- const days=Math.floor(diff/86400000);
- const hours=Math.floor((diff%86400000)/3600000);
- const minutes=Math.floor((diff%3600000)/60000);
- const seconds=Math.floor((diff%60000)/1000);
- el.innerHTML=
- '<div class="countbox">'+days+'<span>Days</span></div>'+
- '<div class="countbox">'+hours+'<span>Hours</span></div>'+
- '<div class="countbox">'+minutes+'<span>Minutes</span></div>'+
- '<div class="countbox">'+seconds+'<span>Seconds</span></div>';
-}
-updateCountdown();
-setInterval(updateCountdown,1000);
-
-const petals=['🌸','🌹','💕','💗','✨','🦋'];
-function makePetal(){
- const el=document.createElement('span');
- el.className='petal';
- el.textContent=petals[Math.floor(Math.random()*petals.length)];
- el.style.left=Math.random()*100+'vw';
- el.style.fontSize=(14+Math.random()*16)+'px';
- const duration=6+Math.random()*7;
- el.style.animationDuration=duration+'s';
- document.body.appendChild(el);
- setTimeout(()=>el.remove(),duration*1000);
-}
-setInterval(makePetal,550);
-
-for(let i=0;i<12;i++){
- const s=document.createElement('span');
- s.className='sparkle';
- s.textContent='✧';
- s.style.left=Math.random()*100+'vw';
- s.style.top=Math.random()*100+'vh';
- s.style.animationDelay=Math.random()*2+'s';
- document.body.appendChild(s);
-}
+function togglePanel(id){document.getElementById(id).classList.toggle('show')}
+(function petals(){const symbols=['🌸','💗','✨','🌼'];for(let i=0;i<18;i++){let p=document.createElement('div');p.className='petal';p.textContent=symbols[i%symbols.length];p.style.left=(Math.random()*100)+'%';p.style.animationDuration=(8+Math.random()*10)+'s';p.style.animationDelay=(-Math.random()*15)+'s';p.style.opacity=.45+Math.random()*.5;document.body.appendChild(p)}})();
+const target=new Date('2026-11-22T06:30:00+05:30').getTime();
+function updateCountdown(){let diff=target-Date.now();if(diff<=0){['days','hours','minutes','seconds'].forEach(id=>document.getElementById(id).textContent='0');document.getElementById('countText').textContent='Our forever day is here! 💍';return}document.getElementById('days').textContent=Math.floor(diff/86400000);document.getElementById('hours').textContent=Math.floor(diff%86400000/3600000);document.getElementById('minutes').textContent=Math.floor(diff%3600000/60000);document.getElementById('seconds').textContent=Math.floor(diff%60000/1000)}
+updateCountdown();setInterval(updateCountdown,1000);
+const canvas=document.getElementById('scratchCanvas'),ctx=canvas.getContext('2d');let drawing=false,ready=false;
+function setupScratch(){const rect=canvas.getBoundingClientRect();const dpr=window.devicePixelRatio||1;canvas.width=Math.max(1,rect.width*dpr);canvas.height=Math.max(1,rect.height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);ctx.globalCompositeOperation='source-over';const g=ctx.createLinearGradient(0,0,rect.width,rect.height);g.addColorStop(0,'#e8c66d');g.addColorStop(.5,'#c69a3c');g.addColorStop(1,'#f5df9d');ctx.fillStyle=g;ctx.fillRect(0,0,rect.width,rect.height);ctx.fillStyle='#805b22';ctx.font='bold 17px Georgia';ctx.textAlign='center';ctx.fillText('✧ SCRATCH HERE ✧',rect.width/2,rect.height/2);ctx.globalCompositeOperation='destination-out';ready=true}
+function scratchPoint(e){const r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
+function scratchMove(e){if(!drawing)return;e.preventDefault();const p=scratchPoint(e);ctx.beginPath();ctx.arc(p.x,p.y,19,0,Math.PI*2);ctx.fill()}
+canvas.addEventListener('pointerdown',e=>{drawing=true;canvas.setPointerCapture(e.pointerId);scratchMove(e)});canvas.addEventListener('pointermove',scratchMove);canvas.addEventListener('pointerup',()=>drawing=false);canvas.addEventListener('pointercancel',()=>drawing=false);
+function revealScratch(){if(!ready)setupScratch();ctx.clearRect(0,0,canvas.width,canvas.height)}
+window.addEventListener('load',setupScratch);window.addEventListener('resize',setupScratch);
 </script>
 </body>
 </html>
