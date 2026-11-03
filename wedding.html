@@ -3,268 +3,238 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hariharan ♥ Sindhu | Royal Wedding Invitation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hariharan ♥ Sindhu | Wedding Invitation</title>
 <style>
 *{box-sizing:border-box}
+:root{
+ --wine:#4b071e;--wine2:#741c38;--rose:#c94f78;
+ --pink:#ffe1eb;--gold:#e7c477;--cream:#fff8ed;
+}
 body{
- margin:0;text-align:center;font-family:Georgia,serif;
- color:#71354e;overflow-x:hidden;
- background:linear-gradient(135deg,#fff0f6,#f5d4e6,#fce8c9,#ead8f4);
+ margin:0;font-family:Georgia,serif;color:var(--cream);
+ background:radial-gradient(circle at top,#9b3155,#4b071e 48%,#210711);
+ overflow-x:hidden;
 }
-:root{--pink:#b83f75;--gold:#c79b4e;--purple:#764078}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;
+ background-image:radial-gradient(#f8dca0 1px,transparent 1px);
+ background-size:28px 28px;
+}
+*{scroll-behavior:smooth}
 .hero{
- min-height:100vh;display:flex;flex-direction:column;
- justify-content:center;align-items:center;padding:35px 15px;
- border:9px double var(--gold);
- background:
- radial-gradient(circle at 15% 15%,#fff 0 2px,transparent 4px),
- radial-gradient(circle at 80% 30%,#fff 0 2px,transparent 4px),
- linear-gradient(145deg,#f5c5dc,#fff0e7,#e8c9ed);
- position:relative;overflow:hidden;
+ min-height:100vh;padding:55px 18px 35px;text-align:center;
+ display:flex;flex-direction:column;justify-content:center;align-items:center;
+ position:relative;border:7px double var(--gold);margin:10px;
+ background:linear-gradient(145deg,#5b102bdf,#270714eF);
+ border-radius:24px;box-shadow:0 0 35px #e9b85c55;
 }
-.hero:before,.hero:after{
- content:"❀ ✿ ❀ ✿ ❀ ✿ ❀";
- position:absolute;left:0;width:100%;
- color:#b77a9b;font-size:24px;letter-spacing:7px
+.ornament{font-size:35px;color:var(--gold);letter-spacing:8px}
+.kicker{color:#f4d99a;letter-spacing:4px;font-size:12px;margin:20px 0}
+h1{font-size:clamp(38px,9vw,68px);line-height:1.15;color:#ffe7bd;margin:12px 0;text-shadow:0 0 18px #f3b6c9}
+h1 span{color:#ff9fbd}
+.hero h2{font-size:20px;color:#f8d88f;font-weight:normal;letter-spacing:3px}
+.hero p{line-height:1.8;color:#ffe8ed;max-width:600px}
+.goldline{width:180px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px}
+.btn{
+ border:1px solid var(--gold);border-radius:30px;padding:13px 20px;
+ background:linear-gradient(120deg,#8d2348,#4a0b22);color:#fff4e7;
+ font-size:15px;cursor:pointer;margin:6px;box-shadow:0 4px 15px #17030b88;
 }
-.hero:before{top:16px}.hero:after{bottom:16px}
-.crown{font-size:58px;color:var(--gold)}
-.eyebrow{letter-spacing:4px;font-size:12px;color:#96603f}
-h1{font-size:clamp(38px,9vw,65px);color:#a13d70;text-shadow:2px 3px 5px white}
-h2{color:#a13d70;font-size:28px}
-p{line-height:1.8}
-.heart{color:#dc3776;animation:beat 1s infinite;display:inline-block}
-@keyframes beat{50%{transform:scale(1.35)}}
-button{
- border:2px solid #f1d89b;border-radius:30px;
- padding:12px 21px;margin:7px;
- background:linear-gradient(120deg,#a83d70,#d0809f,#bd9143);
- color:white;font-family:Georgia;font-size:15px;cursor:pointer;
- box-shadow:0 5px 14px #63334d25;
-}
-button:active{transform:scale(.96)}
-section{padding:35px 13px}
+.btn:hover{background:#b13c66;transform:translateY(-2px)}
+.menu{max-width:800px;margin:28px auto;padding:15px;text-align:center}
+.menu h2,.panel h2{color:#f5d58e}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.menu .btn{min-height:62px;font-size:16px}
 .panel{
- max-width:760px;margin:20px auto;padding:24px 14px;
- background:#fff9f3ed;border:2px solid var(--gold);
- border-radius:24px;box-shadow:0 8px 24px #813d6420;
+ display:none;max-width:850px;margin:20px auto;padding:25px 16px;
+ border:2px solid var(--gold);border-radius:22px;
+ background:linear-gradient(145deg,#6e1938,#310918);
+ box-shadow:0 0 25px #e6b75b44;text-align:center;
 }
-.hidden{display:none}
-.menu{
- display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
- gap:13px;max-width:650px;margin:25px auto;
+.panel.show{display:block;animation:appear .7s ease}
+@keyframes appear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.panel p{line-height:1.8}
+.photo-frame{
+ max-width:650px;margin:15px auto;border:5px double var(--gold);
+ padding:7px;border-radius:15px;background:#fff0df;
 }
-.tile{
- padding:23px 8px;border:2px solid #d2aa65;border-radius:20px;
- background:linear-gradient(145deg,#fffaf0,#f5d9e9);
- color:#874064;cursor:pointer;
+.photo-frame img{width:100%;max-height:570px;object-fit:contain;display:block;border-radius:8px;cursor:zoom-in}
+.gallery-controls{display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap}
+.count{color:#f7dba0;font-size:14px}
+.nav-arrows{display:flex;justify-content:space-between;gap:20px;margin:12px auto;max-width:650px}
+.nav-arrows button{font-size:25px;width:58px;height:48px}
+.hidden{display:none!important}
+.scratch-wrap{
+ position:relative;width:min(90vw,430px);height:230px;margin:20px auto;
+ border:4px solid var(--gold);border-radius:18px;overflow:hidden;
+ background:linear-gradient(135deg,#fff0d4,#f3c6d1);
 }
-.tile span{display:block;font-size:35px;margin-bottom:8px}
-.tile strong{font-size:15px}
-.flower{font-size:30px;color:#b77a9b}
-.slide{
- max-width:540px;margin:20px auto;
- background:#fff;padding:10px;border:3px solid #d3aa62;
- border-radius:20px;
+.secret-date{
+ position:absolute;inset:0;display:flex;flex-direction:column;
+ justify-content:center;align-items:center;color:#650e2e;
+ background:radial-gradient(circle,#fff8e8,#f5cbd6);
 }
-.slide img{
- width:100%;height:350px;object-fit:contain;
- border-radius:12px;background:#f5e8ed;
+.secret-date strong{font-size:36px;color:#8a1741}
+.secret-date span{font-size:17px;margin:8px}
+#scratchCanvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.scratch-note{color:#ffe0ea}
+.timer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;max-width:650px;margin:25px auto}
+.timebox{
+ border:1px solid var(--gold);border-radius:15px;padding:17px 5px;
+ background:linear-gradient(145deg,#8c294e,#3d0a20);
+ box-shadow:inset 0 0 15px #f4c2d033;
 }
-.slide-caption{color:#9e5574;padding:10px}
-.arrows{display:flex;justify-content:center;gap:20px}
-.arrows button{min-width:105px}
-.counter{font-size:13px;color:#92617c}
-.secret{
- background:linear-gradient(140deg,#fff0f6,#f5dfb9,#ecdaf4);
- border:2px dashed #bb904a;padding:28px 12px;border-radius:20px;
+.timebox strong{display:block;font-size:clamp(25px,6vw,42px);color:#ffe4a9}
+.timebox span{font-size:12px;color:#ffd6e2;letter-spacing:1px}
+.venue-card{border:1px solid var(--gold);border-radius:16px;padding:20px;margin:18px auto;max-width:600px}
+a.maplink{color:#ffcfdf}
+.footer{text-align:center;padding:35px 12px;color:#f5d28c}
+.heart{
+ position:fixed;z-index:10;bottom:-35px;pointer-events:none;
+ animation:floatup linear forwards;text-shadow:0 0 12px #ff9dbd;
 }
-#secretAnswer{display:none;color:#a43e70;font-size:23px}
-#timer{font-size:25px;color:#a43e70;line-height:1.9;font-weight:bold}
-.countbox{padding:20px;background:#fff0f5;border-radius:20px;border:1px solid var(--gold)}
-footer{padding:30px;background:linear-gradient(135deg,#f2cbdc,#fff0dc)}
-#lightbox{
- display:none;position:fixed;inset:0;background:#140b19ed;
- z-index:1000;align-items:center;justify-content:center;padding:15px
+@keyframes floatup{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+.flower{position:fixed;pointer-events:none;z-index:1;opacity:.75;animation:fall 12s linear infinite}
+@keyframes fall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(110vh) rotate(360deg)}}
+.lightbox{
+ display:none;position:fixed;inset:0;background:#10030bea;z-index:30;
+ align-items:center;justify-content:center;padding:15px
 }
-#lightbox img{max-width:95%;max-height:80vh;object-fit:contain;border:3px solid var(--gold)}
-#lightbox button{position:absolute;right:8px;top:8px}
-.float{
- position:fixed;bottom:-45px;z-index:20;pointer-events:none;
- animation:rise 9s linear forwards;opacity:.8
+.lightbox img{max-width:95vw;max-height:85vh;object-fit:contain;border:3px solid var(--gold)}
+.lightbox button{position:absolute;top:15px;right:15px}
+@media(max-width:480px){
+ .menu-grid{grid-template-columns:1fr}
+ .timer-grid{grid-template-columns:repeat(2,1fr)}
+ .hero{min-height:90vh}
 }
-@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}
- 15%{opacity:.8}100%{transform:translateY(-115vh) rotate(50deg);opacity:0}}
-@media(max-width:480px){.slide img{height:270px}.menu{gap:9px}}
 </style>
 </head>
 <body>
 
-<header class="hero">
- <div class="crown">♛</div>
- <div class="eyebrow">A ROYAL FLORAL WEDDING CELEBRATION</div>
- <div class="flower">❀ ✿ ❀</div>
- <p>THE BEGINNING OF OUR FOREVER</p>
- <h1>Hariharan <span class="heart">♥</span><br>Sindhu</h1>
- <p>Two Hearts · One Beautiful Journey</p>
- <div class="flower">🌸 💗 🌸</div>
- <p>With the blessings of our families,<br>we joyfully invite you to celebrate our love.</p>
- <button onclick="go('menu')">OPEN OUR INVITATION ♥</button>
-</header>
-
-<section>
- <div class="flower">♛ ❀ ♛</div>
- <h2>With Love & Blessings</h2>
- <div class="panel">
-  <p>We invite you to witness the beautiful union of</p>
-  <h1>Hariharan <span class="heart">♥</span> Sindhu</h1>
-  <p>Two families, two hearts and one forever.</p>
-  <div class="flower">🌸 ❀ 🌸</div>
-  <p>RECEPTION</p>
-  <h2>21 November 2026</h2>
-  <p>WEDDING CEREMONY</p>
-  <h2>22 November 2026</h2>
-  <p>Venue: GP Janarajan Mahal</p>
-  <p>Sholinganallur, Chennai</p>
-  <p>We look forward to celebrating with you!</p>
- </div>
-</section>
-
-<section id="menu">
- <div class="flower">🌷 ✨ 🌷</div>
- <h2>Our Love Story</h2>
- <p>Every moment is a flower in our garden of love.</p>
- <div class="menu">
-  <div class="tile" onclick="openPanel('chat')"><span>💌</span><strong>First Chat</strong></div>
-  <div class="tile" onclick="openPanel('engagement')"><span>💍</span><strong>Engagement</strong></div>
-  <div class="tile" onclick="openPanel('memories')"><span>📸</span><strong>Our Memories</strong></div>
-  <div class="tile" onclick="openPanel('secret')"><span>🎁</span><strong>Secret Wedding Card</strong></div>
-  <div class="tile" onclick="openPanel('countdown')"><span>⏳</span><strong>Countdown</strong></div>
-  <div class="tile" onclick="openPanel('venue')"><span>💒</span><strong>Wedding Venue</strong></div>
- </div>
-</section>
-
-<!-- FIRST CHAT -->
-<section id="chat" class="hidden">
- <div class="panel">
-  <h2>💌 Our First Chat</h2>
-  <p>One conversation, a thousand feelings.</p>
-  <div class="slide">
-   <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20261020-WA0034~3.jpg" onclick="zoom(this)" alt="First chat">
-   <div class="slide-caption">Our little beginning ♥</div>
-  </div>
-  <button onclick="closePanel('chat')">← Back</button>
- </div>
-</section>
-
-<!-- ENGAGEMENT -->
-<section id="engagement" class="hidden">
- <div class="panel">
-  <h2>💍 Our Engagement</h2>
-  <p>A promise of forever, sealed with love.</p>
-  <div class="slide">
-   <img id="engImg" src="" onclick="zoom(this)" alt="Engagement photo">
-   <div class="slide-caption" id="engCaption"></div>
-   <div class="counter" id="engCount"></div>
-  </div>
-  <div class="arrows">
-   <button onclick="move('eng',-1)">❮ Previous</button>
-   <button onclick="move('eng',1)">Next ❯</button>
-  </div>
-  <button onclick="closePanel('engagement')">Back to Invitation</button>
- </div>
-</section>
-
-<!-- MEMORIES -->
-<section id="memories" class="hidden">
- <div class="panel">
-  <h2>📸 Our Beautiful Memories</h2>
-  <p>Little moments, endless happiness.</p>
-  <div class="slide">
-   <img id="memImg" src="" onclick="zoom(this)" alt="Memory photo">
-   <div class="slide-caption" id="memCaption"></div>
-   <div class="counter" id="memCount"></div>
-  </div>
-  <div class="arrows">
-   <button onclick="move('mem',-1)">❮ Previous</button>
-   <button onclick="move('mem',1)">Next ❯</button>
-  </div>
-  <button onclick="closePanel('memories')">Back to Invitation</button>
- </div>
-</section>
-
-<!-- SECRET -->
-<section id="secret" class="hidden">
- <div class="panel">
-  <h2>🎁 A Secret Just For You</h2>
-  <p>Our special date is waiting inside this royal card!</p>
-  <div class="secret">
-   <div style="font-size:55px">💌</div>
-   <h2>Our Secret Wedding Card</h2>
-   <button onclick="reveal()">OPEN THE SECRET ♥</button>
-   <div id="secretAnswer">
-    <p>OUR WEDDING DAY</p>
-    <h2>22 · 11 · 2026</h2>
-    <p>Hariharan ♥ Sindhu</p>
-    <p>Our Forever Begins! 🌸</p>
-   </div>
-  </div>
-  <button onclick="closePanel('secret')">Back to Invitation</button>
- </div>
-</section>
-
-<!-- COUNTDOWN -->
-<section id="countdown" class="hidden">
- <div class="panel">
-  <h2>⏳ Our Wedding Countdown</h2>
-  <p>Every second brings us closer to forever.</p>
-  <button onclick="showCountdown()">OPEN COUNTDOWN ♥</button>
-  <div id="countContent" class="hidden">
-   <div class="countbox">
-    <div style="font-size:35px">💗 🌸 💗</div>
-    <h2>Until Our Wedding Day</h2>
-    <div id="timer">Loading...</div>
-    <p>22 November 2026</p>
-    <p>Hariharan ♥ Sindhu</p>
-   </div>
-  </div>
-  <button onclick="closePanel('countdown')">Back to Invitation</button>
- </div>
-</section>
-
-<!-- VENUE -->
-<section id="venue" class="hidden">
- <div class="panel">
-  <h2>💒 Join Our Celebration</h2>
-  <div class="flower">❀ 🌸 ❀</div>
-  <h2>GP Janarajan Mahal</h2>
-  <p>Sholinganallur, Chennai</p>
-  <p>Reception – 21 November 2026</p>
-  <p>Wedding – 22 November 2026</p>
-  <a href="https://www.google.com/maps/search/?api=1&query=GP+Janarajan+Mahal+Sholinganallur+Chennai" target="_blank">
-   <button>OPEN GOOGLE MAPS 📍</button>
-  </a>
-  <button onclick="closePanel('venue')">Back to Invitation</button>
- </div>
-</section>
-
-<div id="lightbox" onclick="closeZoom()">
- <button onclick="closeZoom()">✕ Close</button>
- <img id="largePhoto" src="" alt="Photo">
+<div class="hero">
+ <div class="ornament">❀ ✧ ❀</div>
+ <div class="kicker">A ROYAL CELEBRATION OF LOVE</div>
+ <p>With the blessings of our families</p>
+ <h1>Hariharan <span>♥</span><br>Sindhu</h1>
+ <div class="goldline"></div>
+ <h2>WEDDING INVITATION</h2>
+ <p>Two hearts, one beautiful promise,<br>and a lifetime of togetherness.</p>
+ <div class="ornament">🌹 ✨ 🌹</div>
+ <button class="btn" onclick="document.getElementById('menu').scrollIntoView()">OPEN OUR INVITATION ↓</button>
 </div>
 
-<footer>
- <div class="flower">♛ ❀ 🌸 ❀ ♛</div>
- <h2>Hariharan <span class="heart">♥</span> Sindhu</h2>
- <p>Two souls. One destiny. Endless love.</p>
- <p>Forever & Always ♥</p>
- <div class="flower">🌷 ✨ 🌷</div>
-</footer>
+<div class="menu" id="menu">
+ <div class="ornament">❀ ♥ ❀</div>
+ <h2>Our Beautiful Moments</h2>
+ <p>Choose a card to open our memories</p>
+ <div class="menu-grid">
+  <button class="btn" onclick="openPanel('chat')">💌 First Chat</button>
+  <button class="btn" onclick="openPanel('engagement')">💍 Engagement</button>
+  <button class="btn" onclick="openPanel('memories')">📸 Our Memories</button>
+  <button class="btn" onclick="openPanel('scratch')">🎁 Secret Scratch Card</button>
+  <button class="btn" onclick="openPanel('countdown')">⏳ Wedding Countdown</button>
+  <button class="btn" onclick="openPanel('venue')">🏛️ Wedding Venue</button>
+ </div>
+</div>
+
+<section class="panel" id="chat">
+ <div class="ornament">💌 🌹 💌</div>
+ <h2>Where Our Story Began</h2>
+ <p>One little conversation, a thousand beautiful feelings.</p>
+ <div class="photo-frame"><img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20261020-WA0034~3.jpg" alt="First chat memory" onclick="zoomPhoto(this.src)"></div>
+ <button class="btn" onclick="closePanels()">Back to Invitation</button>
+</section>
+
+<section class="panel" id="engagement">
+ <div class="ornament">💍 ✨ 💍</div>
+ <h2>Our Engagement</h2>
+ <p>A promise today, forever tomorrow.</p>
+ <div class="photo-frame"><img id="engPhoto" alt="Engagement memory" onclick="zoomPhoto(this.src)"></div>
+ <div class="nav-arrows">
+  <button class="btn" onclick="movePhoto('eng',-1)">❮</button>
+  <button class="btn" onclick="movePhoto('eng',1)">❯</button>
+ </div>
+ <div class="count" id="engCount"></div>
+ <button class="btn" onclick="closePanels()">Back to Invitation</button>
+</section>
+
+<section class="panel" id="memories">
+ <div class="ornament">🌹 💗 🌹</div>
+ <h2>Our Sweet Memories</h2>
+ <p>Every picture holds a little piece of our happiness.</p>
+ <div class="photo-frame"><img id="memoryPhoto" alt="Our memories" onclick="zoomPhoto(this.src)"></div>
+ <div class="nav-arrows">
+  <button class="btn" onclick="movePhoto('memory',-1)">❮</button>
+  <button class="btn" onclick="movePhoto('memory',1)">❯</button>
+ </div>
+ <div class="count" id="memoryCount"></div>
+ <button class="btn" onclick="closePanels()">Back to Invitation</button>
+</section>
+
+<section class="panel" id="scratch">
+ <div class="ornament">🎁 ❤️ 🎁</div>
+ <h2>A Little Secret For You</h2>
+ <p class="scratch-note">Rub the golden card with your finger to reveal our special day!</p>
+ <div class="scratch-wrap" id="scratchWrap">
+  <div class="secret-date">
+   <span>OUR FOREVER BEGINS</span>
+   <strong>22 · 11 · 2026</strong>
+   <span>Hariharan ♥ Sindhu</span>
+  </div>
+  <canvas id="scratchCanvas"></canvas>
+ </div>
+ <p class="scratch-note" id="scratchHint">Scratch here with your finger or mouse ✨</p>
+ <button class="btn" onclick="resetScratch()">Reset Scratch Card</button>
+ <button class="btn" onclick="closePanels()">Back to Invitation</button>
+</section>
+
+<section class="panel" id="countdown">
+ <div class="ornament">❤️ 💗 ❤️</div>
+ <h2>Counting Every Moment</h2>
+ <p>Until our forever begins...</p>
+ <div class="timer-grid">
+  <div class="timebox"><strong id="days">0</strong><span>DAYS</span></div>
+  <div class="timebox"><strong id="hours">00</strong><span>HOURS</span></div>
+  <div class="timebox"><strong id="minutes">00</strong><span>MINUTES</span></div>
+  <div class="timebox"><strong id="seconds">00</strong><span>SECONDS</span></div>
+ </div>
+ <p>22 November 2026 · 6:30 AM</p>
+ <p>One day, one promise, forever together. 💞</p>
+ <button class="btn" onclick="closePanels()">Back to Invitation</button>
+</section>
+
+<section class="panel" id="venue">
+ <div class="ornament">🏛️ 🌹 🏛️</div>
+ <h2>Join Our Celebration</h2>
+ <div class="venue-card">
+  <h3 style="color:#f6d58e">Wedding Reception</h3>
+  <p>21 November 2026</p>
+  <div class="goldline"></div>
+  <h3 style="color:#f6d58e">Wedding Ceremony</h3>
+  <p>22 November 2026 · 6:30 AM</p>
+  <div class="goldline"></div>
+  <h3 style="color:#f6d58e">GP Janarajan Mahal</h3>
+  <p>Sholinganallur, Chennai</p>
+  <a class="maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=GP+Janarajan+Mahal+Sholinganallur+Chennai">📍 Open Google Maps</a>
+ </div>
+ <p>We would be delighted to celebrate with you!</p>
+ <button class="btn" onclick="closePanels()">Back to Invitation</button>
+</section>
+
+<div class="footer">
+ <div class="ornament">❀ ♥ ❀</div>
+ Made with love for Hariharan & Sindhu
+ <p>Two souls · One journey · Forever</p>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+ <button class="btn">✕ Close</button>
+ <img id="largePhoto" alt="Enlarged memory">
+</div>
 
 <script>
 const base="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/";
-
 const engagementPhotos=[
  "IMG-20260914-WA0025.jpg",
  "IMG-20260914-WA0030.jpg",
@@ -273,96 +243,146 @@ const engagementPhotos=[
  "IMG-20260914-WA0059.jpg",
  "IMG-20260915-WA0017.jpg"
 ];
-
 const memoryPhotos=[
  "IMG-20261102-WA0012.jpg",
  "IMG-20261102-WA0043.jpg",
- "IMG-20261103-WA0061.jpg"
+ "IMG-20261103-WA0061.jpg",
+ "IMG-20261103-WA0071.jpg"
 ];
-
-const engLabels=[
- "Our Special Day ♥","A Promise of Forever ♥",
- "Beautiful Together ♥","Our Happiness ♥",
- "Made for Each Other ♥","Our Forever ♥"
-];
-const memLabels=[
- "A Precious Memory ♥","Beautiful Moments ♥",
- "Our Sweet Memories ♥"
-];
-
 let engIndex=0,memIndex=0;
 
-function go(id){
- document.getElementById(id).scrollIntoView({behavior:'smooth'});
-}
 function openPanel(id){
- document.querySelectorAll('section.hidden').forEach(s=>s.style.display='none');
- const p=document.getElementById(id);
- p.style.display='block';
- if(id==='engagement')render('eng');
- if(id==='memories')render('mem');
- p.scrollIntoView({behavior:'smooth'});
+ closePanels();
+ const panel=document.getElementById(id);
+ panel.classList.add("show");
+ panel.scrollIntoView({behavior:"smooth",block:"start"});
+ if(id==="engagement")showPhoto("eng");
+ if(id==="memories")showPhoto("memory");
+ if(id==="scratch")setTimeout(initScratch,100);
+ if(id==="countdown")updateTimer();
 }
-function closePanel(id){
- document.getElementById(id).style.display='none';
- go('menu');
+function closePanels(){
+ document.querySelectorAll(".panel").forEach(p=>p.classList.remove("show"));
+ document.getElementById("menu").scrollIntoView({behavior:"smooth"});
 }
-function render(type){
- const isEng=type==='eng';
- const photos=isEng?engagementPhotos:memoryPhotos;
- const labels=isEng?engLabels:memLabels;
- const index=isEng?engIndex:memIndex;
- document.getElementById(type+'Img').src=base+photos[index];
- document.getElementById(type+'Caption').textContent=labels[index];
- document.getElementById(type+'Count').textContent=
- (index+1)+' / '+photos.length;
-}
-function move(type,direction){
- if(type==='eng'){
-  engIndex=(engIndex+direction+engagementPhotos.length)%engagementPhotos.length;
+function showPhoto(type){
+ if(type==="eng"){
+  document.getElementById("engPhoto").src=base+engagementPhotos[engIndex];
+  document.getElementById("engCount").textContent=(engIndex+1)+" / "+engagementPhotos.length;
  }else{
-  memIndex=(memIndex+direction+memoryPhotos.length)%memoryPhotos.length;
+  document.getElementById("memoryPhoto").src=base+memoryPhotos[memIndex];
+  document.getElementById("memoryCount").textContent=(memIndex+1)+" / "+memoryPhotos.length;
  }
- render(type);
 }
-function reveal(){
- document.getElementById('secretAnswer').style.display='block';
+function movePhoto(type,step){
+ if(type==="eng"){
+  engIndex=(engIndex+step+engagementPhotos.length)%engagementPhotos.length;
+ }else{
+  memIndex=(memIndex+step+memoryPhotos.length)%memoryPhotos.length;
+ }
+ showPhoto(type);
 }
-function showCountdown(){
- document.getElementById('countContent').style.display='block';
- updateTimer();
+function zoomPhoto(src){
+ document.getElementById("largePhoto").src=src;
+ document.getElementById("lightbox").style.display="flex";
 }
+
+/* Real finger and mouse scratch card */
+let canvas,ctx,scratching=false,scratchReady=false;
+function initScratch(){
+ canvas=document.getElementById("scratchCanvas");
+ if(!canvas || scratchReady)return;
+ const rect=canvas.getBoundingClientRect();
+ const dpr=window.devicePixelRatio||1;
+ canvas.width=rect.width*dpr;
+ canvas.height=rect.height*dpr;
+ ctx=canvas.getContext("2d");
+ ctx.scale(dpr,dpr);
+ const gradient=ctx.createLinearGradient(0,0,rect.width,rect.height);
+ gradient.addColorStop(0,"#d7a94e");
+ gradient.addColorStop(.5,"#f8e3a5");
+ gradient.addColorStop(1,"#a96b31");
+ ctx.fillStyle=gradient;ctx.fillRect(0,0,rect.width,rect.height);
+ ctx.fillStyle="#5c1730";ctx.textAlign="center";
+ ctx.font="bold 24px Georgia";
+ ctx.fillText("✧ SCRATCH TO REVEAL ✧",rect.width/2,rect.height/2-8);
+ ctx.font="18px Georgia";ctx.fillText("Our Wedding Date 💗",rect.width/2,rect.height/2+28);
+ ctx.globalCompositeOperation="destination-out";
+ scratchReady=true;
+ canvas.addEventListener("pointerdown",e=>{
+  scratching=true;canvas.setPointerCapture(e.pointerId);scratchAt(e);
+ });
+ canvas.addEventListener("pointermove",e=>{if(scratching)scratchAt(e)});
+ canvas.addEventListener("pointerup",()=>{scratching=false;checkScratch()});
+ canvas.addEventListener("pointercancel",()=>scratching=false);
+}
+function scratchAt(e){
+ const rect=canvas.getBoundingClientRect();
+ const x=e.clientX-rect.left,y=e.clientY-rect.top;
+ ctx.beginPath();ctx.arc(x,y,23,0,Math.PI*2);ctx.fill();
+}
+function checkScratch(){
+ const data=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+ let clear=0,total=0;
+ for(let i=3;i<data.length;i+=32){total++;if(data[i]<80)clear++}
+ if(clear/total>.38){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  document.getElementById("scratchHint").textContent="Our forever begins on 22 November 2026! ❤️";
+  burstHearts(35);
+ }
+}
+function resetScratch(){
+ scratchReady=false;
+ document.getElementById("scratchHint").textContent="Scratch here with your finger or mouse ✨";
+ const old=document.getElementById("scratchCanvas");
+ const fresh=old.cloneNode(false);old.parentNode.replaceChild(fresh,old);
+ canvas=null;ctx=null;setTimeout(initScratch,50);
+}
+
+/* Countdown: Chennai local time */
 function updateTimer(){
- const target=new Date('2026-11-22T06:30:00+05:30').getTime();
+ const target=new Date("2026-11-22T06:30:00+05:30").getTime();
  const diff=target-Date.now();
- const el=document.getElementById('timer');
- if(diff<=0){el.innerHTML='Our Special Day is Here! ♥';return;}
- const d=Math.floor(diff/86400000);
- const h=Math.floor(diff%86400000/3600000);
- const m=Math.floor(diff%3600000/60000);
- const s=Math.floor(diff%60000/1000);
- el.innerHTML=d+' Days<br>'+h+' Hours<br>'+m+' Minutes<br>'+s+' Seconds';
+ if(diff<=0){
+  ["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="00");
+  return;
+ }
+ document.getElementById("days").textContent=Math.floor(diff/86400000);
+ document.getElementById("hours").textContent=String(Math.floor(diff/3600000)%24).padStart(2,"0");
+ document.getElementById("minutes").textContent=String(Math.floor(diff/60000)%60).padStart(2,"0");
+ document.getElementById("seconds").textContent=String(Math.floor(diff/1000)%60).padStart(2,"0");
 }
 setInterval(updateTimer,1000);
+updateTimer();
 
-function zoom(img){
- document.getElementById('largePhoto').src=img.src;
- document.getElementById('lightbox').style.display='flex';
+/* Floating red and pink hearts */
+function burstHearts(amount){
+ for(let i=0;i<amount;i++){
+  setTimeout(()=>{
+   const h=document.createElement("div");
+   h.className="heart";
+   h.textContent=Math.random()>.5?"❤️":"💗";
+   h.style.left=Math.random()*100+"vw";
+   h.style.fontSize=(17+Math.random()*25)+"px";
+   h.style.animationDuration=(4+Math.random()*5)+"s";
+   document.body.appendChild(h);
+   setTimeout(()=>h.remove(),9500);
+  },i*80);
+ }
 }
-function closeZoom(){
- document.getElementById('lightbox').style.display='none';
-}
-function floating(){
- const f=document.createElement('div');
- f.className='float';
- f.textContent=['♥','♡','🌸','❀','✨','✿'][Math.floor(Math.random()*6)];
- f.style.left=Math.random()*100+'vw';
- f.style.fontSize=(18+Math.random()*20)+'px';
- f.style.animationDuration=(6+Math.random()*6)+'s';
+setInterval(()=>burstHearts(2),1200);
+
+/* Floating flowers */
+setInterval(()=>{
+ const f=document.createElement("div");
+ f.className="flower";
+ f.textContent=["🌸","🌹","❀","🌺"][Math.floor(Math.random()*4)];
+ f.style.left=Math.random()*100+"vw";
+ f.style.fontSize=(16+Math.random()*20)+"px";
+ f.style.animationDuration=(9+Math.random()*8)+"s";
  document.body.appendChild(f);
- setTimeout(()=>f.remove(),12000);
-}
-setInterval(floating,550);
+ setTimeout(()=>f.remove(),18000);
+},1300);
 </script>
 </body>
 </html>
