@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hariharan ♥ Sindhu | Wedding Invitation</title>
+
 <style>
-*{box-sizing:border-box}
+*{box-sizing:border-box;scroll-behavior:smooth}
 :root{
  --wine:#4b071e;--wine2:#741c38;--rose:#c94f78;
  --pink:#ffe1eb;--gold:#e7c477;--cream:#fff8ed;
@@ -21,25 +21,32 @@ body:before{
  background-image:radial-gradient(#f8dca0 1px,transparent 1px);
  background-size:28px 28px;
 }
-*{scroll-behavior:smooth}
 .hero{
  min-height:100vh;padding:55px 18px 35px;text-align:center;
  display:flex;flex-direction:column;justify-content:center;align-items:center;
  position:relative;border:7px double var(--gold);margin:10px;
- background:linear-gradient(145deg,#5b102bdf,#270714eF);
+ background:linear-gradient(145deg,#5b102bdf,#270714ef);
  border-radius:24px;box-shadow:0 0 35px #e9b85c55;
 }
 .ornament{font-size:35px;color:var(--gold);letter-spacing:8px}
 .kicker{color:#f4d99a;letter-spacing:4px;font-size:12px;margin:20px 0}
-h1{font-size:clamp(38px,9vw,68px);line-height:1.15;color:#ffe7bd;margin:12px 0;text-shadow:0 0 18px #f3b6c9}
+h1{
+ font-size:clamp(38px,9vw,68px);line-height:1.15;
+ color:#ffe7bd;margin:12px 0;text-shadow:0 0 18px #f3b6c9
+}
 h1 span{color:#ff9fbd}
 .hero h2{font-size:20px;color:#f8d88f;font-weight:normal;letter-spacing:3px}
 .hero p{line-height:1.8;color:#ffe8ed;max-width:600px}
-.goldline{width:180px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px}
+.goldline{
+ width:180px;height:2px;
+ background:linear-gradient(90deg,transparent,var(--gold),transparent);
+ margin:20px auto;
+}
 .btn{
  border:1px solid var(--gold);border-radius:30px;padding:13px 20px;
- background:linear-gradient(120deg,#8d2348,#4a0b22);color:#fff4e7;
- font-size:15px;cursor:pointer;margin:6px;box-shadow:0 4px 15px #17030b88;
+ background:linear-gradient(120deg,#8d2348,#4a0b22);
+ color:#fff4e7;font-size:15px;cursor:pointer;margin:6px;
+ box-shadow:0 4px 15px #17030b88;transition:.25s;
 }
 .btn:hover{background:#b13c66;transform:translateY(-2px)}
 .menu{max-width:800px;margin:28px auto;padding:15px;text-align:center}
@@ -53,21 +60,29 @@ h1 span{color:#ff9fbd}
  box-shadow:0 0 25px #e6b75b44;text-align:center;
 }
 .panel.show{display:block;animation:appear .7s ease}
-@keyframes appear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes appear{
+ from{opacity:0;transform:translateY(20px)}
+ to{opacity:1;transform:none}
+}
 .panel p{line-height:1.8}
 .photo-frame{
  max-width:650px;margin:15px auto;border:5px double var(--gold);
  padding:7px;border-radius:15px;background:#fff0df;
 }
-.photo-frame img{width:100%;max-height:570px;object-fit:contain;display:block;border-radius:8px;cursor:zoom-in}
-.gallery-controls{display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap}
+.photo-frame img{
+ width:100%;max-height:570px;object-fit:contain;
+ display:block;border-radius:8px;cursor:zoom-in
+}
 .count{color:#f7dba0;font-size:14px}
-.nav-arrows{display:flex;justify-content:space-between;gap:20px;margin:12px auto;max-width:650px}
+.nav-arrows{
+ display:flex;justify-content:space-between;gap:20px;
+ margin:12px auto;max-width:650px
+}
 .nav-arrows button{font-size:25px;width:58px;height:48px}
-.hidden{display:none!important}
 .scratch-wrap{
- position:relative;width:min(90vw,430px);height:230px;margin:20px auto;
- border:4px solid var(--gold);border-radius:18px;overflow:hidden;
+ position:relative;width:min(90vw,430px);height:230px;
+ margin:20px auto;border:4px solid var(--gold);
+ border-radius:18px;overflow:hidden;
  background:linear-gradient(135deg,#fff0d4,#f3c6d1);
 }
 .secret-date{
@@ -77,57 +92,109 @@ h1 span{color:#ff9fbd}
 }
 .secret-date strong{font-size:36px;color:#8a1741}
 .secret-date span{font-size:17px;margin:8px}
-#scratchCanvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+#scratchCanvas{
+ position:absolute;inset:0;width:100%;height:100%;
+ touch-action:none;cursor:crosshair
+}
 .scratch-note{color:#ffe0ea}
-.timer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;max-width:650px;margin:25px auto}
+.timer-grid{
+ display:grid;grid-template-columns:repeat(4,1fr);
+ gap:9px;max-width:650px;margin:25px auto
+}
 .timebox{
  border:1px solid var(--gold);border-radius:15px;padding:17px 5px;
  background:linear-gradient(145deg,#8c294e,#3d0a20);
  box-shadow:inset 0 0 15px #f4c2d033;
 }
-.timebox strong{display:block;font-size:clamp(25px,6vw,42px);color:#ffe4a9}
+.timebox strong{
+ display:block;font-size:clamp(25px,6vw,42px);color:#ffe4a9
+}
 .timebox span{font-size:12px;color:#ffd6e2;letter-spacing:1px}
-.venue-card{border:1px solid var(--gold);border-radius:16px;padding:20px;margin:18px auto;max-width:600px}
-a.maplink{color:#ffcfdf}
+
+/* Royal venue and larger map */
+.venue-card{
+ border:1px solid var(--gold);border-radius:20px;
+ padding:22px 16px;margin:18px auto;max-width:700px;
+ background:linear-gradient(145deg,#7b2044,#350a1d);
+ box-shadow:0 0 25px #e6b75b33;
+}
+.venue-card h3{font-size:clamp(18px,4vw,23px);letter-spacing:1px}
+.venue-card p{font-size:16px}
+.map-frame{
+ width:100%;height:320px;border:3px double var(--gold);
+ border-radius:16px;overflow:hidden;margin:20px auto 12px;
+ background:#fff0df;
+}
+.map-frame iframe{width:100%;height:100%;border:0;display:block}
+a.maplink{
+ display:inline-block;color:#ffe1eb;background:#741c38;
+ border:1px solid var(--gold);border-radius:24px;
+ padding:12px 20px;margin-top:12px;text-decoration:none;
+}
+a.maplink:hover{background:#a9345d}
+
 .footer{text-align:center;padding:35px 12px;color:#f5d28c}
 .heart{
  position:fixed;z-index:10;bottom:-35px;pointer-events:none;
  animation:floatup linear forwards;text-shadow:0 0 12px #ff9dbd;
 }
-@keyframes floatup{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
-.flower{position:fixed;pointer-events:none;z-index:1;opacity:.75;animation:fall 12s linear infinite}
-@keyframes fall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(110vh) rotate(360deg)}}
-.lightbox{
- display:none;position:fixed;inset:0;background:#10030bea;z-index:30;
- align-items:center;justify-content:center;padding:15px
+@keyframes floatup{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
 }
-.lightbox img{max-width:95vw;max-height:85vh;object-fit:contain;border:3px solid var(--gold)}
+.flower{
+ position:fixed;pointer-events:none;z-index:1;opacity:.75;
+ animation:fall 12s linear infinite
+}
+@keyframes fall{
+ 0%{transform:translateY(-10vh) rotate(0)}
+ 100%{transform:translateY(110vh) rotate(360deg)}
+}
+.lightbox{
+ display:none;position:fixed;inset:0;background:#10030bea;
+ z-index:30;align-items:center;justify-content:center;padding:15px
+}
+.lightbox img{
+ max-width:95vw;max-height:85vh;object-fit:contain;
+ border:3px solid var(--gold)
+}
 .lightbox button{position:absolute;top:15px;right:15px}
+
 @media(max-width:480px){
  .menu-grid{grid-template-columns:1fr}
  .timer-grid{grid-template-columns:repeat(2,1fr)}
  .hero{min-height:90vh}
+ .map-frame{height:280px}
 }
 </style>
 </head>
+
 <body>
 
+<!-- MAIN INVITATION -->
 <div class="hero">
  <div class="ornament">❀ ✧ ❀</div>
  <div class="kicker">A ROYAL CELEBRATION OF LOVE</div>
  <p>With the blessings of our families</p>
+
  <h1>Hariharan <span>♥</span><br>Sindhu</h1>
+
  <div class="goldline"></div>
  <h2>WEDDING INVITATION</h2>
  <p>Two hearts, one beautiful promise,<br>and a lifetime of togetherness.</p>
  <div class="ornament">🌹 ✨ 🌹</div>
- <button class="btn" onclick="document.getElementById('menu').scrollIntoView()">OPEN OUR INVITATION ↓</button>
+
+ <button class="btn"
+ onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+ OPEN OUR INVITATION ↓
+ </button>
 </div>
 
+<!-- HIDDEN MEMORY MENU -->
 <div class="menu" id="menu">
  <div class="ornament">❀ ♥ ❀</div>
  <h2>Our Beautiful Moments</h2>
  <p>Choose a card to open our memories</p>
+
  <div class="menu-grid">
   <button class="btn" onclick="openPanel('chat')">💌 First Chat</button>
   <button class="btn" onclick="openPanel('engagement')">💍 Engagement</button>
@@ -138,44 +205,70 @@ a.maplink{color:#ffcfdf}
  </div>
 </div>
 
+<!-- FIRST CHAT -->
 <section class="panel" id="chat">
  <div class="ornament">💌 🌹 💌</div>
  <h2>Where Our Story Began</h2>
  <p>One little conversation, a thousand beautiful feelings.</p>
- <div class="photo-frame"><img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20261020-WA0034~3.jpg" alt="First chat memory" onclick="zoomPhoto(this.src)"></div>
+
+ <div class="photo-frame">
+  <img
+   src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20261020-WA0034~3.jpg"
+   alt="First chat memory"
+   onclick="zoomPhoto(this.src)">
+ </div>
+
  <button class="btn" onclick="closePanels()">Back to Invitation</button>
 </section>
 
+<!-- ENGAGEMENT PHOTOS -->
 <section class="panel" id="engagement">
  <div class="ornament">💍 ✨ 💍</div>
  <h2>Our Engagement</h2>
  <p>A promise today, forever tomorrow.</p>
- <div class="photo-frame"><img id="engPhoto" alt="Engagement memory" onclick="zoomPhoto(this.src)"></div>
+
+ <div class="photo-frame">
+  <img id="engPhoto" alt="Engagement memory"
+   onclick="zoomPhoto(this.src)">
+ </div>
+
  <div class="nav-arrows">
   <button class="btn" onclick="movePhoto('eng',-1)">❮</button>
   <button class="btn" onclick="movePhoto('eng',1)">❯</button>
  </div>
+
  <div class="count" id="engCount"></div>
  <button class="btn" onclick="closePanels()">Back to Invitation</button>
 </section>
 
+<!-- EXTRA MEMORIES -->
 <section class="panel" id="memories">
  <div class="ornament">🌹 💗 🌹</div>
  <h2>Our Sweet Memories</h2>
  <p>Every picture holds a little piece of our happiness.</p>
- <div class="photo-frame"><img id="memoryPhoto" alt="Our memories" onclick="zoomPhoto(this.src)"></div>
+
+ <div class="photo-frame">
+  <img id="memoryPhoto" alt="Our memories"
+   onclick="zoomPhoto(this.src)">
+ </div>
+
  <div class="nav-arrows">
   <button class="btn" onclick="movePhoto('memory',-1)">❮</button>
   <button class="btn" onclick="movePhoto('memory',1)">❯</button>
  </div>
+
  <div class="count" id="memoryCount"></div>
  <button class="btn" onclick="closePanels()">Back to Invitation</button>
 </section>
 
+<!-- SECRET SCRATCH CARD -->
 <section class="panel" id="scratch">
  <div class="ornament">🎁 ❤️ 🎁</div>
  <h2>A Little Secret For You</h2>
- <p class="scratch-note">Rub the golden card with your finger to reveal our special day!</p>
+ <p class="scratch-note">
+  Rub the golden card with your finger to reveal our special day!
+ </p>
+
  <div class="scratch-wrap" id="scratchWrap">
   <div class="secret-date">
    <span>OUR FOREVER BEGINS</span>
@@ -184,57 +277,105 @@ a.maplink{color:#ffcfdf}
   </div>
   <canvas id="scratchCanvas"></canvas>
  </div>
- <p class="scratch-note" id="scratchHint">Scratch here with your finger or mouse ✨</p>
+
+ <p class="scratch-note" id="scratchHint">
+  Scratch here with your finger or mouse ✨
+ </p>
+
  <button class="btn" onclick="resetScratch()">Reset Scratch Card</button>
  <button class="btn" onclick="closePanels()">Back to Invitation</button>
 </section>
 
+<!-- LIVE WEDDING COUNTDOWN -->
 <section class="panel" id="countdown">
  <div class="ornament">❤️ 💗 ❤️</div>
  <h2>Counting Every Moment</h2>
  <p>Until our forever begins...</p>
+
  <div class="timer-grid">
-  <div class="timebox"><strong id="days">0</strong><span>DAYS</span></div>
-  <div class="timebox"><strong id="hours">00</strong><span>HOURS</span></div>
-  <div class="timebox"><strong id="minutes">00</strong><span>MINUTES</span></div>
-  <div class="timebox"><strong id="seconds">00</strong><span>SECONDS</span></div>
+  <div class="timebox">
+   <strong id="days">0</strong><span>DAYS</span>
+  </div>
+  <div class="timebox">
+   <strong id="hours">00</strong><span>HOURS</span>
+  </div>
+  <div class="timebox">
+   <strong id="minutes">00</strong><span>MINUTES</span>
+  </div>
+  <div class="timebox">
+   <strong id="seconds">00</strong><span>SECONDS</span>
+  </div>
  </div>
+
  <p>22 November 2026 · 6:30 AM</p>
  <p>One day, one promise, forever together. 💞</p>
+
+ <button class="btn" onclick="burstHearts(65)">
+  💗 Tap for a Shower of Love 💗
+ </button>
+
  <button class="btn" onclick="closePanels()">Back to Invitation</button>
 </section>
 
+<!-- WEDDING VENUE -->
 <section class="panel" id="venue">
  <div class="ornament">🏛️ 🌹 🏛️</div>
  <h2>Join Our Celebration</h2>
+
  <div class="venue-card">
   <h3 style="color:#f6d58e">Wedding Reception</h3>
   <p>21 November 2026</p>
+
   <div class="goldline"></div>
+
   <h3 style="color:#f6d58e">Wedding Ceremony</h3>
   <p>22 November 2026 · 6:30 AM</p>
+
   <div class="goldline"></div>
+
   <h3 style="color:#f6d58e">GP Janarajan Mahal</h3>
   <p>Sholinganallur, Chennai</p>
-  <a class="maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=GP+Janarajan+Mahal+Sholinganallur+Chennai">📍 Open Google Maps</a>
+
+  <div class="map-frame">
+   <iframe
+    title="GP Janarajan Mahal location map"
+    loading="lazy"
+    allowfullscreen
+    src="https://maps.google.com/maps?q=GP%20Janarajan%20Mahal%2C%20Sholinganallur%2C%20Chennai&t=&z=16&ie=UTF8&iwloc=&output=embed">
+   </iframe>
+  </div>
+
+  <a class="maplink"
+   target="_blank"
+   rel="noopener"
+   href="https://www.google.com/maps/search/?api=1&query=GP+Janarajan+Mahal+Sholinganallur+Chennai">
+   📍 Open Directions in Google Maps
+  </a>
  </div>
+
  <p>We would be delighted to celebrate with you!</p>
  <button class="btn" onclick="closePanels()">Back to Invitation</button>
 </section>
 
+<!-- FOOTER -->
 <div class="footer">
  <div class="ornament">❀ ♥ ❀</div>
- Made with love for Hariharan & Sindhu
+ Made with love for Hariharan ♥ Sindhu
  <p>Two souls · One journey · Forever</p>
 </div>
 
-<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+<!-- PHOTO LIGHTBOX -->
+<div class="lightbox" id="lightbox"
+ onclick="this.style.display='none'">
  <button class="btn">✕ Close</button>
  <img id="largePhoto" alt="Enlarged memory">
 </div>
 
 <script>
+
+/* GITHUB PHOTO LOCATION */
 const base="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/";
+
 const engagementPhotos=[
  "IMG-20260914-WA0025.jpg",
  "IMG-20260914-WA0030.jpg",
@@ -243,146 +384,274 @@ const engagementPhotos=[
  "IMG-20260914-WA0059.jpg",
  "IMG-20260915-WA0017.jpg"
 ];
+
 const memoryPhotos=[
  "IMG-20261102-WA0012.jpg",
  "IMG-20261102-WA0043.jpg",
  "IMG-20261103-WA0061.jpg",
  "IMG-20261103-WA0071.jpg"
 ];
+
 let engIndex=0,memIndex=0;
 
+/* OPEN HIDDEN CARDS */
 function openPanel(id){
  closePanels();
+
  const panel=document.getElementById(id);
  panel.classList.add("show");
- panel.scrollIntoView({behavior:"smooth",block:"start"});
+
+ panel.scrollIntoView({
+  behavior:"smooth",
+  block:"start"
+ });
+
  if(id==="engagement")showPhoto("eng");
  if(id==="memories")showPhoto("memory");
  if(id==="scratch")setTimeout(initScratch,100);
- if(id==="countdown")updateTimer();
+
+ if(id==="countdown"){
+  updateTimer();
+  burstHearts(48);
+ }
 }
+
+/* CLOSE ALL CARDS */
 function closePanels(){
- document.querySelectorAll(".panel").forEach(p=>p.classList.remove("show"));
- document.getElementById("menu").scrollIntoView({behavior:"smooth"});
+ document.querySelectorAll(".panel").forEach(p=>{
+  p.classList.remove("show");
+ });
+ document.getElementById("menu").scrollIntoView({
+  behavior:"smooth"
+ });
 }
+
+/* PHOTO SLIDESHOW */
 function showPhoto(type){
  if(type==="eng"){
-  document.getElementById("engPhoto").src=base+engagementPhotos[engIndex];
-  document.getElementById("engCount").textContent=(engIndex+1)+" / "+engagementPhotos.length;
+  document.getElementById("engPhoto").src=
+   base+engagementPhotos[engIndex];
+
+  document.getElementById("engCount").textContent=
+   (engIndex+1)+" / "+engagementPhotos.length;
  }else{
-  document.getElementById("memoryPhoto").src=base+memoryPhotos[memIndex];
-  document.getElementById("memoryCount").textContent=(memIndex+1)+" / "+memoryPhotos.length;
+  document.getElementById("memoryPhoto").src=
+   base+memoryPhotos[memIndex];
+
+  document.getElementById("memoryCount").textContent=
+   (memIndex+1)+" / "+memoryPhotos.length;
  }
 }
+
 function movePhoto(type,step){
  if(type==="eng"){
-  engIndex=(engIndex+step+engagementPhotos.length)%engagementPhotos.length;
+  engIndex=(engIndex+step+engagementPhotos.length)
+   %engagementPhotos.length;
  }else{
-  memIndex=(memIndex+step+memoryPhotos.length)%memoryPhotos.length;
+  memIndex=(memIndex+step+memoryPhotos.length)
+   %memoryPhotos.length;
  }
+
  showPhoto(type);
 }
+
+/* ENLARGE PHOTO */
 function zoomPhoto(src){
  document.getElementById("largePhoto").src=src;
  document.getElementById("lightbox").style.display="flex";
 }
 
-/* Real finger and mouse scratch card */
+/* REAL FINGER AND MOUSE SCRATCH CARD */
 let canvas,ctx,scratching=false,scratchReady=false;
+
 function initScratch(){
  canvas=document.getElementById("scratchCanvas");
+
  if(!canvas || scratchReady)return;
+
  const rect=canvas.getBoundingClientRect();
  const dpr=window.devicePixelRatio||1;
+
  canvas.width=rect.width*dpr;
  canvas.height=rect.height*dpr;
+
  ctx=canvas.getContext("2d");
  ctx.scale(dpr,dpr);
- const gradient=ctx.createLinearGradient(0,0,rect.width,rect.height);
+
+ const gradient=ctx.createLinearGradient(
+  0,0,rect.width,rect.height
+ );
+
  gradient.addColorStop(0,"#d7a94e");
  gradient.addColorStop(.5,"#f8e3a5");
  gradient.addColorStop(1,"#a96b31");
- ctx.fillStyle=gradient;ctx.fillRect(0,0,rect.width,rect.height);
- ctx.fillStyle="#5c1730";ctx.textAlign="center";
+
+ ctx.fillStyle=gradient;
+ ctx.fillRect(0,0,rect.width,rect.height);
+
+ ctx.fillStyle="#5c1730";
+ ctx.textAlign="center";
  ctx.font="bold 24px Georgia";
- ctx.fillText("✧ SCRATCH TO REVEAL ✧",rect.width/2,rect.height/2-8);
- ctx.font="18px Georgia";ctx.fillText("Our Wedding Date 💗",rect.width/2,rect.height/2+28);
+
+ ctx.fillText(
+  "✧ SCRATCH TO REVEAL ✧",
+  rect.width/2,
+  rect.height/2-8
+ );
+
+ ctx.font="18px Georgia";
+
+ ctx.fillText(
+  "Our Wedding Date 💗",
+  rect.width/2,
+  rect.height/2+28
+ );
+
  ctx.globalCompositeOperation="destination-out";
  scratchReady=true;
+
  canvas.addEventListener("pointerdown",e=>{
-  scratching=true;canvas.setPointerCapture(e.pointerId);scratchAt(e);
+  scratching=true;
+  canvas.setPointerCapture(e.pointerId);
+  scratchAt(e);
  });
- canvas.addEventListener("pointermove",e=>{if(scratching)scratchAt(e)});
- canvas.addEventListener("pointerup",()=>{scratching=false;checkScratch()});
- canvas.addEventListener("pointercancel",()=>scratching=false);
+
+ canvas.addEventListener("pointermove",e=>{
+  if(scratching)scratchAt(e);
+ });
+
+ canvas.addEventListener("pointerup",()=>{
+  scratching=false;
+  checkScratch();
+ });
+
+ canvas.addEventListener("pointercancel",()=>{
+  scratching=false;
+ });
 }
+
 function scratchAt(e){
  const rect=canvas.getBoundingClientRect();
- const x=e.clientX-rect.left,y=e.clientY-rect.top;
- ctx.beginPath();ctx.arc(x,y,23,0,Math.PI*2);ctx.fill();
+
+ const x=e.clientX-rect.left;
+ const y=e.clientY-rect.top;
+
+ ctx.beginPath();
+ ctx.arc(x,y,23,0,Math.PI*2);
+ ctx.fill();
 }
+
 function checkScratch(){
- const data=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+ const data=ctx.getImageData(
+  0,0,canvas.width,canvas.height
+ ).data;
+
  let clear=0,total=0;
- for(let i=3;i<data.length;i+=32){total++;if(data[i]<80)clear++}
+
+ for(let i=3;i<data.length;i+=32){
+  total++;
+  if(data[i]<80)clear++;
+ }
+
  if(clear/total>.38){
   ctx.clearRect(0,0,canvas.width,canvas.height);
-  document.getElementById("scratchHint").textContent="Our forever begins on 22 November 2026! ❤️";
+
+  document.getElementById("scratchHint").textContent=
+   "Our forever begins on 22 November 2026! ❤️";
+
   burstHearts(35);
  }
 }
+
 function resetScratch(){
  scratchReady=false;
- document.getElementById("scratchHint").textContent="Scratch here with your finger or mouse ✨";
+
+ document.getElementById("scratchHint").textContent=
+  "Scratch here with your finger or mouse ✨";
+
  const old=document.getElementById("scratchCanvas");
- const fresh=old.cloneNode(false);old.parentNode.replaceChild(fresh,old);
- canvas=null;ctx=null;setTimeout(initScratch,50);
+ const fresh=old.cloneNode(false);
+
+ old.parentNode.replaceChild(fresh,old);
+
+ canvas=null;
+ ctx=null;
+
+ setTimeout(initScratch,50);
 }
 
-/* Countdown: Chennai local time */
+/* LIVE COUNTDOWN - CHENNAI TIME */
 function updateTimer(){
- const target=new Date("2026-11-22T06:30:00+05:30").getTime();
+ const target=new Date(
+  "2026-11-22T06:30:00+05:30"
+ ).getTime();
+
  const diff=target-Date.now();
+
  if(diff<=0){
-  ["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="00");
+  ["days","hours","minutes","seconds"].forEach(id=>{
+   document.getElementById(id).textContent="00";
+  });
   return;
  }
- document.getElementById("days").textContent=Math.floor(diff/86400000);
- document.getElementById("hours").textContent=String(Math.floor(diff/3600000)%24).padStart(2,"0");
- document.getElementById("minutes").textContent=String(Math.floor(diff/60000)%60).padStart(2,"0");
- document.getElementById("seconds").textContent=String(Math.floor(diff/1000)%60).padStart(2,"0");
+
+ document.getElementById("days").textContent=
+  Math.floor(diff/86400000);
+
+ document.getElementById("hours").textContent=
+  String(Math.floor(diff/3600000)%24).padStart(2,"0");
+
+ document.getElementById("minutes").textContent=
+  String(Math.floor(diff/60000)%60).padStart(2,"0");
+
+ document.getElementById("seconds").textContent=
+  String(Math.floor(diff/1000)%60).padStart(2,"0");
 }
+
 setInterval(updateTimer,1000);
 updateTimer();
 
-/* Floating red and pink hearts */
+/* RED AND PINK HEART SHOWER */
 function burstHearts(amount){
  for(let i=0;i<amount;i++){
   setTimeout(()=>{
    const h=document.createElement("div");
+
    h.className="heart";
    h.textContent=Math.random()>.5?"❤️":"💗";
+
    h.style.left=Math.random()*100+"vw";
    h.style.fontSize=(17+Math.random()*25)+"px";
    h.style.animationDuration=(4+Math.random()*5)+"s";
+
    document.body.appendChild(h);
+
    setTimeout(()=>h.remove(),9500);
   },i*80);
  }
 }
+
+/* SMALL FLOATING HEARTS */
 setInterval(()=>burstHearts(2),1200);
 
-/* Floating flowers */
+/* FLOATING ROYAL FLOWERS */
 setInterval(()=>{
  const f=document.createElement("div");
+
  f.className="flower";
- f.textContent=["🌸","🌹","❀","🌺"][Math.floor(Math.random()*4)];
+ f.textContent=["🌸","🌹","❀","🌺"][
+  Math.floor(Math.random()*4)
+ ];
+
  f.style.left=Math.random()*100+"vw";
  f.style.fontSize=(16+Math.random()*20)+"px";
  f.style.animationDuration=(9+Math.random()*8)+"s";
+
  document.body.appendChild(f);
+
  setTimeout(()=>f.remove(),18000);
 },1300);
+
 </script>
 </body>
 </html>
