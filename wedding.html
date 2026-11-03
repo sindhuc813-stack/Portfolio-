@@ -3,345 +3,366 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hariharan ♥ Sindhu | Wedding Invitation</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hariharan ♥ Sindhu | Royal Wedding Invitation</title>
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;
- font-family:Georgia,serif;
- color:#71434d;
- background:linear-gradient(145deg,#fff0f5,#fbe2e9,#fff9ed);
- text-align:center;
+ margin:0;text-align:center;font-family:Georgia,serif;
+ color:#71354e;overflow-x:hidden;
+ background:linear-gradient(135deg,#fff0f6,#f5d4e6,#fce8c9,#ead8f4);
 }
-header{
- min-height:90vh;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- padding:25px;
+:root{--pink:#b83f75;--gold:#c79b4e;--purple:#764078}
+.hero{
+ min-height:100vh;display:flex;flex-direction:column;
+ justify-content:center;align-items:center;padding:35px 15px;
+ border:9px double var(--gold);
  background:
- radial-gradient(circle at top,#fff9e8,transparent 55%),
- linear-gradient(135deg,#f8dce6,#fff1e8);
- border-bottom:4px solid #d6ae66;
+ radial-gradient(circle at 15% 15%,#fff 0 2px,transparent 4px),
+ radial-gradient(circle at 80% 30%,#fff 0 2px,transparent 4px),
+ linear-gradient(145deg,#f5c5dc,#fff0e7,#e8c9ed);
+ position:relative;overflow:hidden;
 }
-.crown{font-size:38px;color:#bd9145}
-h1{
- font-size:clamp(38px,9vw,65px);
- color:#a54d70;
- margin:15px 0;
+.hero:before,.hero:after{
+ content:"❀ ✿ ❀ ✿ ❀ ✿ ❀";
+ position:absolute;left:0;width:100%;
+ color:#b77a9b;font-size:24px;letter-spacing:7px
 }
-.gold{color:#b78b42}
-.subtitle{letter-spacing:4px;color:#a87953}
-section{padding:45px 16px}
-h2{color:#a54d70;font-size:29px}
+.hero:before{top:16px}.hero:after{bottom:16px}
+.crown{font-size:58px;color:var(--gold)}
+.eyebrow{letter-spacing:4px;font-size:12px;color:#96603f}
+h1{font-size:clamp(38px,9vw,65px);color:#a13d70;text-shadow:2px 3px 5px white}
+h2{color:#a13d70;font-size:28px}
 p{line-height:1.8}
+.heart{color:#dc3776;animation:beat 1s infinite;display:inline-block}
+@keyframes beat{50%{transform:scale(1.35)}}
 button{
- border:0;
- background:linear-gradient(135deg,#b85e7e,#d6a35d);
- color:white;
- padding:13px 24px;
- border-radius:30px;
- font-size:15px;
- cursor:pointer;
- margin:8px;
+ border:2px solid #f1d89b;border-radius:30px;
+ padding:12px 21px;margin:7px;
+ background:linear-gradient(120deg,#a83d70,#d0809f,#bd9143);
+ color:white;font-family:Georgia;font-size:15px;cursor:pointer;
+ box-shadow:0 5px 14px #63334d25;
 }
-.card{
- max-width:650px;
- margin:20px auto;
- padding:25px;
- border:1px solid #d9b879;
- border-radius:22px;
- background:#fffaf5;
- box-shadow:0 8px 25px #a65b7020;
+button:active{transform:scale(.96)}
+section{padding:35px 13px}
+.panel{
+ max-width:760px;margin:20px auto;padding:24px 14px;
+ background:#fff9f3ed;border:2px solid var(--gold);
+ border-radius:24px;box-shadow:0 8px 24px #813d6420;
 }
+.hidden{display:none}
 .menu{
- display:grid;
- grid-template-columns:repeat(2,minmax(0,1fr));
- gap:14px;
- max-width:650px;
- margin:auto;
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:13px;max-width:650px;margin:25px auto;
 }
 .tile{
- padding:25px 10px;
- border-radius:18px;
- background:#fffaf5;
- border:1px solid #d9b879;
- color:#9e5470;
- cursor:pointer;
- font-size:16px;
+ padding:23px 8px;border:2px solid #d2aa65;border-radius:20px;
+ background:linear-gradient(145deg,#fffaf0,#f5d9e9);
+ color:#874064;cursor:pointer;
 }
-.tile span{display:block;font-size:30px;margin-bottom:10px}
-.hidden{display:none}
-.gallery{
- display:grid;
- grid-template-columns:repeat(2,minmax(0,1fr));
- gap:12px;
- max-width:750px;
- margin:25px auto;
-}
-.gallery img{
- width:100%;
- height:220px;
- object-fit:cover;
- border-radius:15px;
- border:3px solid #d6b36e;
- cursor:pointer;
-}
-.photo-caption{font-size:13px;color:#956879}
-#lightbox{
- display:none;
- position:fixed;
- inset:0;
- background:#160d12ee;
- z-index:99;
- justify-content:center;
- align-items:center;
- padding:15px;
-}
-#lightbox img{
- max-width:95%;
- max-height:82vh;
- object-fit:contain;
- border-radius:12px;
-}
-#lightbox button{
- position:absolute;
- top:15px;
- right:15px;
-}
-.scratch{
- padding:30px;
- border:2px dashed #bd9654;
+.tile span{display:block;font-size:35px;margin-bottom:8px}
+.tile strong{font-size:15px}
+.flower{font-size:30px;color:#b77a9b}
+.slide{
+ max-width:540px;margin:20px auto;
+ background:#fff;padding:10px;border:3px solid #d3aa62;
  border-radius:20px;
- background:#fff5e9;
 }
-#secret{font-size:25px;color:#a54d70;font-weight:bold}
-.count{
- font-size:25px;
- color:#a54d70;
- font-weight:bold;
+.slide img{
+ width:100%;height:350px;object-fit:contain;
+ border-radius:12px;background:#f5e8ed;
 }
-footer{
- padding:35px 15px;
- background:#f4dce4;
- color:#9d5a70;
+.slide-caption{color:#9e5574;padding:10px}
+.arrows{display:flex;justify-content:center;gap:20px}
+.arrows button{min-width:105px}
+.counter{font-size:13px;color:#92617c}
+.secret{
+ background:linear-gradient(140deg,#fff0f6,#f5dfb9,#ecdaf4);
+ border:2px dashed #bb904a;padding:28px 12px;border-radius:20px;
 }
-.heart{color:#bd577c;animation:pulse 1.3s infinite}
-@keyframes pulse{
- 50%{transform:scale(1.3)}
+#secretAnswer{display:none;color:#a43e70;font-size:23px}
+#timer{font-size:25px;color:#a43e70;line-height:1.9;font-weight:bold}
+.countbox{padding:20px;background:#fff0f5;border-radius:20px;border:1px solid var(--gold)}
+footer{padding:30px;background:linear-gradient(135deg,#f2cbdc,#fff0dc)}
+#lightbox{
+ display:none;position:fixed;inset:0;background:#140b19ed;
+ z-index:1000;align-items:center;justify-content:center;padding:15px
 }
-@media(max-width:480px){
- .gallery img{height:165px}
- .menu{gap:9px}
- .tile{padding:20px 5px;font-size:14px}
+#lightbox img{max-width:95%;max-height:80vh;object-fit:contain;border:3px solid var(--gold)}
+#lightbox button{position:absolute;right:8px;top:8px}
+.float{
+ position:fixed;bottom:-45px;z-index:20;pointer-events:none;
+ animation:rise 9s linear forwards;opacity:.8
 }
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}
+ 15%{opacity:.8}100%{transform:translateY(-115vh) rotate(50deg);opacity:0}}
+@media(max-width:480px){.slide img{height:270px}.menu{gap:9px}}
 </style>
 </head>
-
 <body>
 
-<header>
+<header class="hero">
  <div class="crown">♛</div>
- <div class="subtitle">A ROYAL CELEBRATION OF LOVE</div>
- <h1>Hariharan <span class="heart">♥</span> Sindhu</h1>
- <p>Two Hearts · One Beautiful Forever</p>
- <p class="gold">With love and blessings, we invite you</p>
- <button onclick="document.getElementById('memoriesMenu').scrollIntoView({behavior:'smooth'})">
- Open Our Invitation ♥
- </button>
+ <div class="eyebrow">A ROYAL FLORAL WEDDING CELEBRATION</div>
+ <div class="flower">❀ ✿ ❀</div>
+ <p>THE BEGINNING OF OUR FOREVER</p>
+ <h1>Hariharan <span class="heart">♥</span><br>Sindhu</h1>
+ <p>Two Hearts · One Beautiful Journey</p>
+ <div class="flower">🌸 💗 🌸</div>
+ <p>With the blessings of our families,<br>we joyfully invite you to celebrate our love.</p>
+ <button onclick="go('menu')">OPEN OUR INVITATION ♥</button>
 </header>
 
 <section>
- <h2>Our Wedding Invitation</h2>
- <div class="card">
-  <p>With the blessings of our families</p>
-  <h2>Hariharan ♥ Sindhu</h2>
-  <p>Invite you to celebrate our special day and bless our journey together.</p>
-  <p>Reception</p>
+ <div class="flower">♛ ❀ ♛</div>
+ <h2>With Love & Blessings</h2>
+ <div class="panel">
+  <p>We invite you to witness the beautiful union of</p>
+  <h1>Hariharan <span class="heart">♥</span> Sindhu</h1>
+  <p>Two families, two hearts and one forever.</p>
+  <div class="flower">🌸 ❀ 🌸</div>
+  <p>RECEPTION</p>
   <h2>21 November 2026</h2>
-  <p>Wedding</p>
+  <p>WEDDING CEREMONY</p>
   <h2>22 November 2026</h2>
   <p>Venue: GP Janarajan Mahal</p>
   <p>Sholinganallur, Chennai</p>
+  <p>We look forward to celebrating with you!</p>
  </div>
 </section>
 
-<section id="memoriesMenu">
- <h2>Our Little World ✨</h2>
- <p>Every memory has a beautiful story. Tap to discover.</p>
-
+<section id="menu">
+ <div class="flower">🌷 ✨ 🌷</div>
+ <h2>Our Love Story</h2>
+ <p>Every moment is a flower in our garden of love.</p>
  <div class="menu">
-  <div class="tile" onclick="showSection('loveMemories')">
-   <span>💗</span>Our Memories
-  </div>
-  <div class="tile" onclick="showSection('engagement')">
-   <span>💍</span>Engagement
-  </div>
-  <div class="tile" onclick="showSection('surprise')">
-   <span>🎁</span>Secret Surprise
-  </div>
-  <div class="tile" onclick="showSection('countdown')">
-   <span>⏳</span>Wedding Countdown
-  </div>
-  <div class="tile" onclick="showSection('venue')">
-   <span>📍</span>Wedding Location
-  </div>
+  <div class="tile" onclick="openPanel('chat')"><span>💌</span><strong>First Chat</strong></div>
+  <div class="tile" onclick="openPanel('engagement')"><span>💍</span><strong>Engagement</strong></div>
+  <div class="tile" onclick="openPanel('memories')"><span>📸</span><strong>Our Memories</strong></div>
+  <div class="tile" onclick="openPanel('secret')"><span>🎁</span><strong>Secret Wedding Card</strong></div>
+  <div class="tile" onclick="openPanel('countdown')"><span>⏳</span><strong>Countdown</strong></div>
+  <div class="tile" onclick="openPanel('venue')"><span>💒</span><strong>Wedding Venue</strong></div>
  </div>
 </section>
 
-<section id="loveMemories" class="hidden">
- <h2>Our Beautiful Memories 💕</h2>
- <p>Little moments, endless happiness.</p>
-
- <div class="gallery">
-
-  <div>
-   <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20260915-WA0017.jpg" onclick="zoom(this)" loading="lazy">
-   <div class="photo-caption">A Beautiful Memory ♥</div>
+<!-- FIRST CHAT -->
+<section id="chat" class="hidden">
+ <div class="panel">
+  <h2>💌 Our First Chat</h2>
+  <p>One conversation, a thousand feelings.</p>
+  <div class="slide">
+   <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20261020-WA0034~3.jpg" onclick="zoom(this)" alt="First chat">
+   <div class="slide-caption">Our little beginning ♥</div>
   </div>
-
-  <div>
-   <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20261020-WA0034~3.jpg" onclick="zoom(this)" loading="lazy">
-   <div class="photo-caption">A Special Moment ♥</div>
-  </div>
-
-  <div>
-   <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20261102-WA0012.jpg" onclick="zoom(this)" loading="lazy">
-   <div class="photo-caption">Our Memories ♥</div>
-  </div>
-
-  <div>
-   <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20261102-WA0043.jpg" onclick="zoom(this)" loading="lazy">
-   <div class="photo-caption">Forever Together ♥</div>
-  </div>
-
-  <div>
-   <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20261103-WA0061.jpg" onclick="zoom(this)" loading="lazy">
-   <div class="photo-caption">Another Beautiful Memory ♥</div>
-  </div>
-
+  <button onclick="closePanel('chat')">← Back</button>
  </div>
- <button onclick="hideSection('loveMemories')">Close Memories</button>
 </section>
 
+<!-- ENGAGEMENT -->
 <section id="engagement" class="hidden">
- <h2>Our Engagement 💍</h2>
- <p>A promise of forever.</p>
-
- <div class="gallery">
-
-  <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20260914-WA0025.jpg" onclick="zoom(this)" loading="lazy">
-
-  <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20260914-WA0030.jpg" onclick="zoom(this)" loading="lazy">
-
-  <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20260914-WA0031.jpg" onclick="zoom(this)" loading="lazy">
-
-  <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20260914-WA0053.jpg" onclick="zoom(this)" loading="lazy">
-
-  <img src="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/IMG-20260914-WA0059.jpg" onclick="zoom(this)" loading="lazy">
-
+ <div class="panel">
+  <h2>💍 Our Engagement</h2>
+  <p>A promise of forever, sealed with love.</p>
+  <div class="slide">
+   <img id="engImg" src="" onclick="zoom(this)" alt="Engagement photo">
+   <div class="slide-caption" id="engCaption"></div>
+   <div class="counter" id="engCount"></div>
+  </div>
+  <div class="arrows">
+   <button onclick="move('eng',-1)">❮ Previous</button>
+   <button onclick="move('eng',1)">Next ❯</button>
+  </div>
+  <button onclick="closePanel('engagement')">Back to Invitation</button>
  </div>
- <button onclick="hideSection('engagement')">Close Engagement</button>
 </section>
 
-<section id="surprise" class="hidden">
- <h2>A Little Secret For You 🎁</h2>
- <div class="scratch">
-  <p>Tap the heart to reveal our special day!</p>
-  <button onclick="revealSecret()">💗 Reveal Our Secret 💗</button>
-  <p id="secret">????????</p>
+<!-- MEMORIES -->
+<section id="memories" class="hidden">
+ <div class="panel">
+  <h2>📸 Our Beautiful Memories</h2>
+  <p>Little moments, endless happiness.</p>
+  <div class="slide">
+   <img id="memImg" src="" onclick="zoom(this)" alt="Memory photo">
+   <div class="slide-caption" id="memCaption"></div>
+   <div class="counter" id="memCount"></div>
+  </div>
+  <div class="arrows">
+   <button onclick="move('mem',-1)">❮ Previous</button>
+   <button onclick="move('mem',1)">Next ❯</button>
+  </div>
+  <button onclick="closePanel('memories')">Back to Invitation</button>
  </div>
- <button onclick="hideSection('surprise')">Close</button>
 </section>
 
+<!-- SECRET -->
+<section id="secret" class="hidden">
+ <div class="panel">
+  <h2>🎁 A Secret Just For You</h2>
+  <p>Our special date is waiting inside this royal card!</p>
+  <div class="secret">
+   <div style="font-size:55px">💌</div>
+   <h2>Our Secret Wedding Card</h2>
+   <button onclick="reveal()">OPEN THE SECRET ♥</button>
+   <div id="secretAnswer">
+    <p>OUR WEDDING DAY</p>
+    <h2>22 · 11 · 2026</h2>
+    <p>Hariharan ♥ Sindhu</p>
+    <p>Our Forever Begins! 🌸</p>
+   </div>
+  </div>
+  <button onclick="closePanel('secret')">Back to Invitation</button>
+ </div>
+</section>
+
+<!-- COUNTDOWN -->
 <section id="countdown" class="hidden">
- <h2>Counting Every Moment ❤️</h2>
- <div class="card">
-  <p>Until Hariharan ♥ Sindhu become one</p>
-  <div class="count" id="timer">Loading...</div>
-  <p>22 November 2026</p>
+ <div class="panel">
+  <h2>⏳ Our Wedding Countdown</h2>
+  <p>Every second brings us closer to forever.</p>
+  <button onclick="showCountdown()">OPEN COUNTDOWN ♥</button>
+  <div id="countContent" class="hidden">
+   <div class="countbox">
+    <div style="font-size:35px">💗 🌸 💗</div>
+    <h2>Until Our Wedding Day</h2>
+    <div id="timer">Loading...</div>
+    <p>22 November 2026</p>
+    <p>Hariharan ♥ Sindhu</p>
+   </div>
+  </div>
+  <button onclick="closePanel('countdown')">Back to Invitation</button>
  </div>
- <button onclick="hideSection('countdown')">Close</button>
 </section>
 
+<!-- VENUE -->
 <section id="venue" class="hidden">
- <h2>Join Our Celebration 📍</h2>
- <div class="card">
-  <h3>GP Janarajan Mahal</h3>
+ <div class="panel">
+  <h2>💒 Join Our Celebration</h2>
+  <div class="flower">❀ 🌸 ❀</div>
+  <h2>GP Janarajan Mahal</h2>
   <p>Sholinganallur, Chennai</p>
-  <p>Reception: 21 November 2026</p>
-  <p>Wedding: 22 November 2026</p>
+  <p>Reception – 21 November 2026</p>
+  <p>Wedding – 22 November 2026</p>
   <a href="https://www.google.com/maps/search/?api=1&query=GP+Janarajan+Mahal+Sholinganallur+Chennai" target="_blank">
-   <button>Open Google Maps</button>
+   <button>OPEN GOOGLE MAPS 📍</button>
   </a>
+  <button onclick="closePanel('venue')">Back to Invitation</button>
  </div>
- <button onclick="hideSection('venue')">Close</button>
 </section>
 
-<div id="lightbox" onclick="this.style.display='none'">
- <button onclick="event.stopPropagation();document.getElementById('lightbox').style.display='none'">✕ Close</button>
- <img id="largePhoto" src="" alt="Memory photo">
+<div id="lightbox" onclick="closeZoom()">
+ <button onclick="closeZoom()">✕ Close</button>
+ <img id="largePhoto" src="" alt="Photo">
 </div>
 
 <footer>
+ <div class="flower">♛ ❀ 🌸 ❀ ♛</div>
  <h2>Hariharan <span class="heart">♥</span> Sindhu</h2>
- <p>Our story continues forever...</p>
- <p>Made with love ♡</p>
+ <p>Two souls. One destiny. Endless love.</p>
+ <p>Forever & Always ♥</p>
+ <div class="flower">🌷 ✨ 🌷</div>
 </footer>
 
 <script>
-function showSection(id){
- document.querySelectorAll('.hidden').forEach(el=>{
-  if(el.id) el.style.display='none';
- });
- const section=document.getElementById(id);
- section.style.display='block';
- section.scrollIntoView({behavior:'smooth'});
-}
+const base="https://raw.githubusercontent.com/sindhuc813-stack/Portfolio-/main/";
 
-function hideSection(id){
- document.getElementById(id).style.display='none';
- document.getElementById('memoriesMenu').scrollIntoView({behavior:'smooth'});
+const engagementPhotos=[
+ "IMG-20260914-WA0025.jpg",
+ "IMG-20260914-WA0030.jpg",
+ "IMG-20260914-WA0031.jpg",
+ "IMG-20260914-WA0053.jpg",
+ "IMG-20260914-WA0059.jpg",
+ "IMG-20260915-WA0017.jpg"
+];
+
+const memoryPhotos=[
+ "IMG-20261102-WA0012.jpg",
+ "IMG-20261102-WA0043.jpg",
+ "IMG-20261103-WA0061.jpg"
+];
+
+const engLabels=[
+ "Our Special Day ♥","A Promise of Forever ♥",
+ "Beautiful Together ♥","Our Happiness ♥",
+ "Made for Each Other ♥","Our Forever ♥"
+];
+const memLabels=[
+ "A Precious Memory ♥","Beautiful Moments ♥",
+ "Our Sweet Memories ♥"
+];
+
+let engIndex=0,memIndex=0;
+
+function go(id){
+ document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
+function openPanel(id){
+ document.querySelectorAll('section.hidden').forEach(s=>s.style.display='none');
+ const p=document.getElementById(id);
+ p.style.display='block';
+ if(id==='engagement')render('eng');
+ if(id==='memories')render('mem');
+ p.scrollIntoView({behavior:'smooth'});
+}
+function closePanel(id){
+ document.getElementById(id).style.display='none';
+ go('menu');
+}
+function render(type){
+ const isEng=type==='eng';
+ const photos=isEng?engagementPhotos:memoryPhotos;
+ const labels=isEng?engLabels:memLabels;
+ const index=isEng?engIndex:memIndex;
+ document.getElementById(type+'Img').src=base+photos[index];
+ document.getElementById(type+'Caption').textContent=labels[index];
+ document.getElementById(type+'Count').textContent=
+ (index+1)+' / '+photos.length;
+}
+function move(type,direction){
+ if(type==='eng'){
+  engIndex=(engIndex+direction+engagementPhotos.length)%engagementPhotos.length;
+ }else{
+  memIndex=(memIndex+direction+memoryPhotos.length)%memoryPhotos.length;
+ }
+ render(type);
+}
+function reveal(){
+ document.getElementById('secretAnswer').style.display='block';
+}
+function showCountdown(){
+ document.getElementById('countContent').style.display='block';
+ updateTimer();
+}
+function updateTimer(){
+ const target=new Date('2026-11-22T06:30:00+05:30').getTime();
+ const diff=target-Date.now();
+ const el=document.getElementById('timer');
+ if(diff<=0){el.innerHTML='Our Special Day is Here! ♥';return;}
+ const d=Math.floor(diff/86400000);
+ const h=Math.floor(diff%86400000/3600000);
+ const m=Math.floor(diff%3600000/60000);
+ const s=Math.floor(diff%60000/1000);
+ el.innerHTML=d+' Days<br>'+h+' Hours<br>'+m+' Minutes<br>'+s+' Seconds';
+}
+setInterval(updateTimer,1000);
 
 function zoom(img){
  document.getElementById('largePhoto').src=img.src;
  document.getElementById('lightbox').style.display='flex';
 }
-
-function revealSecret(){
- document.getElementById('secret').innerHTML=
- '22 ♥ 11 ♥ 2026<br>Our Forever Begins!';
+function closeZoom(){
+ document.getElementById('lightbox').style.display='none';
 }
-
-const weddingDate=new Date('2026-11-22T06:30:00+05:30').getTime();
-
-function updateTimer(){
- const now=new Date().getTime();
- const distance=weddingDate-now;
- const timer=document.getElementById('timer');
-
- if(distance<=0){
-  timer.innerHTML='Our Special Day is Here! ♥';
-  return;
- }
-
- const days=Math.floor(distance/(1000*60*60*24));
- const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
- const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
- const seconds=Math.floor((distance%(1000*60))/1000);
-
- timer.innerHTML=
- days+' Days<br>'+hours+' Hours<br>'+
- minutes+' Minutes<br>'+seconds+' Seconds';
+function floating(){
+ const f=document.createElement('div');
+ f.className='float';
+ f.textContent=['♥','♡','🌸','❀','✨','✿'][Math.floor(Math.random()*6)];
+ f.style.left=Math.random()*100+'vw';
+ f.style.fontSize=(18+Math.random()*20)+'px';
+ f.style.animationDuration=(6+Math.random()*6)+'s';
+ document.body.appendChild(f);
+ setTimeout(()=>f.remove(),12000);
 }
-
-updateTimer();
-setInterval(updateTimer,1000);
+setInterval(floating,550);
 </script>
-
 </body>
 </html>
